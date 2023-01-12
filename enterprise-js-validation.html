@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<!-- ***************************************************************
+* This file belongs to the imuk5-ucdd template set                 *
+* Copyright (c) by Andrea Kohlhase                                 *
+* Free to use for IMUK5-UCDD students                              *
+******************************************************************** -->
+<html>
+
+<head>
+   <title>JQuery Enterprise: Dynamic Frontend</title>
+   <meta charset="UTF-8" />
+   <script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
+   <script src="js/jquery.validate.min.js" type="text/javascript"></script>
+   <link rel="stylesheet" href="stylesheets/enterprise.css">
+   <style>
+      /* Formatting rules' error messages */
+      .error { float: none; 
+               color: red; 
+               padding-left: .5em; 
+               vertical-align: top; }
+   </style>
+</head>
+
+<body>
+   <!-- Static HTML -->
+<a href="fancyStuff.html"><button>Back to fancy stuff!</button></a>    
+   <a href="enterprise-js-navigation.html">
+      <h2>The Team of Enterprise</h2>
+   </a>
+
+   <!-- Data View -->
+   <table id="team" class="table table-striped" style="width:400px">
+      <thead>
+         <tr>
+            <td class="colBig"><strong>Member</strong></td>
+            <td class="colBig"><strong>Job</strong></td>
+            <td class="colSmall">
+               <button onclick="showInputMask('','','');">
+                	   <img src="pics/glyphicons-7-user-add.png" height="24" width="24"/>
+                	</button>
+            </td>
+            <td class="colSmall"></td>
+         </tr>
+      </thead>
+      <tbody id="members">
+      </tbody>
+   </table>
+   <form id='input' style="display:none" action="javascript:save();">
+      <div>
+         <label class="myLabel" for="inputMember">Member</label>
+         <input id='inputMember' name='member' type='text' />
+      </div>
+      <div>
+         <label class="myLabel">Job</label>
+         <input id='inputJob' name='job' type="text" />
+      </div>
+      <input type="submit" id="saveId" value="Save"/>
+   </form>
+    
+
+
+   <script type="text/javascript">
+      $("#input").validate({ errorElement: 'span' });
+
+      function Person(member, job) {
+         this.member = member;
+         this.job = job;
+      }
+      
+      var team = new Array();
+      team[0] = new Person('Picard', 'Captain');
+      team[1] = new Person('Riker', 'Number One');
+      team[2] = new Person('Worf', 'Security');
+
+
+      function teamRead(targetId) {
+         console.log('teamRead: ' + team.length);
+         $('#' + targetId).empty();
+
+         for (var i = 0; i < team.length; i++) {
+            generateRow(i, targetId);
+         }
+         $("#input").css("display", 'none');
+         $("#team").css("display", 'block');
+
+      }
+    
+      function save(row) {
+         console.log('save');
+         var member = $("#inputMember").val();
+         var job = $("#inputJob").val();
+         
+         if ($("#input").valid()) {
+            console.log("\t Input is valid!");
+            if (row == "") {
+               //create
+               console.log('\t \t create');
+               team[team.length] = new Person(member, job);
+            }
+            else {
+               //update
+               console.log('\t \t update');
+               team[row] = new Person(member, job);
+            }
+            teamRead('members');
+         }
+         else {
+            console.log("\t Input isn't valid!");
+            alert("Check your input, please!")
+         }
+      }
+      
+      function personDelete(row) {
+         console.log('personDelete (row ' + row + ' = ' + team[row].member + ')');
+         //Löschen mit Sicherheitsabfrage
+         if (confirm("Do you really want to delete member " + team[row].member + "?")) {
+            console.log('\t \t delete');
+            $("#" + row).remove();
+            team.splice(row, 1);
+
+            teamRead('members');
+         }
+      }
+
+
+      function showInputMask(row, member, job) {
+         console.log('showInputMask');
+        
+         $("#inputMember").val(member);
+         $("#inputJob").val(job);
+         $('#input').attr('action', "javascript:save('" + row + "');");
+
+         $("#input").css("display", 'block');
+         $("#team").css("display", 'none');
+
+      }
+
+      function generateRow(row, idTarget) {
+         
+         $("#" + idTarget).append(
+            '<tr id="' + row + '">' +
+            '<td>' + team[row].member + '</td>' +
+            '<td>' + team[row].job + '</td>' +
+            '<td>' +
+            '<button onclick="showInputMask(' +
+            "'" + row + "'," +
+            "'" + team[row].member + "'," +
+            "'" + team[row].job + "' " +
+            ');">' +
+            '<img src="pics/glyphicons-31-pencil.png" height="24" width="24"/>' +
+            '</button>' +
+            '</td>' +
+            '<td>' +
+            '<button onclick="personDelete(' + "'" + row + "'" + ');">' +
+            '<img src="pics/glyphicons-17-bin.png" height="24" width="24"/>' +
+            '</button>' +
+            '</td>' +
+            '</tr>'
+         );
+      }
+
+      function validityRules() {
+         console.log("Aufruf von Funktion validityRules()");
+         $("input[name='member']").rules("add", {
+            required: true,
+            messages: {
+               required: 'Please enter your name.'
+            }
+         });
+
+         $("input[name='job']").rules("add", {
+            required: true,
+            minlength: 5,
+            messages: {
+               required: 'Please add the job.',
+               minlength: 'A job has to be at least 5 chars long.'
+            }
+         });
+      }
+
+      teamRead('members');
+      validityRules();
+   </script>
+</body>
+
+</html>
