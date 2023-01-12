@@ -1,0 +1,72 @@
+/* hier beginnt der header*/
+body{
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navigation a {
+    color: #2A2E30;
+    font-size: 120%;
+    text-decoration: none;
+    margin:0px;
+}
+
+.navigation ul {
+   list-style-type: none;
+   margin-left: 50%;
+   position: absolute;
+   top: 0.5%;       
+}
+
+.navigation ul li {
+   display: inline-block;
+}
+
+.navigation ul li a {
+   display: block;
+   padding: 10px 15px;
+}
+
+.navigation ul li a.active, img.active {
+   background: grey;
+   border-radius: 20px;
+}
+
+.navigation ul li a:hover {
+   background: #F2F2F2;
+   border-radius: 20px;
+}
+
+.header{
+    background-color: #A0BDCE;
+    height: 130px;
+    width:100%;
+    position: absolute;
+    top:0px;
+    left:0px;
+    margin: 0px;
+}
+
+#logo {
+			position: relative;
+  		left: 40px;
+			width: 130px;
+  height: 100px;
+			top: 10px;
+}
+/* hier endet der header*/
+
+
+/* hier beginnt das Grid*/
+#main {
+ display: grid;
+ grid-template-columns: 10% 80% 10%;
+ grid-template-rows: 10% auto auto 20%;                     
+ grid-template-areas: 
+ "left-1 main right-1"
+ "left-1 main right-1"
+ "left-1 main right-1"
+ "footer footer footer"           
+}
+
+/* hier endet das Grid*/
