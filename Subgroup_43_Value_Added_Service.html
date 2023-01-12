@@ -56,6 +56,18 @@
     <div>
         <h1>Form</h1>
         <span>Enter the information about your event here</span>
+        <form id="myform">
+            <input type="checkbox" name="option1" value="1"> Option 1<br>
+            <input type="checkbox" name="option2" value="2"> Option 2<br>
+            <input type="radio" name="option3" value="3"> Option 3<br>
+            <input type="radio" name="option4" value="4"> Option 4<br>
+            <input type="submit" value="Submit">
+        </form>
+
+        <div id="div1" style="display:none">Option 1 selected</div>
+        <div id="div2" style="display:none">Option 2 selected</div>
+        <div id="div3" style="display:none">Option 3 selected</div>
+        <div id="div4" style="display:none">Option 4 selected</div>
 
     </div>
 
@@ -83,6 +95,7 @@
 
     <!-- ****** Bootstrap ****** -->
     <script src="./dist/main.js"></script>
+    <script src="./js/form_script.js"></script>
 
 </body>
 </html>
