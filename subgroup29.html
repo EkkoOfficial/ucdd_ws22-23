@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Added Value Service Subgroup 29</title>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="stylesheets/subgroup29.css">
+      <script type="text/javascript" src="js/jquery-3.1.1.min.js">          </script>  
+  </head>
+
+  <body>
+
+  <!-- Introduction-->
+  <div id="introduction-maske">
+
+    <div id="introduction">
+      Our Added Value Service intends to make meeting new people easier. 
+      Inspired by infamous Dating App Trends, we invented: "Insert Name Here"!
+      </br>
+      </br>
+      <h4>Why choose (NAME)?</h4>
+      </br>
+
+      <ul style=“list-style-type:circle”>
+        <li>Made for people that are new in town - or people who want to extend their friend group in a simple and comfortable way!</li>
+        <li>Easy to use and keep an overview of people you have met</li>
+        <li>Chatting without exchanging numbers - to avoid awkward situations!</li>
+      </ul>
+
+      </br>
+
+      <h4>How does it work?</h4>
+      
+    </div>
+
+    <button onclick="anzeigenAnlegen();">Anlegen</button>
+  </div>
+
+  </br>
+ 
+  <!-- Step 1: Profil anlegen-->
+  <div id="anlegen-mask" style="display:none">
+
+  <!-- Quelle  https://youtu.be/eeHqZeJ9Vqc -->
+    <div class="center">
+      <h1>create your user profil!</h1>
+      
+      <form method="post">
+        
+        <div class="txt_field">
+          <input type="text" required>
+          <span></span>
+          <label id="name" class="beschreibung">name</label>
+        </div>
+
+        <div class="txt_field">
+          <input type="text"required>
+          <span></span>
+          <label id="age" class="beschreibung">age</label>
+        </div>
+
+        <div class="txt_field">
+          <input type="text"required>
+          <span></span>
+          <label id="gender" class="beschreibung">gender</label>
+        </div>
+
+        <div class="txt_field">
+          <input type="email" required>
+          <span></span>
+          <label id="emaill" class="beschreibung">e-mail</label>
+        </div>
+       
+        <div class="txt_field">
+          <input type="password" required>
+          <span></span>
+          <label>password</label>
+        </div>
+
+        <div class="txt_field">
+          <input type="text"required>
+          <span></span>
+          <label id="discription" class="beschreibung">discription</label>
+        </div>
+
+         <div class="txt_field">
+          <input type="email" required>
+          <span></span>
+          <label id="emaill" class="beschreibung">e-mail</label>
+        </div>
+       
+        <div class="txt_field">
+          <input type="password" required>
+          <span></span>
+          <label>password</label>
+        </div>
+
+        <div class="txt_field">
+          <input type="text"required>
+          <span></span>
+          <label id="discription" class="beschreibung">discription</label>
+        </div>
+
+        
+        <input type="submit" value="Sign up">
+       
+        <div class="signup_link">
+          Already a member? <a href="#">Sign in</a>
+        </div>
+      </form>
+    </div>
+     
+  <!--   <div id="seisfilmlange" class="eingabe" name="name">
+      <label id="name" class="beschreibung">Name</label>
+              <input id="eingabename" class="eingabefeld autocomplete" type="text" />
+      </div>
+
+    <div id="seisfilmlange" class="eingabe" name="age">
+        <label id="age" class="beschreibung">Age</label>
+        <input id="eingabeage" class="eingabefeld autocomplete" type="number" />
+      </div>
+
+   <div id="cuatrofsk" class="gender">
+               <label id="gender" class="beschreibung">Gender</label>
+               <select class="eingabefeld selectmenu" id="eingabegender" name = "gender" list ="gendertypen" />
+               <option selected disabled> Gender </option>
+               <option> male </option>
+               <option> female </option>
+               <option> divers </option>
+               </select>
+           </div>
+
+    <div id="seisfilmlange" class="eingabe">
+              <label id="email" class="beschreibung">E-mail</label>
+              <input id="eingabeemail" class="eingabefeld autocomplete" type="email" name='emailrules' />
+      </div>
+
+    <div id="seisfilmlange" class="eingabe">
+              <label id="password" class="beschreibung">Password</label>
+              <input id="eingabepassword" class="eingabefeld autocomplete" type="password" />
+      </div>
+
+    <div id="unofilmtitelbild" class="objZeile">
+               <label id="picture" class="beschreibung">Picture</label>
+               <input id="eingabepicture" class="eingabefeld" type="text"/>
+           </div>
+
+    <div id="tresfilmbeschreibung" class="objZeile">
+               <label id="discription" class="beschreibung">Discription</label>
+               <textarea id="eingabediscription" class="eingabefeld" rows="5" > </textarea>
+           </div>
+
+    
+<div id="tresfilmbeschreibung" class="objZeile">
+   <label id="interests" class="beschreibung">Interests</label>
+  <div>
+    <input type="checkbox" id="sports" name="interest" value="sports" />
+    <label for="sports">Sports</label>
+  </div>
+  <div>
+    <input type="checkbox" id="music" name="interest" value="music" />
+    <label for="music">Music</label>
+  </div>
+ <div>
+    <input type="checkbox" id="reading" name="interest" value="reading" />
+    <label for="reading">Reading</label>
+  </div>  
+ <div>
+    <input type="checkbox" id="clubbing" name="interest" value="clubbing" />
+    <label for="clubbing">Clubbing</label>
+  </div>
+  <div>
+    <input type="checkbox" id="travel" name="interest" value="travel" />
+    <label for="travel">Travel</label>
+  </div>
+</div>
+
+
+<div id="tresfilmbeschreibung" class="objZeile">
+  <label id="language" class="beschreibung">language</label>
+  <div>
+    <input type="checkbox" id="sports" name="language" value="spanish" />
+    <label for="sports">Spanish</label>
+  </div>
+  <div>
+    <input type="checkbox" id="german" name="language" value="german" />
+    <label for="music">German</label>
+  </div>
+ <div>
+    <input type="checkbox" id="english" name="language" value="english" />
+    <label for="english">English</label>
+  </div>  
+</div>
+
+    
+ <div id="seisfilmlange" class="eingabe">
+    <label id="name" class="beschreibung">Job title</label>
+    <input id="eingabejobtitle" class="eingabefeld autocomplete" type="text" />
+ </div>
+
+<div id="buttonocho">
+      <button id="logKnopf" onclick="anzeigenMatch1();alertanlegen();">Safe</button>
+ </div>
+
+      <!-- Show hidden content in a fancybox 
+            <a data-fancybox data-src="#hidden-content">
+                <button class="green button">Trigger a fancybox</button>
+            </a>
+            <div id="hidden-content" style="display:none;">
+                <h2>Hello</h2>
+                <p>You are awesome.</p>
+            </div>-->
+
+</div> <!--Schliesung des anlegen-Mask divs-->
+
+
+    
+  <!--Step 2: Matchen-->
+
+  <div id="match1" style="display:none">
+
+  <div id="match1-picture">
+   <img src="pics/Subgroup29-pics/Test-person-1.jpg" height="150" width="100" >
+  </div>
+
+  <div id="match1-name">
+   <h1>Jonas</h1>
+  </div>
+  <div id="match1-age">
+   <h2>22</h2>
+  </div>
+
+  <div id="match1-gender">
+   <h3>Man</h3>
+  </div>
+
+   <div id="match1-language">
+   <h3>German</h3>
+  </div>
+
+  <div id="match1-jobtitle">
+   <h3>police officer</h3>
+  </div>
+
+<div id="match1-discription">
+     <p>In life there is no map that shows you the way, no sign that gives you 
+             information. There is only the voice of your heart that guides you.</p>
+</div> 
+
+<div id="match1-Interests">
+  <h2>Interests</h2>
+</div> 
+
+<div id="match1-interest1" class="match1-hobbys">  
+  <p>Clubbing</p>
+</div>
+
+<div id="match1-interest2" class="match1-hobbys"> 
+  <p>Music</p>
+</div>
+
+
+<button id="likebutton" onclick="anzeigenChat();">
+		<img class="button" src="pics/Subgroup29-pics/like.png" alt="Anlegen-Knopf" height="50" width="50"/>
+</button>
+
+<button id="dislikebutton" onclick="anzeigenMatch2();">
+		<img class="button" src="pics/Subgroup29-pics/dislike.png" alt="Anlegen-Knopf" height="50" width="50"/>
+</button>
+  
+
+</div> <!--schliesung des match 1 divs-->
+
+
+    
+  <div id="match2" style="display:none">
+
+  <div id="match2-picture">
+   <img src="pics/Subgroup29-pics/Test-person-2.jpg" height="150" width="100" >
+  </div>
+
+  <div id="match2-name">
+   <h1>Lukas</h1>
+  </div>
+  <div id="match2-age">
+   <h2>32</h2>
+  </div>
+
+  <div id="match2-gender">
+   <h3>Divers</h3>
+  </div>
+
+   <div id="match2-language">
+   <h3>German</h3>
+  </div>
+
+  <div id="match2-jobtitle">
+   <h3>Yoga teacher</h3>
+  </div>
+
+<div id="match2-discription">
+     <p>Don’t walk behind me; I may not lead. Don’t walk in front of me; I may not follow. Just walk beside me and be my friend</p>
+</div> 
+
+<div id="match2-Interests">
+  <h2>Interests</h2>
+</div> 
+
+<div id="match2-interest1" class="match2-hobbys">  
+  <p>Sports</p>
+</div>
+
+<div id="match2-interest2" class="match2-hobbys"> 
+  <p>Reading</p>
+</div>
+
+
+<button id="likebutton" onclick="anzeigenChat();">
+		<img class="button" src="pics/Subgroup29-pics/like.png" alt="Anlegen-Knopf" height="50" width="50"/>
+</button>
+
+<button id="dislikebutton" onclick="anzeigenMatch3();">
+		<img class="button" src="pics/Subgroup29-pics/dislike.png" alt="Anlegen-Knopf" height="50" width="50"/>
+</button>
+  
+
+</div> <!--schliesung des match 2 divs-->
+
+  <div id="match3" style="display:none">
+
+  <div id="match3-picture">
+   <img src="pics/Subgroup29-pics/Test-person-3.jpg" height="150" width="100" >
+  </div>
+
+  <div id="match3-name">
+   <h1>Sara</h1>
+  </div>
+  <div id="match3-age">
+   <h2>27</h2>
+  </div>
+
+  <div id="match3-gender">
+   <h3>Female</h3>
+  </div>
+
+   <div id="match3-language">
+   <h3>English</h3>
+  </div>
+
+  <div id="match3-jobtitle">
+   <h3>student</h3>
+  </div>
+
+<div id="match3-discription">
+     <p>A true friend is someone who thinks that you are a good egg even though he knows that you are slightly cracked.</p>
+</div> 
+
+<div id="match3-Interests">
+  <h2>Interests</h2>
+</div> 
+
+<div id="match3-interest1" class="match3-hobbys">  
+  <p>Reading</p>
+</div>
+
+<div id="match3-interest2" class="match3-hobbys"> 
+  <p>Clubbing</p>
+</div>
+
+
+<button id="likebutton" onclick="anzeigenChat();">
+		<img class="button" src="pics/Subgroup29-pics/like.png" alt="Anlegen-Knopf" height="50" width="50"/>
+</button>
+
+<button id="dislikebutton" onclick="anzeigenMatch1();">
+		<img class="button" src="pics/Subgroup29-pics/dislike.png" alt="Anlegen-Knopf" height="50" width="50"/>
+</button>
+  
+
+</div> <!--schliesung des match 3 divs-->
+
+  </br>
+    
+  <!--Step 3: E-Mail-->
+  <div id="email-maske" style="display:none">
+  </br>
+    <h3 id="subject">Hurray, it's a match!</h3>
+    <h5 id="sender">YW</h5>
+
+     <div id="sender-too">
+       YourWebsite - noreply
+       <br/>
+       To: You
+      </div>
+
+    </br>
+    
+    <p class="content">
+      Hello (username)! Congratulations, you just matched with (username) on (website name).
+      </p>
+    <h5 id="question">What's next?</h5>
+    <p class="content">
+      Now all that is left to do is choose the best date and time for the two of you to start a chat in our forum. To do so, please insert a minimum of two options for your partner to choose from!
+      </p>
+
+    <form>
+      <label for="chat">Enter a date and time for your chat:</label>
+      <input
+        id="chat"
+        type="datetime-local"
+        name="chatting"
+        min="2023-01-01T06:30"
+        max="2023-02-29T00:00" />
+      </form>
+       <!--Quelle:https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/datetime-local-->
+    
+    <form>
+      <label for="chat">Enter a date and time for your chat:</label>
+      <input
+        id="chat"
+        type="datetime-local"
+        name="chatting"
+        min="2023-01-01T06:30"
+        max="2023-02-29T00:00" />
+      </form>
+
+    <button id="send-reply">Send!</button>
+
+    <p class="content">
+      Don't worry about informing your partner, we'll take care of that for you! All you have to do is press SEND after filling out the forms. After that, you'll receive a response from us once your partner has agreed to the date.
+    </p>
+    
+    </div>
+
+  <!--Step 4: Chat Forum-->
+  <div id="chat-maske">
+
+    <div class="chat-example-sender">
+      <img src="/pics/Subgroup29-pics/user2.png" class="icon-sender">
+      <h5 class="username">Donna Noble</h5>
+      <p>Hi! Can't believe I finally found someone who also likes R&B :P</p>
+    </div>
+
+    <div class="chat-example-receiver">
+      <img src="/pics/Subgroup29-pics/user1.png" class="icon-receiver">
+      <h5 class="username">Martha Jones</h5>
+      <p>Hi same, are you also new in town?</p>
+      </div>
+
+    <div class="chat-example-sender">
+       <img src="/pics/Subgroup29-pics/user2.png" class="icon-sender">
+      <h5 class="username">Donna Noble</h5>
+      <p>Nope, been living here for five years now. Wbu?</p>
+    </div>
+
+    <div class="chat-example-receiver">
+      <img src="/pics/Subgroup29-pics/user1.png" class="icon-receiver">
+      <h5 class="username">Martha Jones</h5>
+      <p>3 weeks for me! I moved here because of uni.</p>
+    </div>
+    
+    </div>
+
+    
+  <!--ab hier Java Script-->
+  <script type="text/javascript">
+
+
+    function anzeigenIntroduction(){
+  console.log('anzeigenIntroduction');
+   $("#anlegen-mask").hide();
+   $("#match1").hide();
+   $("#match2").hide();
+   $("#match3").hide(); 
+   $("#introduction-maske").show();
+   $("#email-maske").hide();
+   $("#chat-maske").hide();
+}
+
+  function anzeigenAnlegen(){
+  console.log('anzeigenAnlegen');
+   $("#anlegen-mask").show();
+   $("#match1").hide();
+   $("#match2").hide();
+   $("#match3").hide(); 
+   $("#introduction-maske").hide();
+   $("#email-maske").hide();
+   $("#chat-maske").hide();
+}
+  
+function anzeigenMatch1(){
+  console.log('anzeigenMatch1');
+   $("#anlegen-mask").hide();
+   $("#match1").show();
+   $("#match2").hide();
+   $("#match3").hide();
+   $("#introduction-maske").hide();
+   $("#email-maske").hide();
+   $("#chat-maske").hide();
+}
+
+function anzeigenMatch2(){
+  console.log('anzeigenMatch2');
+   $("#anlegen-mask").hide();
+   $("#match1").hide();
+   $("#match2").show();
+   $("#match3").hide();
+   $("#introduction-maske").hide();
+   $("#email-maske").hide();
+   $("#chat-maske").hide();
+}
+
+function anzeigenMatch3(){
+  console.log('anzeigenMatch3');
+   $("#anlegen-mask").hide();
+   $("#match1").hide();
+   $("#match2").hide();
+   $("#match3").show(); 
+   $("#introduction-maske").hide();
+   $("#email-maske").hide();
+   $("#chat-maske").hide();
+}
+
+  function anzeigenChat(){
+  console.log('anzeigenChat');
+   $("#anlegen-mask").hide();
+   $("#match1").hide();
+   $("#match2").hide();
+   $("#match3").hide(); 
+   $("#introduction-maske").hide();
+   $("#email-maske").hide();
+   $("#chat-maske").show();
+}
+
+  function anzeigenEmail(){
+  console.log('anzeigenEmail');
+   $("#anlegen-mask").hide();
+   $("#match1").hide();
+   $("#match2").hide();
+   $("#match3").hide(); 
+   $("#introduction-maske").hide();
+   $("#email-maske").show();
+   $("#chat-maske").hide();
+}
+
+function alertanlegen(){
+         alert("Your registration was successful!")
+      }
+
+
+
+//legt die Regeln fest, welche Kriterien erfüllt sein müssen
+//function myRules(){
+ // console.log("Aufruf von Funktion myRules()");
+
+  //Das Inputfeld mit dem Namen "filmtitelreq" wird selektiert
+  //$("input[name='age']").rules("add",{
+    
+   // required: true, //Feld muss ausgefüllt werden
+   // minlength: 2,
+
+    //Fehlermeldung wird angezeigt bei Nichteinhalten der Regeln
+   // messages:{
+     // required: 'bitte geben Sie den vollständigen Filmtitel ein',
+     // minlength: 'Bitte geben Sie den vollständigen Filmtitel (mindestens 2 Zeichen) ein'
+   // }
+ // }); 
+//Validate Funktion
+//$(".validateForm").validate({
+ //   errorElement: 'span'
+      
+//Aufrufen der Function myRules()
+//myRules();
+  
+</script>
+       
+</body>
+  
+</html>
+
+
+<!--was wir noch brauchen:
+-alert bei Match: du hast ein match
+-alert: erfolgreich angelegt
+-möglicherweise Profil bearbeiten (für mehr java)
+-Rules Java
+-->

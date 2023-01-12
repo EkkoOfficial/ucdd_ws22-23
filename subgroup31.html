@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<!-- ***************************************************************
+*    This file belongs to the imuk5-ucdd template set                 *
+* Copyright (c) by UNKNOWN                                *
+* Free to use for IMUK5-UCDD students 
+******************************************************************** -->
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>FindYourVibe service</title>
+
+  <script type="text/javascript" src="js/jquery-3.1.1.min.js">
+
+  </script>
+
+  <link rel="stylesheet" href="stylesheets/subgroup31.css">
+
+</head>
+
+<body>
+
+
+  <!----------------------------Header-------------------------------------------------->
+  <header>
+        <div class="header">
+    <a href="index.html">
+        <img id="logo" src="pics/logo.png"/>
+    </a>
+    
+    <nav class="navigation">
+      <ul>
+        <li><a href="aboutUs.html">About Us</a></li>
+        <li><a href="subgroup29.html">Group29</a></li>
+        <li><a href="subgroup31.html">FindYourVibe service</a></li>
+        <li><a href="">GroupSamThomas</a></li>
+        <li><a href="contactUs.html">Contact Us</a></li>
+      </ul>
+      </nav>
+    </div>
+  </header>
+
+
+  <!----------------------------Start page -------------------------------------------------->
+  <div id="showIntroductionPage">
+    
+<!-- Source for Buttons + Text on Pic's form: https://wiki.selfhtml.org/wiki/JavaScript/Tutorials/Spiele/Multiple-Choice-Quiz#HTML
+https://www.w3schools.com/howto/howto_css_button_on_image.asp -->
+    <div id="teaser">
+      <img src="pics/Subgroup31-pics/teaserIntroduction.png" alt="StartPic" style="width: 100%;"></img>
+      <div class="headlineStartPage">FindYourVibe - The quiz for finding bars, clubs and events in your local town!</div>
+      <button id="quizButton" onclick="showQuiz();">Test FindYourVibe now!</button>
+
+    </div>
+
+<div class="contentStartPage">
+    <h2 class="headline2">Our approach</h2>
+
+    <p class="text">
+      FindYourVibe is a quiz to find bars, clubs and events in a user's city. <br>
+      The player can indicate what kind of bars, clubs and events he or she is looking for, according to his or her interests. <br>
+      The quiz is the perfect way to get to know a new city, for example because of a move. Moreover, it is a convenient way to connect with like-minded people. <br>
+      At the end of the quiz the user receives at least one suitable option that fits to his or her interests. <br>
+After that there is the option for him or her to join a forum. <br> There the user can create posts and reply to other community members' posts.
+The quiz is in German language because the Added Value Service is supposed to be integrated on a German community website. <br>
+    </p>
+
+    <h2 class="headline2">Meet the creators of the idea</h2>
+
+    <p class="text">
+       <br>
+    </p>
+
+  <!-----Read More, source: fancyStuff.html  -->
+        <div id="readMoreAboutLena">
+        <button id="readMore" class="read" style="display:block">Find out more about Lena</button>
+        <button class="read" style="display:none">Show Less</button>
+        <div id="readText" style="display:none; width:200px; clear:left">
+            Text about Lena<br/>
+        </div>
+        <script type="text/javascript">           
+            $(".read").click(function() {
+                // If you use the toggle function with the parameter "slow", then the selected elements vary their display attribute between none and block, but this is done in an animated way.
+                // The optional second parameter is a callback function, i.e., it is executed after the animation finishes.
+                $("#readText").toggle( "slow",function(){
+                    // If you use the toggle function without a parameter, then it simply varies the display attribute of the selected object between none and block
+                    $(".read").toggle()
+                } );
+            });
+        </script>
+    </div>
+
+          <div id="readMoreAboutAlia">
+            <img class= "teamPics" src="pics/Subgroup31-pics/picAlia.jpg"></img>
+        <button id="readMore" class="read" style="display:block">Find out more about Alia</button>
+        <button class="read" style="display:none">Show Less</button>
+        <div id="readText" style="display:none; width:200px; clear:left">
+            Text about Alia<br/>
+        </div>
+        <script type="text/javascript">           
+            $(".read").click(function() {
+                // If you use the toggle function with the parameter "slow", then the selected elements vary their display attribute between none and block, but this is done in an animated way.
+                // The optional second parameter is a callback function, i.e., it is executed after the animation finishes.
+                $("#readText").toggle( "slow",function(){
+                    // If you use the toggle function without a parameter, then it simply varies the display attribute of the selected object between none and block
+                    $(".read").toggle()
+                } );
+            });
+        </script>
+    </div>
+  
+
+
+
+
+</div> 
+  </div>
+  
+
+
+  <!----------------------------Quiz page-------------------------------------------------->
+
+  <!-- Source for Buttons + Text on Pic's form: https://wiki.selfhtml.org/wiki/JavaScript/Tutorials/Spiele/Multiple-Choice-Quiz#HTML-->
+
+  
+  <form id="showQuizPage" action="javascript:showQuestions()" method="get" style="display:none">
+
+  <!-- Source for button on picutre form: https://www.w3schools.com/howto/howto_css_button_on_image.asp-->  
+    <div id="teaser">
+      <img src="pics/Subgroup31-pics/teaserQuiz.png" alt="QuizPic" style="width: 100%;">
+      <div class="headlineQuizPage">Willkommen zum FindYourVibe Quiz!
+      </div>
+       
+      <button id="StartQuizButton">Quiz starten</button>
+      
+
+    </div>  
+  </form>
+
+
+  <!----------------------------Questions page-------------------------------------------------->
+  <form id="showQuestionPage" action="" method="get" style="display:none">
+
+    <div id="questions">
+      <!--Question 1-->
+      <h3 class="headline3">Nach was suchst du?</h3>
+      <ul>
+        <li>
+          <input type="radio" name="answer" id="q1_1">
+          <label for="q1_1">Bars</label>
+        </li>
+
+        <li>
+          <input type="radio" name="answer" id="q1_2">
+          <label for="q1_2">Clubs</label>
+        </li>
+
+        <li>
+          <input type="radio" name="answer" id="q1_3">
+          <label for="q1_3">Events</label>
+        </li>
+
+      </ul>
+
+      
+
+      <!--Question 2-->
+      <h3 class="headline3">Welche Musikrichtung magst du?</h3>
+      <ul>
+        <li>
+          <input type="radio" name="answer" id="q2_1">
+          <label for="q2_1">Rock</label>
+        </li>
+
+        <li>
+          <input type="radio" name="answer" id="q2_2">
+          <label for="q2_2">Pop</label>
+        </li>
+
+        <li>
+          <input type="radio" name="answer" id="q2_3">
+          <label for="q2_3">Hip Hop</label>
+        </li>
+
+        <li>
+          <input type="radio" name="answer" id="q2_4">
+          <label for="q2_4">Schlager</label>
+        </li>
+
+        <li>
+          <input type="radio" name="answer" id="q2_5">
+          <label for="q2_5">Techno</label>
+        </li>
+
+        <li>
+          <input type="radio" name="answer" id="q2_6">
+          <label for="q2_6">Deutsch Pop</label>
+        </li>
+      </ul>
+
+    
+
+
+      <!--Question 3-->
+      <h3 class="headline3">Wann möchtest du etwas erleben?</h3>
+      <ul>
+        <li>
+          <input type="radio" name="answer" id="q3_1">
+          <label for="q3_1">Heute</label>
+        </li>
+
+        <li>
+          <input type="radio" name="answer" id="q3_2">
+          <label for="q3_2">Unter der Woche</label>
+        </li>
+
+        <li>
+          <input type="radio" name="answer" id="q3_3">
+          <label for="q3_3">Am Wochenende</label>
+        </li>
+      </ul>
+
+   
+
+      <!--Question 4-->
+
+      <h3 class="headline3">Was entspricht am ehesten deinem "Vibe"?</h3>
+      <ul>
+        <li>
+          <input type="radio" name="answer" id="q4_1">
+          <label for="q4_1">Musik</label>
+        </li>
+
+        <li>
+          <input type="radio" name="answer" id="q4_2">
+          <label for="q4_2">Kultur</label>
+        </li>
+
+        <li>
+          <input type="radio" name="answer" id="q4_3">
+          <label for="q4_3">Sport</label>
+        </li>
+      </ul>
+
+      
+
+
+      <!--Question 5-->
+
+      <h3 class="headline3">Welcher Altersgruppe gehörst du zu?</h3>
+      <ul>
+        <li>
+          <input type="radio" name="answer" id="q5_1">
+          <label for="q5_1">0-17 Jahren</label>
+        </li>
+
+        <li>
+          <input type="radio" name="answer" id="q5_2">
+          <label for="q5_2">18-30 Jahren</label>
+        </li>
+
+        <li>
+          <input type="radio" name="answer" id="q5_3">
+          <label for="q5_3">31-49 Jahren</label>
+        </li>
+
+        <li>
+          <input type="radio" name="answer" id="q5_4">
+          <label for="q5_4">50-69 Jahren</label>
+        </li>
+
+        <li>
+          <input type="radio" name="answer" id="q5_5">
+          <label for="q5_5">ab 70 Jahren</label>
+        </li>
+      </ul>
+
+    
+
+
+      <!--Question 6-->
+
+      <h3 class="headline3">Welcher Berufsgruppe gehörst du zu?</h3>
+      <ul>
+        <li>
+          <input type="radio" name="answer" id="q6_1">
+          <label for="q6_1">Schüler</label>
+        </li>
+
+        <li>
+          <input type="radio" name="answer" id="q6_2">
+          <label for="q6_2">Azubi</label>
+        </li>
+
+        <li>
+          <input type="radio" name="answer" id="q6_3">
+          <label for="q5_3">Student</label>
+        </li>
+
+        <li>
+          <input type="radio" name="answer" id="q6_4">
+          <label for="q6_4">Rentner</label>
+        </li>
+
+        <li>
+          <input type="radio" name="answer" id="q6_5">
+          <label for="q6_5">Arbeitnehmer</label>
+        </li>
+      </ul>
+      
+    </div>
+
+
+
+
+    <div class="buttonAuswertung">
+      <input type="button" onclick="showResults();" value="Ihre persönliche Auswahl"  </input>
+    </div>
+
+    <div class=buttonAbbrechen>
+      <input type="button" ondblclick="showIntroductionPage();" value="Abbrechen"</input>
+    </div>
+
+
+
+
+  </form>
+
+
+  <!----------------------------result page Quiz-------------------------------------------------->
+  <div id="showResultPage" style="display:none">
+
+    <div id="teaser">
+      <img src="pics/Subgroup31-pics/teaserQuiz.png" alt="ResultPic" style="width: 100%;">
+      <div class="headlineResultPage">Sehen Sie Ihre persönliche Auswahl an. </br> Viel Spaß!</div>
+    </div>
+    
+<div class="contentResultPage">
+    <h2 class="headline2_2">Ihre Top Ergebnisse</h2>
+    <div id="results">
+ </div>
+    </div>
+  </div>
+
+
+
+
+  <!----------------------------Forum page -------------------------------------------------->
+  <div id="showForumPage" style="display:none">
+    <h1 class="headline1">Willkommen im Forum!</h1>
+
+  </div>
+
+
+  <!-----------------------------Java Script part----------------------------------------->
+  <script>
+
+    function showIntroductionPage() {
+      console.log('showIntroductionPage');
+      $("#showQuizPage").hide();
+      $("#showIntroductionPage").show();
+      $("#showResultPage").hide();
+      $("#showQuestionPage").hide();
+      $("#showForumPage").hide();
+    }
+
+
+    function showQuiz() {
+      console.log('showQuiz');
+      $("#showQuizPage").show();
+      $("#showIntroductionPage").hide();
+      $("#showResultPage").hide();
+      $("#showQuestionPage").hide();
+      $("#showForumPage").hide();
+    }
+
+    function showQuestions() {
+      console.log('showQuestions');
+      $("#showQuestionPage").show();
+      $("#showIntroductionPage").hide();
+      $("#showQuizPage").hide();
+      $("#showResultPage").hide();
+      $("#showForumPage").hide();
+    }
+
+
+
+    function showResults() {
+      console.log('showResults');
+      $("#showResultPage").show();
+      $("#showQuizPage").hide();
+      $("#showQuestionPage").hide();
+      $("#showIntroductionPage").hide();
+      $("#showForumPage").hide();
+    }
+
+
+    /* Forum beitreten*/
+    function joinForum() {
+      console.log('joinForum');
+      $("#showForumPage").show();
+      $("#showResultPage").hide();
+      $("#showQuizPage").hide();
+      $("#showQuestionPage").hide();
+      $("#showIntroductionPage").hide();
+    }
+
+
+
+
+   
+
+    //Constructor Result page
+    function Result(picture, category, name, description, date, location, price) {
+      console.log(`Result with ${picture}, ${category}, ${name}, ${description}, ${date}, ${location}, ${price}`);
+
+      this.picture = picture;
+      this.category = category;
+      this.name = name;
+      this.description = description;
+      this.date = date;
+      this.location = location;
+      this.price = price;
+    }
+
+
+
+    //Array list
+    var arrayResult = new Array();
+    arrayResult[0] = new Result("pics/Subgroup31-pics/bar1", "Bar", "Harry's'", "Im Harry's erwarten dich leckere Drinks und Cocktails aus aller Welt.", "Freitag-Montag", "Muellerstraße 7", "freier Eintritt");
+    arrayResult[1] = new Result("pics/Subgroup31-pics/bar2", "Bar", "Havana", "21:00-22:00 Uhr Happy Hour", "Mittwoch-Samstag", "Bahnhofstraße 55", "freier Eintritt");
+    arrayResult[2] = new Result("pics/Subgroup31-pics/club1", "Club", "Elevate Lounge", "Wir öffnen euch die Türen in eine völlig neue Welt. Kommt vorbei!", "Donnerstag-Freitag", "Hauptstraße 10", "10,00€");
+    arrayResult[3] = new Result("pics/Subgroup31-pics/club2", "Club", "Club Sapphire", "Der modernste Club der Stadt.", "04.02.2023", "Bergstraße 23", "15,00€");
+    arrayResult[4] = new Result("pics/Subgroup31-pics/event1", "Event", "Kulturnacht", "Ein kulturellen Abend mit Live Musik", "28.01.2023", "Stadthalle", "35,00€");
+    arrayResult[5] = new Result("pics/Subgroup31-pics/event2", "Event", "Konzert", "Erlebe den Berliner Rapper in deiner Stadt!", "02.02.2023", "Arena", "60,00€");
+
+
+
+// Ereignisse + Forum Button erstellen mit Array Liste
+    function CreateResult(index) {
+      console.log(`Create result with ${index}`);
+      $("#results").append(
+      `<div class="insertResultInfo">
+      ${insertResults(index)}
+      
+      <div class= "forum">
+      ${createForumButton(index,"joinForum")}</div>
+        </div>
+        `
+      );
+    }
+
+
+  function insertResults(index){
+    var picture=`<div> <img class="picture" scr="${arrayResult[index].picture}"/> </div> `;
+    var category=`< div class= "category" > ${arrayResult[index].category}</div > `;
+    var name=`< div class= "name" > ${arrayResult[index].name}</div> `;
+    var description=`< div class= "description" > ${arrayResult[index].description}</div> `;
+    var date=`< div class= "date" > ${arrayResult[index].date}</div> `;
+    var location=`< div class= "location" > ${arrayResult[index].location}</div> `;
+    var price=`< div class= "price" > ${arrayResult[index].price}</div> `;
+
+    var result =` ${picture}
+                  ${category}                   
+                  ${name}
+                  ${description}
+                  ${date}
+                  ${location}
+                  ${price}`;
+                  
+                 return result;
+    
+  }
+
+// Forum Button erstellen
+  function createForumButton(id) {
+  console.log(`Create Forum Button ${id}`)
+
+  var forumButton = `< button class= "forum" >
+      oncklick="${id}" 
+    
+      </button >`
+          return forumButton;
+  }
+
+
+
+
+  </script>
+</body>
+
+</html>
