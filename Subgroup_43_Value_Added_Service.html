@@ -9,6 +9,7 @@
 <head>
   <meta charset="utf-8">
   <title>Event Planner</title>
+  <link rel="stylesheet" href="dist/bootstrap.css">
   <link rel="stylesheet" href="stylesheets/index.css">
   <link rel="stylesheet" href="stylesheets/subgoup43.css">
 </head>
@@ -48,6 +49,8 @@
     </div>
 
   </div>
+
+
 
   <!-- ****** Form Section ****** -->
 
@@ -362,26 +365,47 @@
       </div> 
  <!-- ******                 Formulare                    ****** --> 
    <!-- ******Formular Ausschanklizenz****** -->
-      <div id="ausschank" style="display: none">
-      <a href="link folgt"> Formular Antrag Ausschanklizenz </a>
+
+      <!-- HIER ALLE ERGEBNIS DIVS REINPACKEN-->
+      <div id="ergenisse">
+      <div id="text_ausschank" class="collapse">
+          <a href="link folgt"> Formular Antrag Ausschanklizenz </a>
+        </div>
+       <!-- ******konzept outdoor****** -->
+        <div id="text_outdoor" class="collapse">
+          <a href="link folgt"> Formular Sicherheitskonzept outdoor </a>
+        </div>
+       <!-- ******konzept indoor****** -->
+        <div id="text_indoor" class="collapse">
+          <a href="link folgt"> Formular Sicherheitskonzept indoor </a>
+        </div>
+      <!-- ******Formular Jugendschutz****** -->
+        <div id="text_jugendschutz" class="collapse">
+          <a href="link folgt"> Formular Jugendschutz </a>
+        </div>
+       <!-- ******Formular Lärmschutz****** -->
+        <div id="text_laermschutz" class="collapse">
+          <a href="link folgt"> Formular Lärmschutz </a>
+        </div>
+      </div>
     </div>
-   <!-- ******konzept outdoor****** -->   
-    <div id="outdoor" style="display: none">
-      <a href="link folgt"> Formular Sicherheitskonzept outdoor </a>
-    </div>
-   <!-- ******konzept indoor****** -->   
-    <div id="indoor" style="display: none">
-      <a href="link folgt"> Formular Sicherheitskonzept indoor </a>
-    </div>
-  <!-- ******Formular Jugendschutz****** -->    
-    <div id="Jugendschutz" style="display: none"> 
-      <a href="link folgt"> Formular Jugendschutz </a>
-    </div>
-   <!-- ******Formular Lärmschutz****** -->   
-    <div id="lärmschutz" style="display: none"> 
-      <a href="link folgt"> Formular Lärmschutz </a>
-    </div>
-        
+  </div>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
     </div>
   </div>
 

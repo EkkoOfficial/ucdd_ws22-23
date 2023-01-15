@@ -1,45 +1,53 @@
+//Referenz zum Form
+var eventForm = document.getElementById("event_form");
 
-var form = document.getElementById("event_form");
-form.addEventListener('submit', (event) => {
+const ergebnisse = document.querySelector('#ergenisse');
+
+//Referenz zu den Ergebnisstexten
+const text_jugendschutz = document.querySelector('#text_jugendschutz');
+const text_ausschank = document.querySelector('#text_ausschank');
+const text_ort = document.querySelector('#text_ort');
+
+//Funktion start
+eventForm.addEventListener('submit', (event) => {
     event.preventDefault();
-    var option1 = document.getElementsByName("option1")[0];
-    var option2 = document.getElementsByName("option2")[0];
-    var option3 = document.getElementsByName("option3")[0];
-    var option4 = document.getElementsByName("option4")[0];
-    var div1 = document.getElementById("div1");
-    var div2 = document.getElementById("div2");
-    var div3 = document.getElementById("div3");
-    var div4 = document.getElementById("div4");
-  
-    var sancar = document.getElementByName("sancar")[0];
-    var sani = document.getElementById("sani")
 
-    if (option1.checked) {
-        div1.style.display = "block";
-    } else {
-        div1.style.display = "none";
-    }
-    if (option2.checked) {
-        div2.style.display = "block";
-    } else {
-        div2.style.display = "none";
-    }
-    if (option3.checked) {
-        div3.style.display = "block";
-    } else {
-        div3.style.display = "none";
-    }
-    if (option4.checked) {
-        div4.style.display = "block";
-    } else {
-        div4.style.display = "none";
+    //ruft daten aus dem Form ab und packt sie in das Objekt
+    const formData = new FormData(eventForm);
+    console.log('formData:', formData);
+
+    // ergbenisse zurück setzen
+    ergebnisse.querySelectorAll('.collapse').forEach(function (ergeniss ) {
+        ergeniss.classList.remove('show');
+    });
+
+    //variablen für jedes Eingabefeld
+    const ev_vorname = formData.get('vorname');
+    const ev_nachname = formData.get('nachname');
+    const ev_art = formData.get('art');
+    const ev_ort = formData.get('ort');
+    const ev_alkohol = formData.get('alkohol');
+
+
+
+    //Bedingungen
+
+    //Input und select
+    if(ev_art == 'konzert') {
+        text_ausschank.classList.add('show');
     }
 
     //radio
     if(ev_ort === 'indoor'){
         text_ort.classList.add('show');
     }
-    alert('successfully submitted');
+
+    // checkbox
+    if (ev_alkohol === 'on') {
+        text_jugendschutz.classList.add('show');
+    }
+
+
 });
 
 /*alert*/
