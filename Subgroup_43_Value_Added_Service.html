@@ -11,7 +11,6 @@
   <title>Event Planner</title>
   <link rel="stylesheet" href="stylesheets/index.css">
   <link rel="stylesheet" href="stylesheets/subgoup43.css">
-  <!-- Es ist alles so hässlich weil ich deren stylesheet eingebunden habe -->
 </head>
 
 <body>
@@ -83,28 +82,28 @@
             <!-- ****** Art der Veranstaltung / Größe der Veranstaltung ******-->
             <div class="row mb-3">
               <div class="col">
-                <label for="dropdown" class="form-label">Art der Veranstaltung:</label><br>
-                <select id="dropdown" name="Art der Veranstaltung" class="form-select mb-3"><br>
-                  <option value="konzert">Konzert</option><br>
-                  <option value="tanzveranstaltung">Tanzveranstaltung</option><br>
-                  <option value="flohmarkt">Flohmarkt</option><br>
-                  <option value="sportveranstaltung">Sportveranstaltung</option><br>
-                  <option value="umzugdemonstration">Umzug / Demonstration</option><br>
-                  <option value="politischeveranstaltung">politische Veranstaltung / Kundgebung</option><br>
-                  <option value="firmenveranstaltung">Firmenveranstaltung</option><br>
-                  <option value="kinder">Familienfreundlich / Kinder</option><br>
-                  <option value="sonstige">sonstige</option><br>
+                <label for="art" class="form-label">Art der Veranstaltung:</label>
+                <select id="art" name="art" class="form-select mb-3">
+                  <option value="konzert">Konzert</option>
+                  <option value="tanzveranstaltung">Tanzveranstaltung</option>
+                  <option value="flohmarkt">Flohmarkt</option>
+                  <option value="sportveranstaltung">Sportveranstaltung</option>
+                  <option value="umzugdemonstration">Umzug / Demonstration</option>
+                  <option value="politischeveranstaltung">politische Veranstaltung / Kundgebung</option>
+                  <option value="firmenveranstaltung">Firmenveranstaltung</option>
+                  <option value="kinder">Familienfreundlich / Kinder</option>
+                  <option value="sonstige">sonstige</option>
                 </select>
               </div>
               <div class="col">
-                <label for="dropdown2" class="form-label"> Größe der Veranstaltung:</label>
-                <select id="dropdown2" name="Größe der Veranstaltung" class="form-select mb-3">
-                  <option value="bis50"> bis 50 pax </option><br>
-                  <option value="bis100"> bis 100 pax </option><br>
-                  <option value="bis250"> bis 250 pax </option><br>
-                  <option value="bis500"> bis 500 pax </option><br>
-                  <option value="bis1000"> bis 1000 pax </option><br>
-                  <option value="über1000"> über 1000 pax </option><br>
+                <label for="groesse" class="form-label"> Größe der Veranstaltung:</label>
+                <select id="groesse" name="groesse" class="form-select mb-3">
+                  <option value="bis50"> bis 50 pax </option>
+                  <option value="bis100"> bis 100 pax </option>
+                  <option value="bis250"> bis 250 pax </option>
+                  <option value="bis500"> bis 500 pax </option>
+                  <option value="bis1000"> bis 1000 pax </option>
+                  <option value="über1000"> über 1000 pax </option>
                 </select>
               </div>
             </div>
@@ -125,9 +124,9 @@
                 <div class="form-check-inline">
                   <input type="radio" class="form-check-input" id="privat" name="privatöffentlich" value="privat">
                   <label for="privat" class="form-check-label mx-1">privat</label>
-                  <input type="radio" class="form-check-input mx-1" id="öffentlich" name="privatöffentlich"
-                    value="öffentlich">
-                  <label for="öffentlich" class="form-check-label mx-1">öffentlich</label>
+                  <input type="radio" class="form-check-input mx-1" id="oeffentlich" name="privatöffentlich"
+                         value="öffentlich">
+                  <label for="oeffentlich" class="form-check-label mx-1">öffentlich</label>
                 </div>
               </div>
               <div class="col">
@@ -145,15 +144,15 @@
               <!-- ****** Alkoholausschank ****** -->
               <div class="col">
                 <div class="form-check">
-                  <label for="alkoholausschank" class="form-check-label"> Es wird alkohol ausgeschenkt</label>
-                  <input type="checkbox" id="alkohol" name="alkoholausschank" class="form-check-input" value="alkohol">
+                  <label for="alkohol" class="form-check-label"> Es wird alkohol ausgeschenkt</label>
+                  <input type="checkbox" id="alkohol" name="alkohol" class="form-check-input">
                 </div>
               </div>
               <!-- ***** nach 22uhr ****** -->
               <div class="col">
                 <div class="form-check">
-                  <input type="checkbox" id="zeit" class="form-check-input" name="22uhr" value="22uhr">
-                  <label for="22uhr" class="form-check-label"> Die Veranstaltung findet auch nach 22Uhr statt</label>
+                  <input type="checkbox" id="zeit" class="form-check-input" name="zeit" value="22uhr">
+                  <label for="zeit" class="form-check-label"> Die Veranstaltung findet auch nach 22Uhr statt</label>
                 </div>
               </div>
               <!-- ****** Sancar ****** -->
@@ -173,20 +172,10 @@
                   value="Submit">Submit</button>
               </div>
               <div class="col">
-                <!-- LÄSST SICH NOCH NICHT SCHLIESSEN -->
                 <div id="liveAlertPlaceholder"></div>
               </div>
             </div>
 
-            <!-- Button Alt <div class="row">
-         <input type="submit" value="Submit" class="btn btn-lg btn-outline-success">
-        </div> -->
-                  
-            <input type="checkbox" name="option1" value="1"> Option 1<br>
-            <input type="checkbox" name="option2" value="2"> Option 2<br>
-            <input type="radio" name="option3" value="3"> Option 3<br>
-            <input type="radio" name="option4" value="4"> Option 4<br>
-    
           </form>
         </div>
         <div class="col"></div>
@@ -243,8 +232,8 @@
           <div class="col-md-8">
             <div class="card-body">
               <h5 class="card-title">DRK Ansprechpartner</h5>
-              <p class="card-text">Max Mustermann <br>
-                Telefon:0171/123456<br>
+              <p class="card-text">Max Mustermann 
+                Telefon:0171/123456
                 email: Max.mustermann@drk.de
                 </p>
             <!--
@@ -265,8 +254,8 @@
           <div class="col-md-8">
             <div class="card-body">
               <h5 class="card-title">Jugendschutzbeauftragter </h5>
-              <p class="card-text">Max Mustermann <br>
-                Telefon:0171/123456<br>
+              <p class="card-text">Max Mustermann 
+                Telefon:0171/123456
                 email: Max.mustermann@jugendamt.de
                 </p>
             </div>
@@ -284,8 +273,8 @@
           <div class="col-md-8">
             <div class="card-body">
               <h5 class="card-title">Ordnungsamt </h5>
-              <p class="card-text">Helga Mustermann <br>
-                Telefon:0171/123456<br>
+              <p class="card-text">Helga Mustermann 
+                Telefon:0171/123456
                 email: Helga.mustermann@ordnungsamt.de
                 </p>
             </div>
@@ -303,8 +292,8 @@
           <div class="col-md-8">
             <div class="card-body">
               <h5 class="card-title">Polizei </h5>
-              <p class="card-text">Max Mustermann <br>
-                Telefon:0171/123456<br>
+              <p class="card-text">Max Mustermann 
+                Telefon:0171/123456
                 email: Max.mustermann@polizei.de
                 </p>
             </div>
@@ -323,8 +312,8 @@
           <div class="col-md-8">
             <div class="card-body">
               <h5 class="card-title">Ansprechpartner Busunternehmen </h5>
-              <p class="card-text">Max Mustermann <br>
-                Telefon:0171/123456<br>
+              <p class="card-text">Max Mustermann 
+                Telefon:0171/123456
                 email: Max.mustermann@öffis.de
                 </p>
             </div>
@@ -343,8 +332,8 @@
           <div class="col-md-8">
             <div class="card-body">
               <h5 class="card-title">Stadtreinigung </h5>
-              <p class="card-text">Max Mustermann <br>
-                Telefon:0171/123456<br>
+              <p class="card-text">Max Mustermann 
+                Telefon:0171/123456
                 email: Max.mustermann@müll.de
                 </p>
             </div>
@@ -362,8 +351,8 @@
           <div class="col-md-8">
             <div class="card-body">
               <h5 class="card-title"> Stadthalle </h5>
-              <p class="card-text">Max Mustermann <br>
-                Telefon:0171/123456<br>
+              <p class="card-text">Max Mustermann 
+                Telefon:0171/123456
                 email: Max.mustermann@stadthalle.de
                 </p>
             </div>

@@ -35,11 +35,9 @@ form.addEventListener('submit', (event) => {
         div4.style.display = "none";
     }
 
-  
-    if (sancar.checked){
-      sani.style.display = "block";
-    }else{
-      sani.style.display = "none";
+    //radio
+    if(ev_ort === 'indoor'){
+        text_ort.classList.add('show');
     }
     alert('successfully submitted');
 });
@@ -62,6 +60,6 @@ const alert = (message, type) => {
 const alertTrigger = document.getElementById('submitBtn')
 if (alertTrigger) {
   alertTrigger.addEventListener('click', () => {
-    alert('Nice, you triggered this alert message!', 'success')
+    alert('sucessfully submitted', 'success')
   })
 }

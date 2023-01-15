@@ -6,9 +6,12 @@
   "author": "WS23-Samuel-Alazar <Samuel.T.Alazar@student.hnu.de>",
   "license": "MIT",
   "devDependencies": {
+    "mini-css-extract-plugin": "^2.7.2",
+    "rimraf": "^4.0.6",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1",
-    "webpack-dev-server": "^4.11.1"
+    "webpack-dev-server": "^4.11.1",
+    "webpack-fix-style-only-entries": "^0.6.1"
   },
   "dependencies": {
     "@popperjs/core": "^2.11.6",
