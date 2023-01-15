@@ -8,7 +8,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>FindYourVibe service</title>
+  <title>FindYourVibe</title>
 
   <script type="text/javascript" src="js/jquery-3.1.1.min.js">
 
@@ -32,8 +32,8 @@
       <ul>
         <li><a href="aboutUs.html">About Us</a></li>
         <li><a href="subgroup29.html">Group29</a></li>
-        <li><a href="subgroup31.html">FindYourVibe service</a></li>
-        <li><a href="">GroupSamThomas</a></li>
+        <li><a class="active" href="subgroup31.html">FindYourVibe</a></li>
+        <li><a href="Subgroup_43_Value_Added_Service.html">EventPlanner</a></li>
         <li><a href="contactUs.html">Contact Us</a></li>
       </ul>
       </nav>
@@ -48,35 +48,43 @@
 https://www.w3schools.com/howto/howto_css_button_on_image.asp -->
     <div id="teaser">
       <img src="pics/Subgroup31-pics/teaserIntroduction.png" alt="StartPic" style="width: 100%;"></img>
-      <div class="headlineStartPage">FindYourVibe - The quiz for finding bars, clubs and events in your local town!</div>
-      <button id="quizButton" onclick="showQuiz();">Test FindYourVibe now!</button>
-
+      <div class="headlineStartPage"><span style=color:#FFE600;">FindYourVibe</span>
+</br><span style=font-size:35px;">The quiz for finding bars, clubs and events in your local town!</span><br></div>
+    <button id="quizButton" onclick="showQuiz();">Test FindYourVibe now!</button>
     </div>
 
+  
+    
 <div class="contentStartPage">
+
     <h2 class="headline2">Our approach</h2>
 
     <p class="text">
-      FindYourVibe is a quiz to find bars, clubs and events in a user's city. <br>
+      FindYourVibe is a quiz to find bars, clubs and events in a user's city. 
       The player can indicate what kind of bars, clubs and events he or she is looking for, according to his or her interests. <br>
-      The quiz is the perfect way to get to know a new city, for example because of a move. Moreover, it is a convenient way to connect with like-minded people. <br>
-      At the end of the quiz the user receives at least one suitable option that fits to his or her interests. <br>
-After that there is the option for him or her to join a forum. <br> There the user can create posts and reply to other community members' posts.
+      <br>
+      The quiz is the perfect way to get to know a new city, for example because of a move. Moreover, it is a convenient way to connect with like-minded people. 
+      At the end of the quiz the user receives at least one suitable option that fits to his or her interests. 
+After that there is the option for him or her to join a forum. There the user can create posts and reply to other community members' posts.
 The quiz is in German language because the Added Value Service is supposed to be integrated on a German community website. <br>
+      <br>
+      <br>
     </p>
 
+   <!-----<div id="groupMembers">-->
     <h2 class="headline2">Meet the creators of the idea</h2>
-
     <p class="text">
        <br>
     </p>
+  
 
   <!-----Read More, source: fancyStuff.html  -->
         <div id="readMoreAboutLena">
+          <img class= "teamPics" src="pics/Subgroup31-pics/picLena.jpg"></img>
         <button id="readMore" class="read" style="display:block">Find out more about Lena</button>
         <button class="read" style="display:none">Show Less</button>
         <div id="readText" style="display:none; width:200px; clear:left">
-            Text about Lena<br/>
+The Graphic Designer is responsible for the design of the website and the corporate design. The trained industrial clerk discovered her passion while studying IMUK. <br/>
         </div>
         <script type="text/javascript">           
             $(".read").click(function() {
@@ -92,18 +100,18 @@ The quiz is in German language because the Added Value Service is supposed to be
 
           <div id="readMoreAboutAlia">
             <img class= "teamPics" src="pics/Subgroup31-pics/picAlia.jpg"></img>
-        <button id="readMore" class="read" style="display:block">Find out more about Alia</button>
-        <button class="read" style="display:none">Show Less</button>
-        <div id="readText" style="display:none; width:200px; clear:left">
+        <button id="readMore2" class="read2" style="display:block">Find out more about Alia</button>
+        <button class="read2" style="display:none">Show Less</button>
+        <div id="readText2" style="display:none; width:200px; clear:left">
             Text about Alia<br/>
         </div>
         <script type="text/javascript">           
-            $(".read").click(function() {
+            $(".read2").click(function() {
                 // If you use the toggle function with the parameter "slow", then the selected elements vary their display attribute between none and block, but this is done in an animated way.
                 // The optional second parameter is a callback function, i.e., it is executed after the animation finishes.
-                $("#readText").toggle( "slow",function(){
+                $("#readText2").toggle( "slow",function(){
                     // If you use the toggle function without a parameter, then it simply varies the display attribute of the selected object between none and block
-                    $(".read").toggle()
+                    $(".read2").toggle()
                 } );
             });
         </script>
@@ -112,8 +120,8 @@ The quiz is in German language because the Added Value Service is supposed to be
 
 
 
+</div>
 
-</div> 
   </div>
   
 
@@ -128,10 +136,10 @@ The quiz is in German language because the Added Value Service is supposed to be
   <!-- Source for button on picutre form: https://www.w3schools.com/howto/howto_css_button_on_image.asp-->  
     <div id="teaser">
       <img src="pics/Subgroup31-pics/teaserQuiz.png" alt="QuizPic" style="width: 100%;">
-      <div class="headlineQuizPage">Willkommen zum FindYourVibe Quiz!
-      </div>
-       
-      <button id="StartQuizButton">Quiz starten</button>
+<div class="headlineQuizPage"> Willkommen zum<span style="color:#FFE600 ;"> FindYourVibe </span> Quiz!</div>
+
+      
+      <button id="startQuizButton">Quiz starten</button>
       
 
     </div>  
@@ -146,54 +154,53 @@ The quiz is in German language because the Added Value Service is supposed to be
       <h3 class="headline3">Nach was suchst du?</h3>
       <ul>
         <li>
-          <input type="radio" name="answer" id="q1_1">
+          <input type="radio" id="filterBars" onclick="filterElems('filterBars');" name="answer">
           <label for="q1_1">Bars</label>
         </li>
 
         <li>
-          <input type="radio" name="answer" id="q1_2">
+          <input type="radio" name="answer" id="filterClubs"  onclick="filterElems('filterClubs');" >
           <label for="q1_2">Clubs</label>
         </li>
 
         <li>
-          <input type="radio" name="answer" id="q1_3">
+          <input type="radio" name="answer" id="filterEvents" onclick="filterElems('filterEvents');">
           <label for="q1_3">Events</label>
         </li>
 
       </ul>
 
-      
-
+    
       <!--Question 2-->
       <h3 class="headline3">Welche Musikrichtung magst du?</h3>
       <ul>
         <li>
-          <input type="radio" name="answer" id="q2_1">
+          <input type="radio" name="answer" id="filterRock" onclick="filterElems('filterRock');">
           <label for="q2_1">Rock</label>
         </li>
 
         <li>
-          <input type="radio" name="answer" id="q2_2">
+          <input type="radio" name="answer" id="filterPop">
           <label for="q2_2">Pop</label>
         </li>
 
         <li>
-          <input type="radio" name="answer" id="q2_3">
+          <input type="radio" name="answer" id="filterHipHop">
           <label for="q2_3">Hip Hop</label>
         </li>
 
         <li>
-          <input type="radio" name="answer" id="q2_4">
+          <input type="radio" name="answer" id="filterSchlager">
           <label for="q2_4">Schlager</label>
         </li>
 
         <li>
-          <input type="radio" name="answer" id="q2_5">
+          <input type="radio" name="answer" id="filterTechno">
           <label for="q2_5">Techno</label>
         </li>
 
         <li>
-          <input type="radio" name="answer" id="q2_6">
+          <input type="radio" name="answer" id="filterDeutschPop">
           <label for="q2_6">Deutsch Pop</label>
         </li>
       </ul>
@@ -204,40 +211,65 @@ The quiz is in German language because the Added Value Service is supposed to be
       <!--Question 3-->
       <h3 class="headline3">Wann möchtest du etwas erleben?</h3>
       <ul>
+
         <li>
-          <input type="radio" name="answer" id="q3_1">
-          <label for="q3_1">Heute</label>
+          <input type="radio" name="answer" id="filterMontag">
+          <label for="q3_1">Montag</label>
         </li>
 
         <li>
-          <input type="radio" name="answer" id="q3_2">
-          <label for="q3_2">Unter der Woche</label>
-        </li>
-
-        <li>
-          <input type="radio" name="answer" id="q3_3">
-          <label for="q3_3">Am Wochenende</label>
+          <input type="radio" name="answer" id="filterDienstag">
+          <label for="q3_2">Dienstag</label>
         </li>
       </ul>
 
-   
+ <li>
+          <input type="radio" name="answer" id="filterMittwoch">
+          <label for="q3_3">Mittwoch</label>
+        </li>
+      </ul>
+      
+  <li>
+          <input type="radio" name="answer" id="filterDonnerstag">
+          <label for="q3_4">Donnerstag</label>
+        </li>
+      </ul>
+      
+  <li>
+          <input type="radio" name="answer" id="filterFreitag">
+          <label for="q3_5">Freitag</label>
+        </li>
+      </ul>
+
+
+  <li>
+          <input type="radio" name="answer" id="filterSamstag">
+          <label for="q3_6">Samstag</label>
+        </li>
+      </ul>
+
+        <li>
+          <input type="radio" name="answer" id="filterSonntag">
+          <label for="q3_7">Sonntag</label>
+        </li>
+      </ul>
 
       <!--Question 4-->
 
       <h3 class="headline3">Was entspricht am ehesten deinem "Vibe"?</h3>
       <ul>
         <li>
-          <input type="radio" name="answer" id="q4_1">
+          <input type="radio" name="answer" id="filterMusik">
           <label for="q4_1">Musik</label>
         </li>
 
         <li>
-          <input type="radio" name="answer" id="q4_2">
+          <input type="radio" name="answer" id="filterKulutr">
           <label for="q4_2">Kultur</label>
         </li>
 
         <li>
-          <input type="radio" name="answer" id="q4_3">
+          <input type="radio" name="answer" id="filterSport">
           <label for="q4_3">Sport</label>
         </li>
       </ul>
@@ -250,27 +282,27 @@ The quiz is in German language because the Added Value Service is supposed to be
       <h3 class="headline3">Welcher Altersgruppe gehörst du zu?</h3>
       <ul>
         <li>
-          <input type="radio" name="answer" id="q5_1">
+          <input type="radio" name="answer" id="filter0-17Jahren">
           <label for="q5_1">0-17 Jahren</label>
         </li>
 
         <li>
-          <input type="radio" name="answer" id="q5_2">
+          <input type="radio" name="answer" id="filter18-30Jahren">
           <label for="q5_2">18-30 Jahren</label>
         </li>
 
         <li>
-          <input type="radio" name="answer" id="q5_3">
+          <input type="radio" name="answer" id="filter31-49Jahren">
           <label for="q5_3">31-49 Jahren</label>
         </li>
 
         <li>
-          <input type="radio" name="answer" id="q5_4">
+          <input type="radio" name="answer" id="filter50-69Jahren">
           <label for="q5_4">50-69 Jahren</label>
         </li>
 
         <li>
-          <input type="radio" name="answer" id="q5_5">
+          <input type="radio" name="answer" id="filterAb70Jahren">
           <label for="q5_5">ab 70 Jahren</label>
         </li>
       </ul>
@@ -278,39 +310,60 @@ The quiz is in German language because the Added Value Service is supposed to be
     
 
 
-      <!--Question 6-->
+      <!-- rauslassen Question 6
 
       <h3 class="headline3">Welcher Berufsgruppe gehörst du zu?</h3>
       <ul>
         <li>
-          <input type="radio" name="answer" id="q6_1">
+          <input type="radio" name="answer" id="filterSchüler">
           <label for="q6_1">Schüler</label>
         </li>
 
         <li>
-          <input type="radio" name="answer" id="q6_2">
+          <input type="radio" name="answer" id="filterAzubi">
           <label for="q6_2">Azubi</label>
         </li>
 
         <li>
-          <input type="radio" name="answer" id="q6_3">
+          <input type="radio" name="answer" id="filterStudent">
           <label for="q5_3">Student</label>
         </li>
 
         <li>
-          <input type="radio" name="answer" id="q6_4">
+          <input type="radio" name="answer" id="filterRentner">
           <label for="q6_4">Rentner</label>
         </li>
 
         <li>
-          <input type="radio" name="answer" id="q6_5">
+          <input type="radio" name="answer" id="filterArbeitnehmer">
           <label for="q6_5">Arbeitnehmer</label>
         </li>
-      </ul>
+      </ul>-->
       
     </div>
 
+<!---
+     <div id="elements">
+      <div class="filterBars filterAmWochende filterMusik filter18-30Jahren filter31-49Jahren filter50-69Jahren filterAb70Jahren"><span style="color:black">Bar: Harry`s</span></div>
 
+<div class="filterBars filterAmWochende filter filterMusik filter18-30Jahren filter31-49Jahren filter50-69Jahren filterAb70Jahren"><span style="color:black">Bar: Havana </span></div>
+    
+<div class="filterClubs filterAmWochende filterMusik filter18-30Jahren filter31-49Jahren "><span style="color:black">Club: Elevate Lounge </span></div>
+
+<div class="filterClubs filterAmWochende filterMusik filter18-30Jahren filter31-49Jahren"><span style="color:black">Club: Club Sapphire </span></div>
+
+    arrayResult[0] = new Result("pics/Subgroup31-pics/bar1", "Bar", "Harry's", "Im Harry's erwarten dich leckere Drinks und Cocktails aus aller Welt.", "Freitag-Sonntag", "Muellerstraße 7", "freier Eintritt");
+    arrayResult[1] = new Result("pics/Subgroup31-pics/bar2", "Bar", "Havana", "21:00-22:00 Uhr Happy Hour", "Mittwoch-Samstag", "Bahnhofstraße 55", "freier Eintritt");
+    arrayResult[2] = new Result("pics/Subgroup31-pics/club1", "Club", "Elevate Lounge", "Wir öffnen euch die Türen in eine völlig neue Welt. Kommt vorbei!", "Donnerstag-Samstag", "Hauptstraße 10", "10,00€");
+    arrayResult[3] = new Result("pics/Subgroup31-pics/club2", "Club", "Club Sapphire", "Der modernste Club der Stadt.", "Freitag-Samstag", "Bergstraße 23", "15,00€");
+    arrayResult[4] = new Result("pics/Subgroup31-pics/event1", "Event", "Kulturnacht", "Ein kulturellen Abend mit Live Musik", "Mittwoch", "Stadthalle", "35,00€");
+    arrayResult[5] = new Result("pics/Subgroup31-pics/event2", "Event", "Konzert", "Erlebe den Berliner Rapper in deiner Stadt!", "Dienstag", "Arena", "60,00€");
+    
+      <div class="filterGreen filterRound filterSizeLarge filterCharacterCurious"><span
+          style="color:black">Curious</span></div>
+    </div>
+
+    --->
 
 
     <div class="buttonAuswertung">
@@ -328,13 +381,7 @@ The quiz is in German language because the Added Value Service is supposed to be
 
 
   <!----------------------------result page Quiz-------------------------------------------------->
-  <div id="showResultPage" style="display:none">
-
-    <div id="teaser">
-      <img src="pics/Subgroup31-pics/teaserQuiz.png" alt="ResultPic" style="width: 100%;">
-      <div class="headlineResultPage">Sehen Sie Ihre persönliche Auswahl an. </br> Viel Spaß!</div>
-    </div>
-    
+  <div id="showResultPage" style="display:none">  
 <div class="contentResultPage">
     <h2 class="headline2_2">Ihre Top Ergebnisse</h2>
     <div id="results">
@@ -344,10 +391,13 @@ The quiz is in German language because the Added Value Service is supposed to be
 
 
 
-
   <!----------------------------Forum page -------------------------------------------------->
   <div id="showForumPage" style="display:none">
-    <h1 class="headline1">Willkommen im Forum!</h1>
+      <!-----evtl. Teaser rauslassen und bei Forum Seite reinpacken---->
+    <div id="teaser">
+      <img src="pics/Subgroup31-pics/teaserQuiz.png" alt="ResultPic" style="width: 100%;">
+      <div class="headlineResultPage">Willkommen im Forum!</div>
+    </div>
 
   </div>
 
@@ -374,8 +424,16 @@ The quiz is in German language because the Added Value Service is supposed to be
       $("#showForumPage").hide();
     }
 
-    function showQuestions() {
+
+
+
+
+function showQuestions() {
       console.log('showQuestions');
+  
+/*Zurücksetzten Radiobuttons
+  $("#questions input").prop("checked",false);*/
+
       $("#showQuestionPage").show();
       $("#showIntroductionPage").hide();
       $("#showQuizPage").hide();
@@ -385,28 +443,102 @@ The quiz is in German language because the Added Value Service is supposed to be
 
 
 
-    function showResults() {
-      console.log('showResults');
-      $("#showResultPage").show();
-      $("#showQuizPage").hide();
-      $("#showQuestionPage").hide();
-      $("#showIntroductionPage").hide();
-      $("#showForumPage").hide();
-    }
+     .filterBar {
+        width: 100px;
+        height: 100px;
+        background-color: chartreuse;
+        color: chartreuse;
+        /* This sets the border color as well as the font color 
+      }
+/* Kopie aus fancyStuff.html
 
+      .filterGreen {
+        width: 100px;
+        height: 100px;
+        background-color: chartreuse;
+        color: chartreuse;
+        /* This sets the border color as well as the font color 
+      }
 
-    /* Forum beitreten*/
-    function joinForum() {
-      console.log('joinForum');
-      $("#showForumPage").show();
-      $("#showResultPage").hide();
-      $("#showQuizPage").hide();
-      $("#showQuestionPage").hide();
-      $("#showIntroductionPage").hide();
-    }
+      .filterRed {
+        width: 100px;
+        height: 100px;
+        background-color: crimson;
+        color: crimson;
+        /* This sets the border color as well as the font color 
+      }
 
+      .filterWhite {
+        width: 100px;
+        height: 100px;
+        background-color: aquamarine;
+        color: aquamarine;
+        /* This sets the border color as well as the font color 
+      }
 
+      .filterSizeSmall {
+        width: 40px;
+        height: 40px;
+      }
 
+      .filterSizeMedium {
+        width: 80px;
+        height: 80px;
+      }
+
+      .filterSizeLarge {
+        width: 120px;
+        height: 120px;
+      }
+
+      .filterSquare {
+        border: 1px double lite-gray;
+      }
+
+      .filterRound {
+        border-radius: 50%;
+        border: 1px double lite-gray;
+      }
+
+      .filterTriangle.filterSizeMedium {
+        width: 0;
+        height: 0;
+        border-left: 40px solid transparent;
+        border-right: 40px solid transparent;
+        border-bottom: 80px solid;
+        background-color: white;
+      }
+      .filterTriangle.filterSizeSmall {
+        width: 0;
+        height: 0;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-bottom: 40px solid;
+        background-color: white;
+      }
+      .filterTriangle.filterSizeLarge {
+        width: 0;
+        height: 0;
+        border-left: 60px solid transparent;
+        border-right: 60px solid transparent;
+        border-bottom: 120px solid;
+        background-color: white;
+      }
+ 
+      #elements,
+      table {
+        margin: 20px 100px 0px 100px;
+      }
+
+      #elements div {
+        display: inline-block;
+        float: left;
+        margin: 2px;
+        font-size: small;
+        font-weight: bolder;
+      }
+
+  */
 
    
 
@@ -427,12 +559,22 @@ The quiz is in German language because the Added Value Service is supposed to be
 
     //Array list
     var arrayResult = new Array();
-    arrayResult[0] = new Result("pics/Subgroup31-pics/bar1", "Bar", "Harry's'", "Im Harry's erwarten dich leckere Drinks und Cocktails aus aller Welt.", "Freitag-Montag", "Muellerstraße 7", "freier Eintritt");
+    arrayResult[0] = new Result("pics/Subgroup31-pics/bar1", "Bar", "Harry's", "Im Harry's erwarten dich leckere Drinks und Cocktails aus aller Welt.", "Freitag-Sonntag", "Muellerstraße 7", "freier Eintritt");
     arrayResult[1] = new Result("pics/Subgroup31-pics/bar2", "Bar", "Havana", "21:00-22:00 Uhr Happy Hour", "Mittwoch-Samstag", "Bahnhofstraße 55", "freier Eintritt");
-    arrayResult[2] = new Result("pics/Subgroup31-pics/club1", "Club", "Elevate Lounge", "Wir öffnen euch die Türen in eine völlig neue Welt. Kommt vorbei!", "Donnerstag-Freitag", "Hauptstraße 10", "10,00€");
-    arrayResult[3] = new Result("pics/Subgroup31-pics/club2", "Club", "Club Sapphire", "Der modernste Club der Stadt.", "04.02.2023", "Bergstraße 23", "15,00€");
-    arrayResult[4] = new Result("pics/Subgroup31-pics/event1", "Event", "Kulturnacht", "Ein kulturellen Abend mit Live Musik", "28.01.2023", "Stadthalle", "35,00€");
-    arrayResult[5] = new Result("pics/Subgroup31-pics/event2", "Event", "Konzert", "Erlebe den Berliner Rapper in deiner Stadt!", "02.02.2023", "Arena", "60,00€");
+    arrayResult[2] = new Result("pics/Subgroup31-pics/club1", "Club", "Elevate Lounge", "Wir öffnen euch die Türen in eine völlig neue Welt. Kommt vorbei!", "Donnerstag-Samstag", "Hauptstraße 10", "10,00€");
+    arrayResult[3] = new Result("pics/Subgroup31-pics/club2", "Club", "Club Sapphire", "Der modernste Club der Stadt.", "Freitag-Samstag", "Bergstraße 23", "15,00€");
+    arrayResult[4] = new Result("pics/Subgroup31-pics/event1", "Event", "Kulturnacht", "Ein kulturellen Abend mit Live Musik", "Mittwoch", "Stadthalle", "35,00€");
+    arrayResult[5] = new Result("pics/Subgroup31-pics/event2", "Event", "Konzert", "Erlebe den Berliner Rapper in deiner Stadt!", "Dienstag", "Arena", "60,00€");
+
+
+    function showResults() {
+      console.log('showResults');
+      $("#showResultPage").show();
+      $("#showQuizPage").hide();
+      $("#showQuestionPage").hide();
+      $("#showIntroductionPage").hide();
+      $("#showForumPage").hide();
+    }
 
 
 
@@ -483,6 +625,16 @@ The quiz is in German language because the Added Value Service is supposed to be
           return forumButton;
   }
 
+    
+    /* Forum beitreten*/
+    function joinForum() {
+      console.log('joinForum');
+      $("#showForumPage").show();
+      $("#showResultPage").hide();
+      $("#showQuizPage").hide();
+      $("#showQuestionPage").hide();
+      $("#showIntroductionPage").hide();
+    }
 
 
 

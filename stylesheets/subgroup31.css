@@ -1,125 +1,112 @@
-/* Header */
-
-body{
-  margin:0;
-  font-family: Arial, Helvetica, sans-serif;
+/* header */
+nav ul{
+  float: right;
 }
 
-.navigation a {
-    color: #2A2E30;
-    font-size: 120%;
-    text-decoration: none;
-    margin:0px;
+nav li{
+  display: inline-block;
+  margin-top: 30px;
+  margin-right: 40px;
 }
 
-.navigation ul {
-   list-style-type: none;
-   margin-left: 50%;
-   position: absolute;
-   top: 0.5%;       
+nav li a{
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
 }
 
-.navigation ul li {
-   display: inline-block;
+nav ul li .active{
+  font-weight: bold;
 }
 
-.navigation ul li a {
-   display: block;
-   padding: 10px 15px;
+nav ul li:hover{
+  border-bottom: 2px solid white;
 }
 
-.navigation ul li a.active, img.active {
-   background: grey;
-   border-radius: 20px;
-}
-
-.navigation ul li a:hover {
-   background: #F2F2F2;
-   border-radius: 20px;
+nav:hover::after{
+  width: 0;
 }
 
 .header{
-    background-color: #A0BDCE;
-    height: 130px;
+    background-color: #0f1f38;
+    height: 100px;
     width:100%;
     position: absolute;
     top:0px;
     left:0px;
     margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #logo {
-	position: relative;
-  left: 40px;
-	width: 130px;
-  height: 100px;
-	top: 10px;
+      height: 45px;
+			position: absolute;
+      top: 50%;
+      transform: translate(0%, -50%);
+      margin-left: 20px;
 }
 
+/* header Ende*/
 
 
+
+/* Teaser*/
 /* Source from: https://www.w3schools.com/howto/howto_css_button_on_image.asp +
 https://www.w3schools.com/howto/howto_css_image_text.asp*/
 
-/* Container needed to position the button. Adjust the width as needed */
 #teaser {
   position: absolute;
   width: 100%;
-  top:130px;
+  top:100px;
+  left:0px;
   text-align: center;
   color: white;
 }
 
-
-/* Style the button and place it in the middle of the container/image */
-#teaser #StartQuizButton  {
+#teaser #startQuizButton  {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   padding: 12px 24px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  
-}
-
-
-
-#readMoreAboutLena{
-position: absolute;
-top: 600px;
-left:0%;
-
-}
-
-#readMoreAboutAlia{
-position: absolute;
-top: 600px;
-left:30%;
-
 }
 
 #teaser #quizButton  {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
+  top: 55%;
+  left: 35px;
   padding: 12px 24px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
 }
+/* Teaser Ende*/
 
+
+/*Buttons*/
 /*https://www.bestcssbuttongenerator.com/#/14*/
-#quizButton, #StartQuizButton, .read {
+.read, .read2 {
 	box-shadow: 0px 1px 0px 0px #FFFFFF;
 	background:linear-gradient(to bottom, #5297A6 5%, #6581B2 100%);
 	background-color:#6581B2 ;
-	border-radius:6px;
-	border:1px solid #1C3972;
+	border-radius:50px;
+	border:1px solid #6581B2;
+	display:inline-block;
+	cursor:pointer;
+	color:#FFFFFF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size:20px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #3771E3; 
+}
+
+
+input[type=button] {
+	box-shadow: 0px 1px 0px 0px #FFFFFF;
+	background:linear-gradient(to bottom, #5297A6 5%, #6581B2 100%);
+	background-color:#6581B2 ;
+	border-radius:50px;
+	border:1px solid #6581B2;
 	display:inline-block;
 	cursor:pointer;
 	color:#FFFFFF;
@@ -129,120 +116,134 @@ left:30%;
 	padding:6px 24px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #3771E3;
-
 }
-#quizButton:hover, #StartQuizButton:hover, .read:hover {
+
+
+.read:hover, .read2:hover, input[type=button]:hover{
 	background:linear-gradient(to bottom, #6581B2 5%, #5297A6 100%);
 	background-color:#1C3972;
 }
 
 
-#quizButton, #StartQuizButton {
+#readText, #readText2 {
+  font-family: Arial, Helvetica, sans-serif;
+	font-size:20px;
+}
+
+#quizButton, #startQuizButton{
+  border: 2px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+	font-size:25px;
+	font-weight:bold;
+  background-color: #0f1f38;
+  color: white;
+	padding:6px 24px;
+	text-decoration:none;
+}
+
+#quizButton:hover, #startQuizButton:hover{
+  background-color: white;
+  color: #0f1f38;
+}
+
+#quizButton, #startQuizButton{
 	position:relative;
 	top:1px;
 }
 
+/*Buttons Ende*/
 
 
+/*Start Page*/
 .headlineStartPage{
   position: absolute;
   top: 10%;
-  left:0;
+  left:30px;
   right:0;
-  text-align: center;
-  font-size: 40pt;
+  text-align: left;
+  font-size: 80px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   color: white;
 }
 
-.headlineQuizPage{
-  position: absolute;
-  top: 10%;
-  left:0;
-  right:0;
-  text-align: center;
-  font-size: 40pt;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-}
 
-.headlineResultPage{
-  position: absolute;
-  top: 10%;
- left:0;
-  right:0;
-  text-align: center;
-  font-size: 40pt;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-}
-
-.headline1 {
-  font-size: 28pt;
-    font-family: Arial, Helvetica, sans-serif;
+.contentStartPage{
+position:absolute;
+top: 660px;
+left:5%; 
 }
 
 .headline2 {
-  font-size: 20pt;
-    font-family: Arial, Helvetica, sans-serif;
+  font-size: 30pt;
+  font-family: Arial, Helvetica, sans-serif;
   text-align: left;
-  color: black;
+  color: black; 
 }
 
-.headline2_2 {
-  font-size: 20pt;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.headline3 {
-  font-size: 16pt;
-    font-family: Arial, Helvetica, sans-serif;
-  
-}
-
-
+/*
+#groupMembers{
+ font-size: 15pt;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: left;
+  color: black; 
+}*/
 
 .text {
-font-size: 12pt;
+  font-size: 15pt;
   font-family: Arial, Helvetica, sans-serif;
   text-align: left;
   color: black;
   width: 75%;
-  
 }
 
+#readMoreAboutLena{
+position: absolute;
+top: 460px;
+left:0%;
+padding-bottom: 200px;
+}
+
+#readMoreAboutAlia{
+position: absolute;
+top: 460px;
+left:30%;
+padding-bottom: 200px;
+}
+/*Start Page Ende*/
+
+
+/*Start Quiz Page*/
+.headlineQuizPage{
+  position: absolute;
+  top: 30%;
+  left:0;
+  right:0;
+  text-align: center;
+  font-size: 35pt;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+}
+/*Start Quiz Page Ende*/
+
+/* Quiz Page*/
 /* source: https://www.html-seminar.de/forum/thread/3591-auflistungen-punkt-komplett-entfernen/ */
 ul, li {
   list-style:none;
 }
-
-
-
-
-
-.contentStartPage{
-position:absolute;
-top: 700px;
-left:5%; 
-}
-
-
-.contentResultPage{
-position:absolute;
-top: 700px;
-left:5%; 
-}
-
-
-
-
 #questions{
 position:absolute;
 top: 150px;
 left:5%;
 font-family: Arial, Helvetica, sans-serif;
 font-size: 12pt; 
+}
+
+.headline3 {
+  font-size: 18pt;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .buttonAuswertung{
@@ -259,30 +260,24 @@ top: 1100px;
 left:28%;
 width: 150px;  
 }
+/* Quiz Page Ende*/
 
-input[type=button]{
-  box-shadow: 0px 1px 0px 0px #FFFFFF;
-	background:linear-gradient(to bottom, #5297A6 5%, #6581B2 100%);
-	background-color:#6581B2 ;
-	border-radius:6px;
-	border:1px solid #1C3972;
-	display:inline-block;
-	cursor:pointer;
-	color:#FFFFFF;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size:20px;
-	font-weight:bold;
-	padding:6px 24px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #3771E3;
+/*Result Page */
+.headlineResultPage{
+  position: absolute;
+  top: 10%;
+ left:0;
+  right:0;
+  text-align: center;
+  font-size: 35pt;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
 }
 
-
-.buttonAuswertung:hover, .buttonAbbrechen:hover {
-	background:linear-gradient(to bottom, #6581B2 5%, #5297A6 100%);
-	background-color:#1C3972;
+.headline2_2 {
+  font-size: 30pt;
+    font-family: Arial, Helvetica, sans-serif;
 }
-
 
 #results{
   position: relative;
@@ -298,20 +293,26 @@ input[type=button]{
   grid-row-gap: 30px;
 }
 
+.contentResultPage{
+position:absolute;
+top: 125px;
+left:5%; 
+}
+
 .insertResultInfo{
   display: grid;
   grid-template-columns:1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-auto-flow: column;
   grid-gap: 20px;
 }
+/*Result Page Ende*/
 
 
-
-
-
+/*Forum Page*/
 .forum{
   
 }
 #showForumPage{
   
 }
+/*Forum Page Ende*/

@@ -7,342 +7,344 @@
 <html>
 
 <head>
-    <title>Look</title>
-    <meta charset="UTF-8" />
+  <title>Look</title>
+  <meta charset="UTF-8" />
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!--<script src="./js/jquery-3.1.1.min.js" type="text/javascript"></script>-->
-    <!-- ****** Background-Color Transition with jQuery ****** -->
-    <script src="./js/jquery.color.js" type="text/javascript"></script>
-    <!-- ****** Speech Recognition ****** -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
-    <!-- ****** Scrolling ****** -->
-    <script src="./js/jquery.ba-throttle-debounce.js" type="text/javascript"></script>
-    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js" type="text/javascript"></script>-->
-    
-    <!-- ******  Fancybox (Achtung: Fancybox und notify.js schließen sich zur Zeit gegenseitig aus) 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!--<script src="./js/jquery-3.1.1.min.js" type="text/javascript"></script>-->
+  <!-- ****** Background-Color Transition with jQuery ****** -->
+  <script src="./js/jquery.color.js" type="text/javascript"></script>
+  <!-- ****** Speech Recognition ****** -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+  <!-- ****** Scrolling ****** -->
+  <script src="./js/jquery.ba-throttle-debounce.js" type="text/javascript"></script>
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js" type="text/javascript"></script>-->
+
+  <!-- ******  Fancybox (Achtung: Fancybox und notify.js schließen sich zur Zeit gegenseitig aus) 
                  Damit Fancybox fkt, muss die Einbindung von notify auskommentiert werden ****** 
 -->
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
-    <script type="text/javascript">
-        $(function () {$("#feedback").hide()});
-    </script>
-   
-    <!-- ******  notify.js (Achtung: Fancybox und notify.js schließen sich zur Zeit gegenseitig aus) 
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
+  <script type="text/javascript">
+    $(function () {$("#feedback").hide()});
+  </script>
+
+  <!-- ******  notify.js (Achtung: Fancybox und notify.js schließen sich zur Zeit gegenseitig aus) 
                  Damit Fancybox fkt, muss die Einbindung von notify auskommentiert werden ****** 
     <script src="./js/notify.min.js" type="text/javascript"></script>
 -->
 
 
-    
-    <!-- The next link contains the css for a jumpingArrow    
+
+  <!-- The next link contains the css for a jumpingArrow    
    <link rel="stylesheet" href="./stylesheets/jumpingArrow.css" />  -->
 
-    <style>
-        .button {
-            color: white;
-            border-radius: 20px;
-            border: 1px solid green;
-            font-size: large;
-            width: 110px;
-            height: 40px;
-        }
-        
-        .blue {
-            background-color: blue;
-        }
-        
-        .green {
-            background-color: green;
-            width: 200px;
-            float: right;
-        }
-        
-        div[id$="Point"] {
-            display: inline-block;
-        }
-    </style>
+  <style>
+    .button {
+      color: white;
+      border-radius: 20px;
+      border: 1px solid green;
+      font-size: large;
+      width: 110px;
+      height: 40px;
+    }
+
+    .blue {
+      background-color: blue;
+    }
+
+    .green {
+      background-color: green;
+      width: 200px;
+      float: right;
+    }
+
+    div[id$="Point"] {
+      display: inline-block;
+    }
+  </style>
 </head>
 
 <body>
-    <a href="enterprise-js-validation.html"><button>Link to CRUD operations example!</button></a>  
-    <!-- **************************************************************** -->
-    <!-- Active Menus -->
-    <!-- **************************************************************** -->
-    <div id="activeMenuPoint">
-        <nav>
-            <ul id="navList">
-                <li><a href="#activeMenuPoint">Active Menu</a></li>
-                <li><a href="#hoverPoint">Interactive Buttons</a></li>
-                <!--<li><a href="#clickPoint">Click Button</a></li>
+  <a href="enterprise-js-validation.html"><button>Link to CRUD operations example!</button></a>
+  <!-- **************************************************************** -->
+  <!-- Active Menus -->
+  <!-- **************************************************************** -->
+  <div id="activeMenuPoint">
+    <nav>
+      <ul id="navList">
+        <li><a href="#activeMenuPoint">Active Menu</a></li>
+        <li><a href="#hoverPoint">Interactive Buttons</a></li>
+        <!--<li><a href="#clickPoint">Click Button</a></li>
                 <li><a href="#rotatePoint">DblClick Button</a></li>
                 <li><a href="#arrowPoint">Jump Button</a></li>
                 <li><a href="#voicePoint">Voice Input</a></li>
                 <li><a href="#resetPoint">Reset</a></li>-->
-                <li><a href="#scrollPoint">Scrolling</a></li>
-                <li><a href="#flipPoint">Flipping</a></li>
-                <li><a href="#fancyPoint">Fancybox</a></li>
-                <li><a href="#searchPoint">Search</a></li>
-                <li><a href="#gridAreaPoint">CSS Grid Areas</a></li>
-                <li><a href="#gridCellPoint">CSS Grid with Rows and Columns</a></li>
-                <li><a href="#flexPoint">Flex Boxes</a></li>
-                <li><a href="#filterPoint">Filter</a></li>
-            </ul>
-        </nav>
-        <style>
-            nav {
-                position: fixed;
-                top: 0px;
-                left: 0px;
-            }
-            
-            #navList {
-                display: flex;
-                align-items: stretch;
-                height: 100px;
-                border: 1px solid fuchsia;
-                margin: 10px;
-                background-color: antiquewhite;
-            }
-            /* Select all a-tags that lie within a tag from the class navigation */
-            
-            nav a {
-                background-color: fuchsia;
-                color: white;
-                border: 1px solid black;
-                margin: 1px;
-                font-size: larger;
-                font-weight: bold;
-                text-decoration: none;
-            }
-            
-            nav ul {
-                list-style-type: none;
-            }
-            
-            nav ul li {
-                display: inline-block;
-            }
-            
-            nav ul li a {
-                display: block;
-                padding: 10px 15px;
-            }
-            
-            nav ul li a.active {
-                background: lightblue;
-            }
-            /* ********** PSEUDOfilterN  ************* */
-            
-            nav ul li a:hover {
-                background: aqua;
-            }
-        </style>
-        <script>
-            var navHeight = $("nav").height();
+        <li><a href="#scrollPoint">Scrolling</a></li>
+        <li><a href="#flipPoint">Flipping</a></li>
+        <li><a href="#fancyPoint">Fancybox</a></li>
+        <li><a href="#searchPoint">Search</a></li>
+        <li><a href="#gridAreaPoint">CSS Grid Areas</a></li>
+        <li><a href="#gridCellPoint">CSS Grid with Rows and Columns</a></li>
+        <li><a href="#flexPoint">Flex Boxes</a></li>
+        <li><a href="#filterPoint">Filter</a></li>
+      </ul>
+    </nav>
+    <style>
+      nav {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+      }
 
-            // from MD Ashik: [https://stackoverflow.com/questions/9979827/change-active-menu-item-on-page-scroll]
-            //Active menu item changes whenever the next area is at the top of the screen just below the navigation
-            function onScroll(event) {
-                var scrollPos = $(document).scrollTop();
-                console.log("scrollPos: " + scrollPos)
-                if (scrollPos == 0) {
-                    $('nav ul li a').removeClass("active");
-                    $("a[href='#activeMenuPoint']").addClass("active");
-                } else {
-                    scrollPos = scrollPos + navHeight + 1;
-                    console.log("scrollPos: " + scrollPos)
-                    $('nav ul li a').each(function () {
-                        var currLink = $(this);
-                        var refElement = $(currLink.attr("href"));
-                        console.log("refElement: " + refElement.attr("id") + " " + refElement.position().top)
-                        if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-                            $('nav ul li a').removeClass("active");
-                            currLink.addClass("active");
-                        } else {
-                            currLink.removeClass("active");
-                        }
-                    });
-                }
+      #navList {
+        display: flex;
+        align-items: stretch;
+        height: 100px;
+        border: 1px solid fuchsia;
+        margin: 10px;
+        background-color: antiquewhite;
+      }
+
+      /* Select all a-tags that lie within a tag from the class navigation */
+
+      nav a {
+        background-color: fuchsia;
+        color: white;
+        border: 1px solid black;
+        margin: 1px;
+        font-size: larger;
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+      nav ul {
+        list-style-type: none;
+      }
+
+      nav ul li {
+        display: inline-block;
+      }
+
+      nav ul li a {
+        display: block;
+        padding: 10px 15px;
+      }
+
+      nav ul li a.active {
+        background: lightblue;
+      }
+
+      /* ********** PSEUDOfilterN  ************* */
+
+      nav ul li a:hover {
+        background: aqua;
+      }
+    </style>
+    <script>
+      var navHeight = $("nav").height();
+
+      // from MD Ashik: [https://stackoverflow.com/questions/9979827/change-active-menu-item-on-page-scroll]
+      //Active menu item changes whenever the next area is at the top of the screen just below the navigation
+      function onScroll(event) {
+        var scrollPos = $(document).scrollTop();
+        console.log("scrollPos: " + scrollPos)
+        if (scrollPos == 0) {
+          $('nav ul li a').removeClass("active");
+          $("a[href='#activeMenuPoint']").addClass("active");
+        } else {
+          scrollPos = scrollPos + navHeight + 1;
+          console.log("scrollPos: " + scrollPos)
+          $('nav ul li a').each(function () {
+            var currLink = $(this);
+            var refElement = $(currLink.attr("href"));
+            console.log("refElement: " + refElement.attr("id") + " " + refElement.position().top)
+            if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+              $('nav ul li a').removeClass("active");
+              currLink.addClass("active");
+            } else {
+              currLink.removeClass("active");
             }
-            // adapted from [https://stackoverflow.com/questions/4086107/fixed-page-header-overlaps-in-page-anchors]
-            function anchorWithOffset(target) {
-                var offset = $(target).offset();
-                var scrollto = offset.top - navHeight;
-                $('html, body').animate({
-                    scrollTop: scrollto
-                }, 0);
-            }
-            $(document).ready(function () {
-                // An empty block to start the static HTML below the navigation
-                // Two empty blocks to make the active menu scrolling for flex boxes possible
-                var emptyBlock = "<div style='height:" + navHeight + "px;'></div>";
-                $("#activeMenuPoint").prepend(emptyBlock)
+          });
+        }
+      }
+      // adapted from [https://stackoverflow.com/questions/4086107/fixed-page-header-overlaps-in-page-anchors]
+      function anchorWithOffset(target) {
+        var offset = $(target).offset();
+        var scrollto = offset.top - navHeight;
+        $('html, body').animate({
+          scrollTop: scrollto
+        }, 0);
+      }
+      $(document).ready(function () {
+        // An empty block to start the static HTML below the navigation
+        // Two empty blocks to make the active menu scrolling for flex boxes possible
+        var emptyBlock = "<div style='height:" + navHeight + "px;'></div>";
+        $("#activeMenuPoint").prepend(emptyBlock)
 
 
 
-                $(document).on("scroll", onScroll);
-                $("a[href$='Point']").click(function () {
-                    event.preventDefault();
-                    target = $(this).attr("href");
-                    console.log("target: " + target)
-                    anchorWithOffset(target);
-                })
-            })
-        </script>
+        $(document).on("scroll", onScroll);
+        $("a[href$='Point']").click(function () {
+          event.preventDefault();
+          target = $(this).attr("href");
+          console.log("target: " + target)
+          anchorWithOffset(target);
+        })
+      })
+    </script>
+  </div>
+
+
+  <!-- **************************************************************** -->
+  <!-- Static HTML -->
+  <!-- **************************************************************** -->
+
+  <h1 id="top">Look how easy interaction is ... </h1>
+
+
+
+  <!-- **************************************************************** -->
+  <!-- Read-More-Action -->
+  <!-- (see https://api.jquery.com/toggle/) -->
+  <!-- **************************************************************** -->
+  <div id="readMorePoint">
+    <button id="readMore" class="read blue button" style="display:block">Read More</button>
+    <button class="read blue button" style="display:none">Read Less</button>
+    <div id="readText" style="display:none; width:200px; clear:left">
+      A read-more button is not only a call-to-action, but it also organizes
+      the screen area management in a non-wasteful way. If and only if users are interested,
+      they will use the button.<br />
     </div>
+    <script type="text/javascript">
+      $(".read").click(function () {
+        // If you use the toggle function with the parameter "slow", then the selected elements vary their display attribute between none and block, but this is done in an animated way.
+        // The optional second parameter is a callback function, i.e., it is executed after the animation finishes.
+        $("#readText").toggle("slow", function () {
+          // If you use the toggle function without a parameter, then it simply varies the display attribute of the selected object between none and block
+          $(".read").toggle()
+        });
+      });
+    </script>
+  </div>
 
 
-    <!-- **************************************************************** -->
-    <!-- Static HTML -->
-    <!-- **************************************************************** -->
-
-    <h1 id="top">Look how easy interaction is ... </h1>
-
-
-
-    <!-- **************************************************************** -->
-    <!-- Read-More-Action -->
-    <!-- (see https://api.jquery.com/toggle/) -->
-    <!-- **************************************************************** -->
-    <div id="readMorePoint">
-        <button id="readMore" class="read blue button" style="display:block">Read More</button>
-        <button class="read blue button" style="display:none">Read Less</button>
-        <div id="readText" style="display:none; width:200px; clear:left">
-            A read-more button is not only a call-to-action, but it also organizes 
-            the screen area management in a non-wasteful way. If and only if users are interested,
-            they will use the button.<br/>
-        </div>
-        <script type="text/javascript">           
-            $(".read").click(function() {
-                // If you use the toggle function with the parameter "slow", then the selected elements vary their display attribute between none and block, but this is done in an animated way.
-                // The optional second parameter is a callback function, i.e., it is executed after the animation finishes.
-                $("#readText").toggle( "slow",function(){
-                    // If you use the toggle function without a parameter, then it simply varies the display attribute of the selected object between none and block
-                    $(".read").toggle()
-                } );
-            });
-        </script>
-    </div>
-    
-    
-    <!-- **************************************************************** -->
-    <!-- Hover-Action -->
-    <!-- **************************************************************** -->
-    <div id="hoverPoint">
-        <button id="hover" class="blue button">hover</button>
-        <script type="text/javascript">
-            $("#hover").hover(function () {
-                    $(this).css("font-size", "140%")
-                           .css("background-color", "black")
-                           .css("color", "red");
-                }
-                // The 2. function is executed when not anylonger hovering
-                ,
-                function () {
-                    $(this).css("font-size", "100%")
-                           .css("background-color", "red")
-                           .css("color", "black");
-                });
-        </script>
-    </div>
+  <!-- **************************************************************** -->
+  <!-- Hover-Action -->
+  <!-- **************************************************************** -->
+  <div id="hoverPoint">
+    <button id="hover" class="blue button">hover</button>
+    <script type="text/javascript">
+      $("#hover").hover(function () {
+        $(this).css("font-size", "140%")
+          .css("background-color", "black")
+          .css("color", "red");
+      }
+        // The 2. function is executed when not anylonger hovering
+        ,
+        function () {
+          $(this).css("font-size", "100%")
+            .css("background-color", "red")
+            .css("color", "black");
+        });
+    </script>
+  </div>
 
 
-    <!-- **************************************************************** -->
-    <!-- Image/Information Display on Click -->
-    <!-- **************************************************************** -->
-    <div id="clickPoint">
-        <style>
-            .wrap {
-                display: inline-block;
-                height: 40px;
-                width: 110px;
-                position: relative;
-            }
-            
-            #cat {
-                display: none;
-                position: absolute;
-                /* will be removed from the CSS flow, 
+  <!-- **************************************************************** -->
+  <!-- Image/Information Display on Click -->
+  <!-- **************************************************************** -->
+  <div id="clickPoint">
+    <style>
+      .wrap {
+        display: inline-block;
+        height: 40px;
+        width: 110px;
+        position: relative;
+      }
+
+      #cat {
+        display: none;
+        position: absolute;
+        /* will be removed from the CSS flow, 
                                   positioning aligns with the enclosing element */
-                bottom: -200%;
-                /* here:  pushed 2x40px wrt. the bottom of the enclosing                         .wrap element*/
-                left: 0%;
-                width: 100%;
-            }
-        </style>
-        <div class="wrap">
-            <div style="height:100px"></div>
-            <button id="click" class="blue button">click</button>
-            <img id="cat" src="./pics/cat.png" alt="cat" />
-        </div>
-        <script type="text/javascript">
-            /* global $ */
-            $("#click").click(function () {
-                $("#cat").slideDown("slow")
-                    .click(function () {
-                        $("#cat").slideUp("slow");
-                    });
-            });
-        </script>
+        bottom: -200%;
+        /* here:  pushed 2x40px wrt. the bottom of the enclosing                         .wrap element*/
+        left: 0%;
+        width: 100%;
+      }
+    </style>
+    <div class="wrap">
+      <div style="height:100px"></div>
+      <button id="click" class="blue button">click</button>
+      <img id="cat" src="./pics/cat.png" alt="cat" />
     </div>
+    <script type="text/javascript">
+      /* global $ */
+      $("#click").click(function () {
+        $("#cat").slideDown("slow")
+          .click(function () {
+            $("#cat").slideUp("slow");
+          });
+      });
+    </script>
+  </div>
 
 
-    <!-- **************************************************************** -->
-    <!-- Transformation (here: rotation, color change) on Doubleclick   -->
-    <!-- **************************************************************** -->
-    <div id="rotatePoint">
-        <style>
-            #dblclick {
-                -webkit-transition: background-color 2s, -webkit-transform 2s;
-                transition: background-color 2s, transform 2s;
-            }
-            
-            #dblclick:hover {
-                background-color: orange;
-                -webkit-transform: rotate(180deg);
-                transform: rotate(180deg);
-            }
-        </style>
-        <button id="dblclick" class="blue button">doubleclick</button>
-        <script type="text/javascript">
-            /* global $ */
-            $("#dblclick").dblclick(function () {
-                $(this).css("transform", "rotate(-20deg)")
-                    .css("background-color", "orange");
-            });
-        </script>
-    </div>
-    
-    <!-- **************************************************************** -->
-    <!-- Notification Sound -->
-    <!-- see [https://stackoverflow.com/questions/10105063/how-to-play-a-notification-sound-on-websites] -->
-    <!-- **************************************************************** -->
-    <div id="soundPoint">
-       <button id="sound" class="blue button" onclick="playSound('sounds/Short_clip_of_girl_laughing.wav');">Sound</button>    
-       <script type="text/javascript">  
-           function playSound(url) {
-                console.log("Call playSound with " + url);
-                const audio = new Audio(url);
-                audio.play();
-                setTimeout(function(){window.location.replace('enterprise-js-validation.html');}, 1000);               
-            }
-        </script>
-        
-    </div>
+  <!-- **************************************************************** -->
+  <!-- Transformation (here: rotation, color change) on Doubleclick   -->
+  <!-- **************************************************************** -->
+  <div id="rotatePoint">
+    <style>
+      #dblclick {
+        -webkit-transition: background-color 2s, -webkit-transform 2s;
+        transition: background-color 2s, transform 2s;
+      }
 
-    <!-- **************************************************************** -->
-    <!-- Jumping Arrow for Scrolling Down Indicator                       
+      #dblclick:hover {
+        background-color: orange;
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+      }
+    </style>
+    <button id="dblclick" class="blue button">doubleclick</button>
+    <script type="text/javascript">
+      /* global $ */
+      $("#dblclick").dblclick(function () {
+        $(this).css("transform", "rotate(-20deg)")
+          .css("background-color", "orange");
+      });
+    </script>
+  </div>
+
+  <!-- **************************************************************** -->
+  <!-- Notification Sound -->
+  <!-- see [https://stackoverflow.com/questions/10105063/how-to-play-a-notification-sound-on-websites] -->
+  <!-- **************************************************************** -->
+  <div id="soundPoint">
+    <button id="sound" class="blue button" onclick="playSound('sounds/Short_clip_of_girl_laughing.wav');">Sound</button>
+    <script type="text/javascript">
+      function playSound(url) {
+        console.log("Call playSound with " + url);
+        const audio = new Audio(url);
+        audio.play();
+        setTimeout(function () {window.location.replace('enterprise-js-validation.html');}, 1000);
+      }
+    </script>
+
+  </div>
+
+  <!-- **************************************************************** -->
+  <!-- Jumping Arrow for Scrolling Down Indicator                       
         Combine this with the animated scrolling 
         to stop showing the indicator when it isn't necessary anymore
         (at the end of a webpage)
    -->
-    <!-- **************************************************************** -->
-    <div id="arrowPoint">
-        <style>
-            /* Is not supported for Edge and Internet Explorer */
-            /*     UpDown is the name of this keyframe. 
+  <!-- **************************************************************** -->
+  <div id="arrowPoint">
+    <style>
+      /* Is not supported for Edge and Internet Explorer */
+      /*     UpDown is the name of this keyframe. 
                It seems to move an object, on which it is applied, 10px up and down.
                In reality the margin-attribute is changed: 
                -  at the very first (0%) the margin is 0px;
@@ -350,1093 +352,1145 @@
                -  at last (100%) the margin is back to 0px;
                All the values inbetween are automatically interpolated by CSS.
           */
-            
-            @keyframes UpDown {
-                0%,
-                100% {
-                    margin: 0 auto;
-                }
-                50% {
-                    margin: 10px auto;
-                }
-            }
-            
-            @-webkit-keyframes UpDown {
-                0%,
-                100% {
-                    margin: 0 auto;
-                }
-                50% {
-                    margin: 10px auto;
-                }
-            }
-            
-            @-moz-keyframes UpDown {
-                0%,
-                100% {
-                    margin: 0 auto;
-                }
-                50% {
-                    margin: 10px auto;
-                }
-            }
-            /* Here is the animation where the keyframe UpDown is used */
-            
-            #arrow {
-                background-color: black;
-                width: 50px;
-                height: auto;
-                margin: 0 auto;
-                position: fixed;
-                bottom: 10px;
-                right: 10px;
-                z-index: 1000;
-                animation: UpDown 2s ease-in-out infinite;
-                -webkit-animation: UpDown 2s ease-in-out infinite;
-            }
-        </style>
-        <button id="jump" class="blue button" onclick="showArrow();">Jump</button>
-        <img id="arrow" style="display:none" alt="arrow" src="./pics/arrow.svg" />
-        <script type="text/javascript">
-            function showArrow() {
-                $("#arrow").css("display", "block");
-                $("#jump").attr("onclick", "hideArrow();")
-                    .html("Stop Jump");
-            }
 
-            function hideArrow() {
-                $("#arrow").css("display", "none");
-                $("#jump").attr("onclick", "showArrow();")
-                    .html("Jump");
-            }
-        </script>
+      @keyframes UpDown {
+
+        0%,
+        100% {
+          margin: 0 auto;
+        }
+
+        50% {
+          margin: 10px auto;
+        }
+      }
+
+      @-webkit-keyframes UpDown {
+
+        0%,
+        100% {
+          margin: 0 auto;
+        }
+
+        50% {
+          margin: 10px auto;
+        }
+      }
+
+      @-moz-keyframes UpDown {
+
+        0%,
+        100% {
+          margin: 0 auto;
+        }
+
+        50% {
+          margin: 10px auto;
+        }
+      }
+
+      /* Here is the animation where the keyframe UpDown is used */
+
+      #arrow {
+        background-color: black;
+        width: 50px;
+        height: auto;
+        margin: 0 auto;
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        z-index: 1000;
+        animation: UpDown 2s ease-in-out infinite;
+        -webkit-animation: UpDown 2s ease-in-out infinite;
+      }
+    </style>
+    <button id="jump" class="blue button" onclick="showArrow();">Jump</button>
+    <img id="arrow" style="display:none" alt="arrow" src="./pics/arrow.svg" />
+    <script type="text/javascript">
+      function showArrow() {
+        $("#arrow").css("display", "block");
+        $("#jump").attr("onclick", "hideArrow();")
+          .html("Stop Jump");
+      }
+
+      function hideArrow() {
+        $("#arrow").css("display", "none");
+        $("#jump").attr("onclick", "showArrow();")
+          .html("Jump");
+      }
+    </script>
+  </div>
+
+  <!-- **************************************************************** -->
+  <!-- Speech Recognition -->
+  <!-- **************************************************************** -->
+  <div id="voicePoint">
+    <button id="speech" class="blue button">Say Hello</button>
+    <script type="text/javascript">
+      /* global $, annyang */
+      function startSpeechRecognition() {
+        if (annyang) {
+          $("#speech").click(function () {
+            stopSpeechRecognition();
+          })
+            .css("background-color", "green");
+
+          // Start listening. You can call this here, or attach this call to an event, button, etc.
+          annyang.start();
+          console.log("annyang is listening");
+        } else {
+          console.log("annyang wasn't started");
+        }
+      }
+
+      function stopSpeechRecognition() {
+        if (annyang) {
+          $("#speech").click(function () {
+            startSpeechRecognition();
+          })
+            .css("background-color", "blue");
+
+          annyang.abort();
+          console.log("annyang was aborted");
+        } else {
+          console.log("annyang wasn't started");
+        }
+      }
+      $(document).ready(function () {
+        if (annyang) {
+          // Define the functions our commands will run.
+          var scrollToOwl = function () {
+            console.log("Scroll to Owl");
+            $('html, body').animate({
+              scrollTop: $("#owl").offset().top
+            }, 2000);
+          };
+          var scrollBack = function () {
+            console.log("Scroll back");
+            $('html, body').animate({
+              scrollTop: $("#top").offset().top
+            }, 2000);
+          };
+
+          // Define our commands.
+          // * The key is the phrase you want your users to say.
+          // * The value is the action to do.
+          //   You can pass a function, a function name (as a string), or write your function as part of the commands object.
+          var commands = {
+            'hello (there)': scrollToOwl,
+            'bye bye': scrollBack
+          };
+
+          // OPTIONAL: activate debug mode for detailed logging in the console
+          annyang.debug();
+
+          // Add voice commands to respond to
+          annyang.addCommands(commands);
+          $("#speech").click(function () {
+            startSpeechRecognition();
+          })
+
+        } else {
+          console.log("annyang did not start, maybe because listening is unsupported");
+        }
+      });
+    </script>
+  </div>
+
+  <!-- **************************************************************** -->
+  <!-- File-Upload-Action -->
+  <!-- (see e.g. https://wiki.selfhtml.org/wiki/JavaScript/File_Upload#Direkter_Upload_einer_einzelnen_Datei_an_einen_Server) -->
+  <!-- **************************************************************** -->
+  <div id="fileUploadPoint">
+    <button class="blue button" onclick="$('#upload').show();">Upload Pic</button>
+    <div id="upload" style="display:none">
+      <form method="post" enctype="multipart/form-data">
+        <input type="file" accept=".jpg, .jpeg, .png" id="fileUpload" />
+        <div id="myThumbNail"></div>
+      </form>
     </div>
-    
-    <!-- **************************************************************** -->
-    <!-- Speech Recognition -->
-    <!-- **************************************************************** -->
-    <div id="voicePoint">
-        <button id="speech" class="blue button">Say Hello</button>
-        <script type="text/javascript">
-            /* global $, annyang */
-            function startSpeechRecognition() {
-                if (annyang) {
-                    $("#speech").click(function () {
-                            stopSpeechRecognition();
-                        })
-                        .css("background-color", "green");
+    <script type="text/javascript">
+      function fileSelection(evt) {
+        var files = evt.target.files; // FileList object
 
-                    // Start listening. You can call this here, or attach this call to an event, button, etc.
-                    annyang.start();
-                    console.log("annyang is listening");
-                } else {
-                    console.log("annyang wasn't started");
-                }
-            }
+        // Loop over the list of files
+        for (var i = 0, file; file = files[i]; i++) {
 
-            function stopSpeechRecognition() {
-                if (annyang) {
-                    $("#speech").click(function () {
-                            startSpeechRecognition();
-                        })
-                        .css("background-color", "blue");
+          // only image files should be loaded
+          if (!file.type.match('image.*')) {
+            continue;
+          }
 
-                    annyang.abort();
-                    console.log("annyang was aborted");
-                } else {
-                    console.log("annyang wasn't started");
-                }
-            }
-            $(document).ready(function () {
-                if (annyang) {
-                    // Define the functions our commands will run.
-                    var scrollToOwl = function () {
-                        console.log("Scroll to Owl");
-                        $('html, body').animate({
-                            scrollTop: $("#owl").offset().top
-                        }, 2000);
-                    };
-                    var scrollBack = function () {
-                        console.log("Scroll back");
-                        $('html, body').animate({
-                            scrollTop: $("#top").offset().top
-                        }, 2000);
-                    };
+          var reader = new FileReader();
+          // The onload function call is triggered when the readAsDataURRL call below is completed
+          reader.onload = (function (theFile) {
+            return function (e) {
+              // Show the image when loaded
+              var thumbNail = document.createElement('img');
+              thumbNail.src = e.target.result;
+              thumbNail.title = theFile.name;
+              thumbNail.style = "width:100px";
+              $('#myThumbNail').prepend(thumbNail);
 
-                    // Define our commands.
-                    // * The key is the phrase you want your users to say.
-                    // * The value is the action to do.
-                    //   You can pass a function, a function name (as a string), or write your function as part of the commands object.
-                    var commands = {
-                        'hello (there)': scrollToOwl,
-                        'bye bye': scrollBack
-                    };
+            };
+          })(file);
 
-                    // OPTIONAL: activate debug mode for detailed logging in the console
-                    annyang.debug();
+          //Upload the data to the browser
+          reader.readAsDataURL(file);
+          console.log("meins " + meins)
+          $('#myThumbNail').append("<button onclick='saveUpload(" + meins + ")'>Save</button>")
+        }
+        function saveUpload(data) {
+          // see https://stackoverflow.com/questions/15772394/how-to-upload-display-and-save-images-using-node-js-and-express
+          //if there were a server ... you could save the uploaded data now to the server
+          //$.post("myRoute", data, function(){alert("Success!");})
+        }
+      }
+      $('#fileUpload').on("change", fileSelection);
+    </script>
+  </div>
 
-                    // Add voice commands to respond to
-                    annyang.addCommands(commands);
-                    $("#speech").click(function () {
-                        startSpeechRecognition();
-                    })
+  <!-- **************************************************************** -->
+  <!-- Feedback Messages with notify.js (https://notifyjs.jpillora.com/)-->
+  <!-- **************************************************************** -->
+  <div id="feedbackPoint">
+    <button id="feedback" class="blue button">Feedback</button>
+    <script type="text/javascript">
+      $("#feedback").click(function () {
+        //Global positioning
+        $.notify("You clicked the Feedback button (Success)!", "success");
+        //Note: multiple options are given in JSON format
+        $.notify("You clicked the Feedback button (Error)!", {type: "error", autoHide: false, clickToHide: true});
+        $.notify("You clicked the Feedback button (Warning)!", "warn");
+        $.notify("You clicked the Feedback button (Information)!", "info");
+        //Selected-Element positioning
+        $(this).notify("A message close to the Feedback button!", {position: "top"});
+        $("#reset").notify("Warning at reset button (default: bottom left)", "warn");
+        $("#jump").notify("Info at jump button", "info");
+        $("#readMore").notify("Succes at readMore button", "success");
+        $("#click").notify("Error at click button", {type: "error", position: "top center"});
+      });
+    </script>
+  </div>
 
-                } else {
-                    console.log("annyang did not start, maybe because listening is unsupported");
-                }
-            });
-        </script>
+  <!-- **************************************************************** -->
+  <!-- Reset Animations -->
+  <!-- **************************************************************** -->
+  <div id="resetPoint">
+    <button id="reset" class="blue button">RESET</button>
+    <script type="text/javascript">
+      /* global $ */
+      $("#reset").click(function () {
+        //jQuery-animate works with some CSS-attributes 
+        //  (see http://api.jquery.com/animate/)
+        $("button[id!=reset], img").animate({
+          opacity: 0
+        }, 400);
+        //Reset scroll position to beginning
+        $('html, body').animate({
+          scrollTop: 1
+        });
+        //The color animation depends on the plugin jquery.color.js
+        $(this).animate({
+          backgroundColor: "red"
+        }, 2000,
+          // This function is a callback function,
+          // that is, it is executed after the animation is done
+          function () {
+            window.location.reload();
+          });
+      });
+    </script>
+  </div>
+
+
+  <!-- **************************************************************** -->
+  <!-- Animated Scrolling -->
+  <!-- **************************************************************** -->
+  <br />
+  <div id="scrollPoint">
+    <style>
+      .scrollAnimation {
+        position: fixed;
+        bottom: 4%;
+        left: 48%;
+      }
+    </style>
+    <div id="scroll" style="height:1000px;position:relative;background-color:lightgray">
+      <img id="scroll1" class="scrollAnimation" src="./pics/person1.png" style="display:block" />
+      <img id="scroll2" class="scrollAnimation" src="./pics/person2.png" style="display:none" />
     </div>
-    
-    <!-- **************************************************************** -->
-    <!-- File-Upload-Action -->
-    <!-- (see e.g. https://wiki.selfhtml.org/wiki/JavaScript/File_Upload#Direkter_Upload_einer_einzelnen_Datei_an_einen_Server) -->
-    <!-- **************************************************************** -->
-    <div id="fileUploadPoint">
-        <button class="blue button" onclick="$('#upload').show();">Upload Pic</button>
-        <div id="upload"  style="display:none">
-            <form  method="post" enctype="multipart/form-data">
-                <input type="file" accept=".jpg, .jpeg, .png" id="fileUpload"/>
-                <div id="myThumbNail"></div>
-            </form>
-        </div>
-        <script type="text/javascript">           
-            function fileSelection(evt) {
-                var files = evt.target.files; // FileList object
-
-                // Loop over the list of files
-                for (var i = 0, file; file = files[i]; i++) {
-
-                  // only image files should be loaded
-                  if (!file.type.match('image.*')) {
-                    continue;
-                  }
-
-                  var reader = new FileReader();
-                  // The onload function call is triggered when the readAsDataURRL call below is completed
-                  reader.onload = (function(theFile) {
-                                    return function(e) {
-                                      // Show the image when loaded
-                                      var thumbNail = document.createElement('img');
-                                      thumbNail.src   = e.target.result;
-                                      thumbNail.title = theFile.name;
-                                      thumbNail.style = "width:100px";
-                                      $('#myThumbNail').prepend(thumbNail);
-                                                     
-                                    };
-                                })(file);
-
-                  //Upload the data to the browser
-                  reader.readAsDataURL(file);
-                console.log("meins " + meins)
-                $('#myThumbNail').append("<button onclick='saveUpload(" + meins + ")'>Save</button>")
-                }
-                function saveUpload(data){
-                    // see https://stackoverflow.com/questions/15772394/how-to-upload-display-and-save-images-using-node-js-and-express
-                    //if there were a server ... you could save the uploaded data now to the server
-                    //$.post("myRoute", data, function(){alert("Success!");})
-                }
-              }
-              $('#fileUpload').on("change", fileSelection);
-        </script>
-    </div>
-    
-    <!-- **************************************************************** -->
-    <!-- Feedback Messages with notify.js (https://notifyjs.jpillora.com/)-->
-    <!-- **************************************************************** -->
-    <div id="feedbackPoint">
-        <button id="feedback" class="blue button">Feedback</button>
-        <script type="text/javascript">
-            $("#feedback").click(function () {
-                //Global positioning
-                $.notify("You clicked the Feedback button (Success)!", "success");
-                //Note: multiple options are given in JSON format
-                $.notify("You clicked the Feedback button (Error)!", {type:"error", autoHide:false, clickToHide:true});
-                $.notify("You clicked the Feedback button (Warning)!", "warn");
-                $.notify("You clicked the Feedback button (Information)!", "info");
-                //Selected-Element positioning
-                $(this).notify("A message close to the Feedback button!",{position:"top"});
-                $("#reset").notify("Warning at reset button (default: bottom left)","warn");
-                $("#jump").notify("Info at jump button","info");
-                $("#readMore").notify("Succes at readMore button","success");
-                $("#click").notify("Error at click button",{type:"error", position:"top center"});
-            });
-        </script>
-    </div>
-
-    <!-- **************************************************************** -->
-    <!-- Reset Animations -->
-    <!-- **************************************************************** -->
-    <div id="resetPoint">
-        <button id="reset" class="blue button">RESET</button>
-        <script type="text/javascript">
-            /* global $ */
-            $("#reset").click(function () {
-                //jQuery-animate works with some CSS-attributes 
-                //  (see http://api.jquery.com/animate/)
-                $("button[id!=reset], img").animate({
-                    opacity: 0
-                }, 400);
-                //Reset scroll position to beginning
-                $('html, body').animate({
-                    scrollTop: 1
-                });
-                //The color animation depends on the plugin jquery.color.js
-                $(this).animate({
-                        backgroundColor: "red"
-                    }, 2000,
-                    // This function is a callback function,
-                    // that is, it is executed after the animation is done
-                    function () {
-                        window.location.reload();
-                    });
-            });
-        </script>
-    </div>
-
-
-    <!-- **************************************************************** -->
-    <!-- Animated Scrolling -->
-    <!-- **************************************************************** -->
-    <br/>
-    <div id="scrollPoint">
-        <style>
-            .scrollAnimation {
-                position: fixed;
-                bottom: 4%;
-                left: 48%;
-            }
-        </style>
-        <div id="scroll" style="height:1000px;position:relative;background-color:lightgray">
-            <img id="scroll1" class="scrollAnimation" src="./pics/person1.png" style="display:block" />
-            <img id="scroll2" class="scrollAnimation" src="./pics/person2.png" style="display:none" />
-        </div>
-        <script type="text/javascript">
-            /* global $ */
-            $(window).scroll($.debounce(30, true, function () {
-                var position = $(this).scrollTop();
-                //Here you decide in which rows of the screen the animation is going to happen, after the 1000th row the animation disappears 
-                if (position <= 1000) {
-                    if ($("#scroll1").css("display") == "none") {
-                        //console.log("scroll1")
-                        $("#scroll1").css("display", "block");
-                        $("#scroll2").css("display", "none");
-                    } else {
-                        //console.log("scroll2")
-                        $("#scroll2").css("display", "block");
-                        $("#scroll1").css("display", "none");
-                    }
-                } else {
-                    $("#scroll1").css("display", "none");
-                    $("#scroll2").css("display", "none");
-                }
-            }));
+    <script type="text/javascript">
+      /* global $ */
+      $(window).scroll($.debounce(30, true, function () {
+        var position = $(this).scrollTop();
+        //Here you decide in which rows of the screen the animation is going to happen, after the 1000th row the animation disappears 
+        if (position <= 1000) {
+          if ($("#scroll1").css("display") == "none") {
+            //console.log("scroll1")
+            $("#scroll1").css("display", "block");
+            $("#scroll2").css("display", "none");
+          } else {
+            //console.log("scroll2")
+            $("#scroll2").css("display", "block");
+            $("#scroll1").css("display", "none");
+          }
+        } else {
+          $("#scroll1").css("display", "none");
+          $("#scroll2").css("display", "none");
+        }
+      }));
             /*
-            $(window).scroll($.debounce( 250, function(){
-               console.log("stopped scrolling")
-            }));
-            */
-        </script>
+$(window).scroll($.debounce( 250, function(){
+   console.log("stopped scrolling")
+}));
+*/
+    </script>
+  </div>
+
+  <!-- **************************************************************** -->
+  <!-- Flipping Pictures -->
+  <!-- **************************************************************** -->
+  <br>
+  <div id="flipPoint">
+    <style>
+      /* see [https://www.w3schools.com/howto/howto_css_flip_box.asp] */
+      .flip-box {
+        background-color: transparent;
+        width: 400px;
+        height: 300px;
+        border: 1px solid #f1f1f1;
+        perspective: 1000px;
+        /* Remove this if you don't want the 3D effect */
+      }
+
+      /* This container is needed to position the front and back side */
+      .flip-box-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.8s;
+        transform-style: preserve-3d;
+      }
+
+      /* Do an horizontal flip when you move the mouse over the flip box container */
+      .flip-box:hover .flip-box-inner {
+        transform: rotateY(180deg);
+      }
+
+      /* Position the front and back side */
+      .flip-box-front,
+      .flip-box-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        /* Safari */
+        backface-visibility: hidden;
+      }
+
+      /* Style the front side */
+      .flip-box-front {
+        background-color: #bbb;
+        color: black;
+      }
+
+      /* Style the back side */
+      .flip-box-back {
+        background-color: dodgerblue;
+        color: white;
+        transform: rotateY(180deg);
+        backface-visibility: hidden;
+      }
+    </style>
+
+    <div class="flip-box">
+      <div class="flip-box-inner">
+        <div class="flip-box-front">
+          <h2>Front Side</h2>
+          <img id="owl" src="./pics/Eule.png" alt="owl" />
+        </div>
+        <div class="flip-box-back">
+          <h2>Back Side</h2>
+          <img id="pinguin" src="./pics/Pinguin.png" alt="pinguin" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- **************************************************************** -->
+  <!-- Fancybox -->
+  <!-- see https://fancyapps.com/fancybox/3/docs/-->
+  <!-- Examples from https://codesandbox.io/u/fancyapps -->
+  <!-- **************************************************************** -->
+  <br>
+  <div id="fancyPoint" style="width:80%">
+    <style>
+      #myGallery img {
+        width: 40%;
+      }
+
+      #myGallery div {
+        margin: 5px;
+      }
+    </style>
+    <div id="fancy" style="height:1000px;background-color:lightgray">
+      <a href="#top">
+        <button class="blue button" style="width:200px">Back to Top</button>
+      </a>
+      <h1 style="text-align:right">Some Fancybox Examples</h1>
+
+      <!-- ++++++++++++++++++++++++++++++++++++++++++ -->
+      <!-- Load a picture in the fancybox way -->
+      <a data-fancybox href="./pics/cat.png">
+        <button class="green button">Load a picture</button>
+      </a>
+
+      <!-- ++++++++++++++++++++++++++++++++++++++++++ -->
+      <!-- Show hidden content in a fancybox -->
+      <a data-fancybox data-src="#hidden-content">
+        <button class="green button">Trigger a fancybox</button>
+      </a>
+      <div id="hidden-content" style="display:none;">
+        <h2>Hello</h2>
+        <p>You are awesome.</p>
+      </div>
+
+      <!-- ++++++++++++++++++++++++++++++++++++++++++ -->
+      <!-- Create a gallery the fancybox way -->
+      <button onclick="showGallery();" class="green button">Show a gallery</button>
+
+      <div id="myGallery" style="display:none">
+        <h2>Simple Gallery</h2>
+        <p>
+        <div>
+          <a id="mountain-1" data-fancybox="gallery" data-src="https://lipsum.app/id/3/1024x768">
+            <img src="https://lipsum.app/id/3/200x150" />
+          </a>
+        </div>
+        <div>
+          <a id="mountain-2" data-fancybox="gallery" data-src="https://lipsum.app/id/4/1024x768">
+            <img src="https://lipsum.app/id/4/200x150" />
+          </a>
+        </div>
+        <div>
+          <a id="mountains" data-fancybox="gallery" data-src="https://lipsum.app/id/5/1024x768">
+            <img src="https://lipsum.app/id/5/200x150" />
+          </a>
+        </div>
+        </p>
+      </div>
+
+
+      <script>
+        function showGallery() {
+          //$('*[data-fancybox="gallery"]').fancybox();
+          $("#myGallery").css("display", "block");
+        }
+      </script>
+    </div>
+  </div>
+
+  <!-- **************************************************************** -->
+  <!-- Searching  (Filter/Search List) -->
+  <!-- see https://www.w3schools.com/howto/howto_js_filter_lists.asp    -->
+  <!-- **************************************************************** -->
+  <br />
+  <br />
+  <div id="searchPoint">
+    <div style="height:100px; width:400px; background-color: yellow">
+      <input type="text" id="q" onkeyup="searchFunction()" placeholder="Search for names .." title="Type in a name"
+        style="border:2px solid blue; font-size:120%;position:relative;top:10px; left:10px">
+
+      <!-- This is the list of potential search result links: -->
+      <ul id="myUL" style="display:none">
+        <li><a href="#mountain-1">Mountains blue background</a></li>
+        <li><a href="#mountain-2">Cloudy Mountains</a></li>
+        <li><a href="#mountains">Mountains far-away</a></li>
+      </ul>
+    </div>
+    <script>
+      /* global $*/
+      //Set the autocomplete to off, as autocomplete searches the browser history
+      $("#q").attr("autocomplete", "off");
+
+      function searchFunction() {
+        //Only search if there are more than 2 input chars
+        if ($("#q").val().length > 1) {
+          var input, filter, ul, li, a, i, txtValue;
+          input = document.getElementById("q");
+          filter = input.value.toUpperCase();
+          ul = document.getElementById("myUL");
+          li = ul.getElementsByTagName("li");
+          for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("a")[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+              li[i].style.display = "block";
+              $("#myUL").show();
+            } else {
+              li[i].style.display = "none";
+            }
+          }
+        } else {
+          $("#myUL").hide();
+        }
+      }
+      $("#q").val("");
+    </script>
+  </div>
+
+
+
+  <!-- **************************************************************** -->
+  <!-- Grid-Layout Variant 1: with template-areas -->
+  <!-- see e.g.https://css-tricks.com/snippets/css/complete-guide-grid/ -->
+  <!-- **************************************************************** -->
+  <br />
+  <br />
+  <div id="gridAreaPoint">
+    <style>
+      /* Grid-Layout with grid areas*/
+
+      #myGrid {
+        display: grid;
+        grid-template-columns: 160px 160px 160px 160px;
+        grid-template-rows: auto;
+        grid-template-areas: "head1        head2        head3      head4""main-left-1  main-left-2  .          .    "".            .            main-right main-right ""main-left-3  main-left-4  main-right main-right ";
+      }
+
+      .list1 {
+        grid-area: head1;
+        background-color: aqua;
+      }
+
+      .list2 {
+        grid-area: head2;
+        background-color: aquamarine;
+      }
+
+      .list3 {
+        grid-area: head3;
+        background-color: azure;
+      }
+
+      .list4 {
+        grid-area: head4;
+        background-color: cadetblue;
+      }
+
+      .list5 {
+        grid-area: main-right;
+        background-color: blueviolet;
+      }
+
+      .list6 {
+        grid-area: main-left-1;
+        background-color: darkgray;
+      }
+
+      .list7 {
+        grid-area: main-left-2;
+        background-color: antiquewhite;
+      }
+
+      .list8 {
+        grid-area: main-left-3;
+        background-color: darkred;
+      }
+
+      .list9 {
+        grid-area: main-left-4;
+        background-color: deeppink;
+      }
+
+      *[class^="list"] {
+        /* All Tags, whose class begins with the string 'list' */
+        display: inline-block;
+        border: 1px solid blue;
+      }
+
+      *[id^="cat"] {
+        width: 140px;
+        float: left;
+      }
+    </style>
+
+    <div id="myGrid">
+      <div class="list1">
+        Column 1
+      </div>
+      <div class="list2">
+        Column 2
+      </div>
+      <div class="list3">
+        Column 3
+      </div>
+      <div class="list4">
+        Column 4
+      </div>
+
+      <div class="list6">
+        Lorem ipsum dolor sit amet
+      </div>
+      <div class="list7">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+      </div>
+      <div class="list8">
+        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+        sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </div>
+      <div class="list9">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat.
+      </div>
+      <div class="list5">
+        <img id="cat3" src="./pics/cat.png" alt="cat" />
+        <img id="cat4" src="./pics/cat.png" alt="cat" />
+        <img id="cat5" src="./pics/cat.png" alt="cat" />
+        <img id="cat6" src="./pics/cat.png" alt="cat" />
+        <img id="cat7" src="./pics/cat.png" alt="cat" />
+        <img id="cat8" src="./pics/cat.png" alt="cat" />
+      </div>
+    </div>
+  </div>
+
+  <!-- **************************************************************** -->
+  <!-- Grid-Layout Variant 2: with rows and columns                     -->
+  <!-- or Placing items onto the grid by line number                    -->
+  <!-- see e.g. https://developer.mozilla.org/en-US/docs/Glossary/Grid_Lines -->
+  <!-- or https://css-tricks.com/snippets/css/complete-guide-grid/ -->
+  <!-- **************************************************************** -->
+  <br />
+  <div id="gridCellPoint">
+    <style>
+      #myGrid2,
+      #myGrid3 {
+        display: grid;
+        grid-template-columns: 100px 200px auto 200px 100px;
+        grid-template-rows: 50px 100px 50px auto;
+      }
+
+      .cell-1-1 {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+      }
+
+      .cell-1-2 {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+      }
+
+      .cell-1-3 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+      }
+
+      .cell-1-4 {
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 2;
+      }
+
+      .cell-1-5 {
+        grid-column-start: 5;
+        grid-column-end: 6;
+        grid-row-start: 1;
+        grid-row-end: 2;
+      }
+
+      .area-1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+      }
+
+      .area-2 {
+        grid-column-start: 3;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+      }
+
+      .area-3 {
+        grid-column-start: 4;
+        grid-column-end: 6;
+        grid-row-start: 2;
+        grid-row-end: 3;
+      }
+
+      .col-area-1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+      }
+
+      .col-area-2 {
+        grid-column-start: 3;
+        grid-column-end: 4;
+      }
+
+      .col-area-3 {
+        grid-column-start: 4;
+        grid-column-end: 6;
+      }
+
+      .upper-left {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
+      }
+
+      .center {
+        grid-column-start: 2;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        grid-row-end: 3;
+      }
+
+      .lower-right {
+        grid-column-start: 4;
+        grid-column-end: 6;
+        grid-row-start: 2;
+        grid-row-end: 4;
+      }
+
+      .box {
+        border: 1px dotted red;
+        margin: 4px;
+        background-color: aqua;
+        border-radius: 20px;
+        opacity: 0.5;
+      }
+
+      .boxToo {
+        border: 1px dashed blue;
+        margin: 10px;
+        background-color: coral;
+        border-radius: 20px;
+        opacity: 0.5;
+        text-align: center;
+      }
+    </style>
+
+    <div id="myGrid2">
+      <div>Cell-1-1</div>
+      <div>Cell-1-2</div>
+      <div>Cell-1-3</div>
+      <div>Cell-1-4</div>
+      <div>Cell-1-5</div>
     </div>
 
-    <!-- **************************************************************** -->
-    <!-- Flipping Pictures -->
-    <!-- **************************************************************** -->
-    <br>
-    <div id="flipPoint">
-        <style>
-            /* see [https://www.w3schools.com/howto/howto_css_flip_box.asp] */            
-            .flip-box {
-                background-color: transparent;
-                width: 400px;
-                height: 300px;
-                border: 1px solid #f1f1f1;
-                perspective: 1000px; /* Remove this if you don't want the 3D effect */
-            }
-            
-            /* This container is needed to position the front and back side */            
-            .flip-box-inner {
-                position: relative;
-                width: 100%;
-                height: 100%;
-                text-align: center;
-                transition: transform 0.8s;
-                transform-style: preserve-3d;
-            }
-            
-            /* Do an horizontal flip when you move the mouse over the flip box container */
-            .flip-box:hover .flip-box-inner {
-                transform: rotateY(180deg);
-            }
-            
-            /* Position the front and back side */   
-            .flip-box-front,
-            .flip-box-back {
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                -webkit-backface-visibility: hidden; /* Safari */
-                backface-visibility: hidden;
-            }
-            /* Style the front side */  
-            .flip-box-front {
-                background-color: #bbb;
-                color: black;
-            }
-            /* Style the back side */
-            .flip-box-back {
-                background-color: dodgerblue;
-                color: white;
-                transform: rotateY(180deg);
-                backface-visibility: hidden;
-            }
-        </style>
-        
-        <div class="flip-box">
-            <div class="flip-box-inner">
-                <div class="flip-box-front">
-                    <h2>Front Side</h2>
-                    <img id="owl" src="./pics/Eule.png" alt="owl" />
-                </div>
-                <div class="flip-box-back">
-                    <h2>Back Side</h2>
-                    <img id="pinguin" src="./pics/Pinguin.png" alt="pinguin" />
-                </div>
-            </div>
-        </div>
-    </div>
+    <div id="myGrid3">
+      <!-- Row 1: Cell by Cell -->
+      <div class="box cell-1-1">
+        Cell-1-1
+      </div>
+      <div class="box cell-1-2">Cell-1-2</div>
+      <div class="box cell-1-3">Cell-1-3</div>
+      <div class="box cell-1-4">Cell-1-4</div>
+      <div class="box cell-1-5">Cell-1-5</div>
 
-    <!-- **************************************************************** -->
-    <!-- Fancybox -->
-    <!-- see https://fancyapps.com/fancybox/3/docs/-->
-    <!-- Examples from https://codesandbox.io/u/fancyapps -->
-    <!-- **************************************************************** -->
-    <br>
-    <div id="fancyPoint" style="width:80%">
-        <style>
-            #myGallery img {
-                width: 40%;
-            }
-            
-            #myGallery div {
-                margin: 5px;
-            }
-        </style>
-        <div id="fancy" style="height:1000px;background-color:lightgray">
-            <a href="#top">
-                <button class="blue button" style="width:200px">Back to Top</button>
-            </a>
-            <h1 style="text-align:right">Some Fancybox Examples</h1>
+      <!-- Row 2: You determine the areas -->
+      <div class="box area-1">Area-1</div>
+      <div class="box area-2">Area-2</div>
+      <div class="box area-3">
+        Area-3
+      </div>
 
-            <!-- ++++++++++++++++++++++++++++++++++++++++++ -->
-            <!-- Load a picture in the fancybox way -->
-            <a data-fancybox href="./pics/cat.png">
-                <button class="green button">Load a picture</button>
-            </a>
-
-            <!-- ++++++++++++++++++++++++++++++++++++++++++ -->
-            <!-- Show hidden content in a fancybox -->
-            <a data-fancybox data-src="#hidden-content">
-                <button class="green button">Trigger a fancybox</button>
-            </a>
-            <div id="hidden-content" style="display:none;">
-                <h2>Hello</h2>
-                <p>You are awesome.</p>
-            </div>
-
-            <!-- ++++++++++++++++++++++++++++++++++++++++++ -->
-            <!-- Create a gallery the fancybox way -->
-            <button onclick="showGallery();" class="green button">Show a gallery</button>
-            
-            <div id="myGallery" style="display:none">
-                <h2>Simple Gallery</h2>
-                <p>
-                <div>    
-                  <a id="mountain-1" data-fancybox="gallery" data-src="https://lipsum.app/id/3/1024x768">
-                    <img src="https://lipsum.app/id/3/200x150" />
-                  </a>
-                </div>
-                <div>    
-                  <a id="mountain-2" data-fancybox="gallery" data-src="https://lipsum.app/id/4/1024x768">
-                    <img src="https://lipsum.app/id/4/200x150" />
-                  </a>
-                </div>
-                <div>
-                  <a id="mountains" data-fancybox="gallery" data-src="https://lipsum.app/id/5/1024x768">
-                    <img src="https://lipsum.app/id/5/200x150" />
-                  </a>
-                </div>
-                </p>
-            </div>
-
-            
-            <script>
-                function showGallery() {
-                    //$('*[data-fancybox="gallery"]').fancybox();
-                    $("#myGallery").css("display", "block");
-                }
-            </script>
-        </div>
-    </div>
-
-    <!-- **************************************************************** -->
-    <!-- Searching  (Filter/Search List) -->
-    <!-- see https://www.w3schools.com/howto/howto_js_filter_lists.asp    -->
-    <!-- **************************************************************** -->
-    <br/>
-    <br/>
-    <div id="searchPoint">
-        <div style="height:100px; width:400px; background-color: yellow">
-            <input type="text" id="q" onkeyup="searchFunction()" placeholder="Search for names .." title="Type in a name" style="border:2px solid blue; font-size:120%;position:relative;top:10px; left:10px">
-
-            <!-- This is the list of potential search result links: -->
-            <ul id="myUL" style="display:none">
-                <li><a href="#mountain-1">Mountains blue background</a></li>
-                <li><a href="#mountain-2">Cloudy Mountains</a></li>
-                <li><a href="#mountains">Mountains far-away</a></li>
-            </ul>
-        </div>
-        <script>
-            /* global $*/
-            //Set the autocomplete to off, as autocomplete searches the browser history
-            $("#q").attr("autocomplete", "off");
-
-            function searchFunction() {
-                //Only search if there are more than 2 input chars
-                if ($("#q").val().length > 1) {
-                    var input, filter, ul, li, a, i, txtValue;
-                    input = document.getElementById("q");
-                    filter = input.value.toUpperCase();
-                    ul = document.getElementById("myUL");
-                    li = ul.getElementsByTagName("li");
-                    for (i = 0; i < li.length; i++) {
-                        a = li[i].getElementsByTagName("a")[0];
-                        txtValue = a.textContent || a.innerText;
-                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                            li[i].style.display = "block";
-                            $("#myUL").show();
-                        } else {
-                            li[i].style.display = "none";
-                        }
-                    }
-                } else {
-                    $("#myUL").hide();
-                }
-            }
-            $("#q").val("");
-        </script>
-    </div>
-
-
-    
-    <!-- **************************************************************** -->
-    <!-- Grid-Layout Variant 1: with template-areas -->
-    <!-- see e.g.https://css-tricks.com/snippets/css/complete-guide-grid/ -->
-    <!-- **************************************************************** -->
-    <br/>
-    <br/>
-    <div id="gridAreaPoint">
-        <style>
-            /* Grid-Layout with grid areas*/
-            
-            #myGrid {
-                display: grid;
-                grid-template-columns: 160px 160px 160px 160px;
-                grid-template-rows: auto;
-                grid-template-areas: "head1        head2        head3      head4" "main-left-1  main-left-2  .          .    " ".            .            main-right main-right " "main-left-3  main-left-4  main-right main-right ";
-            }
-            
-            .list1 {
-                grid-area: head1;
-                background-color: aqua;
-            }
-            
-            .list2 {
-                grid-area: head2;
-                background-color: aquamarine;
-            }
-            
-            .list3 {
-                grid-area: head3;
-                background-color: azure;
-            }
-            
-            .list4 {
-                grid-area: head4;
-                background-color: cadetblue;
-            }
-            
-            .list5 {
-                grid-area: main-right;
-                background-color: blueviolet;
-            }
-            
-            .list6 {
-                grid-area: main-left-1;
-                background-color: darkgray;
-            }
-            
-            .list7 {
-                grid-area: main-left-2;
-                background-color: antiquewhite;
-            }
-            
-            .list8 {
-                grid-area: main-left-3;
-                background-color: darkred;
-            }
-            
-            .list9 {
-                grid-area: main-left-4;
-                background-color: deeppink;
-            }
-            
-            *[class^="list"] {
-                /* All Tags, whose class begins with the string 'list' */
-                display: inline-block;
-                border: 1px solid blue;
-            }
-            
-            *[id^="cat"] {
-                width: 140px;
-                float: left;
-            }
-        </style>
-
-        <div id="myGrid">
-            <div class="list1">
-                Column 1
-            </div>
-            <div class="list2">
-                Column 2
-            </div>
-            <div class="list3">
-                Column 3
-            </div>
-            <div class="list4">
-                Column 4
-            </div>
-
-            <div class="list6">
-                Lorem ipsum dolor sit amet
-            </div>
-            <div class="list7">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            </div>
-            <div class="list8">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </div>
-            <div class="list9">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </div>
-            <div class="list5">
-                <img id="cat3" src="./pics/cat.png" alt="cat" />
-                <img id="cat4" src="./pics/cat.png" alt="cat" />
-                <img id="cat5" src="./pics/cat.png" alt="cat" />
-                <img id="cat6" src="./pics/cat.png" alt="cat" />
-                <img id="cat7" src="./pics/cat.png" alt="cat" />
-                <img id="cat8" src="./pics/cat.png" alt="cat" />
-            </div>
-        </div>
-    </div>
-
-    <!-- **************************************************************** -->
-    <!-- Grid-Layout Variant 2: with rows and columns                     -->
-    <!-- or Placing items onto the grid by line number                    -->
-    <!-- see e.g. https://developer.mozilla.org/en-US/docs/Glossary/Grid_Lines -->
-    <!-- or https://css-tricks.com/snippets/css/complete-guide-grid/ -->
-    <!-- **************************************************************** -->
-    <br/>
-    <div id="gridCellPoint">
-        <style>
-            #myGrid2,
-            #myGrid3 {
-                display: grid;
-                grid-template-columns: 100px 200px auto 200px 100px;
-                grid-template-rows: 50px 100px 50px auto;
-            }
-            
-            .cell-1-1 {
-                grid-column-start: 1;
-                grid-column-end: 2;
-                grid-row-start: 1;
-                grid-row-end: 2;
-            }
-            
-            .cell-1-2 {
-                grid-column-start: 2;
-                grid-column-end: 3;
-                grid-row-start: 1;
-                grid-row-end: 2;
-            }
-            
-            .cell-1-3 {
-                grid-column-start: 3;
-                grid-column-end: 4;
-                grid-row-start: 1;
-                grid-row-end: 2;
-            }
-            
-            .cell-1-4 {
-                grid-column-start: 4;
-                grid-column-end: 5;
-                grid-row-start: 1;
-                grid-row-end: 2;
-            }
-            
-            .cell-1-5 {
-                grid-column-start: 5;
-                grid-column-end: 6;
-                grid-row-start: 1;
-                grid-row-end: 2;
-            }
-            
-            .area-1 {
-                grid-column-start: 1;
-                grid-column-end: 3;
-                grid-row-start: 2;
-                grid-row-end: 3;
-            }
-            
-            .area-2 {
-                grid-column-start: 3;
-                grid-column-end: 3;
-                grid-row-start: 2;
-                grid-row-end: 3;
-            }
-            
-            .area-3 {
-                grid-column-start: 4;
-                grid-column-end: 6;
-                grid-row-start: 2;
-                grid-row-end: 3;
-            }
-            
-            .col-area-1 {
-                grid-column-start: 1;
-                grid-column-end: 3;
-            }
-            
-            .col-area-2 {
-                grid-column-start: 3;
-                grid-column-end: 4;
-            }
-            
-            .col-area-3 {
-                grid-column-start: 4;
-                grid-column-end: 6;
-            }
-            
-            .upper-left {
-                grid-column-start: 1;
-                grid-column-end: 3;
-                grid-row-start: 1;
-                grid-row-end: 3;
-            }
-            
-            .center {
-                grid-column-start: 2;
-                grid-column-end: 5;
-                grid-row-start: 2;
-                grid-row-end: 3;
-            }
-            
-            .lower-right {
-                grid-column-start: 4;
-                grid-column-end: 6;
-                grid-row-start: 2;
-                grid-row-end: 4;
-            }
-            
-            .box {
-                border: 1px dotted red;
-                margin: 4px;
-                background-color: aqua;
-                border-radius: 20px;
-                opacity: 0.5;
-            }
-            
-            .boxToo {
-                border: 1px dashed blue;
-                margin: 10px;
-                background-color: coral;
-                border-radius: 20px;
-                opacity: 0.5;
-                text-align: center;
-            }
-        </style>
-
-        <div id="myGrid2">
-            <div>Cell-1-1</div>
-            <div>Cell-1-2</div>
-            <div>Cell-1-3</div>
-            <div>Cell-1-4</div>
-            <div>Cell-1-5</div>
-        </div>
-
-        <div id="myGrid3">
-            <!-- Row 1: Cell by Cell -->
-            <div class="box cell-1-1">
-                Cell-1-1
-            </div>
-            <div class="box cell-1-2">Cell-1-2</div>
-            <div class="box cell-1-3">Cell-1-3</div>
-            <div class="box cell-1-4">Cell-1-4</div>
-            <div class="box cell-1-5">Cell-1-5</div>
-
-            <!-- Row 2: You determine the areas -->
-            <div class="box area-1">Area-1</div>
-            <div class="box area-2">Area-2</div>
-            <div class="box area-3">
-                Area-3
-            </div>
-
-            <!-- Row 3: Column-based Layout 
+      <!-- Row 3: Column-based Layout 
                         (and therefore elements flow) -->
-            <div class="box col-area-1">Col-Area-1</div>
-            <div class="box col-area-2">Col-Area-2</div>
-            <div class="box col-area-3">Col-Area-3</div>
+      <div class="box col-area-1">Col-Area-1</div>
+      <div class="box col-area-2">Col-Area-2</div>
+      <div class="box col-area-3">Col-Area-3</div>
 
-            <!-- Overlays -->
-            <div class="boxToo upper-left">Other-Area-1</div>
-            <div class="boxToo center">Other-Area-2</div>
-            <div class="boxToo lower-right">Other-Area-3</div>
+      <!-- Overlays -->
+      <div class="boxToo upper-left">Other-Area-1</div>
+      <div class="boxToo center">Other-Area-2</div>
+      <div class="boxToo lower-right">Other-Area-3</div>
 
-        </div>
     </div>
+  </div>
 
 
-    <!-- **************************************************************** -->
-    <!-- Flex Boxes -->
-    <!-- see https://css-tricks.com/snippets/css/a-guide-to-flexbox/      -->
-    <!-- **************************************************************** -->
-    <br/>
-    <div id="flexPoint">
-        <style>
-            .flex-container {
-                display: flex;
-                align-items: stretch;
-                height: 100px;
-                border: 1px solid blue;
-                margin: 10px;
-                background-color: aliceblue;
-            }
-            
-            .flex-item {
-                background-color: aqua;
-                border: 1px solid red;
-            }
-            
-            .flex-start {
-                justify-content: flex-start;
-                align-items: flex-start;
-            }
-            
-            .flex-center {
-                justify-content: center;
-                align-items: center;
-            }
-            
-            .flex-end {
-                justify-content: flex-end;
-                align-items: flex-end;
-            }
-            
-            .flex-size1 {
-                flex-grow: 0;
-                /* may NOT grow with window-size over flex-basis size */
-                flex-shrink: 0;
-                /* may NOT shrink with window-size under flex-basis size */
-                flex-basis: 30%;
-            }
-            
-            .flex-size2 {
-                flex-grow: 1;
-                /* may grow with window-size over flex-basis size */
-                flex-shrink: 1;
-                /* may shrink with window-size under flex-basis size */
-                flex-basis: 30%;
-            }
-            
-            .flex-space-around {
-                justify-content: space-around;
-            }
-            
-            .flex-space-between {
-                justify-content: space-between;
-            }
-            
-            .flex-space-evenly {
-                justify-content: space-evenly;
-            }
-            
-            .highlighted {
-                background-color: yellow;
-                font-size: boldest;
-            }
-        </style>
-        <div class="flex-container flex-start">
-            <p>Flex container with justify-content/align-items:
-                <span class="highlighted">flex-start</span>
-            </p>
-            <div class="flex-item">Item 1: Hello World!</div>
-            <div class="flex-item">Item 2</div>
-            <div class="flex-item">Item 3: Hello Flex-World!</div>
-            <div class="flex-item">Item 4</div>
-        </div>
-        <div class="flex-container flex-center">
-            <p>Flex container with justify-content/align-items:
-                <span class="highlighted">flex-center</span>
-            </p>
-            <div class="flex-item">Item 1: Hello World!</div>
-            <div class="flex-item">Item 2</div>
-            <div class="flex-item">Item 3: Hello Flex-World!</div>
-            <div class="flex-item">Item 4</div>
-        </div>
-        <div class="flex-container flex-end">
-            <p>Flex container with justify-content/align-items:
-                <span class="highlighted">flex-end</span>
-            </p>
-            <div class="flex-item">Item 1: Hello World!</div>
-            <div class="flex-item">Item 2</div>
-            <div class="flex-item">Item 3: Hello Flex-World!</div>
-            <div class="flex-item">Item 4</div>
-        </div>
-        <div class="flex-container">
-            <div class="flex-item"> Just a flex-item </div>
-            <div class="flex-item flex-size1"> A flex-item that may NOT grow nor shrink under 30%, i.e., it always is of width=30%</div>
-            <div class="flex-item flex-size2">A flex-item that may grow or shrink as it likes</div>
-        </div>
-        <div class="flex-container flex-space-around">
-            <p>Flex container with justify-content:
-                <span class="highlighted">flex-space-around</span>
-            </p>
-            <div class="flex-item">Item 1: Hello World!</div>
-            <div class="flex-item">Item 2</div>
-            <div class="flex-item">Item 3: Hello Flex-World!</div>
-            <div class="flex-item">Item 4</div>
-        </div>
-        <div class="flex-container flex-space-between">
-            <p>Flex container with justify-content:
-                <span class="highlighted">flex-space-between</span>
-            </p>
-            <div class="flex-item">Item 1: Hello World!</div>
-            <div class="flex-item">Item 2</div>
-            <div class="flex-item">Item 3: Hello Flex-World!</div>
-            <div class="flex-item">Item 4</div>
-        </div>
-        <div class="flex-container flex-space-evenly">
-            <p>Flex container with justify-content:
-                <span class="highlighted">flex-space-evenly</span>
-            </p>
-            <div class="flex-item">Item 1: Hello World!</div>
-            <div class="flex-item">Item 2</div>
-            <div class="flex-item">Item 3: Hello Flex-World!</div>
-            <div class="flex-item">Item 4</div>
-        </div>
+  <!-- **************************************************************** -->
+  <!-- Flex Boxes -->
+  <!-- see https://css-tricks.com/snippets/css/a-guide-to-flexbox/      -->
+  <!-- **************************************************************** -->
+  <br />
+  <div id="flexPoint">
+    <style>
+      .flex-container {
+        display: flex;
+        align-items: stretch;
+        height: 100px;
+        border: 1px solid blue;
+        margin: 10px;
+        background-color: aliceblue;
+      }
+
+      .flex-item {
+        background-color: aqua;
+        border: 1px solid red;
+      }
+
+      .flex-start {
+        justify-content: flex-start;
+        align-items: flex-start;
+      }
+
+      .flex-center {
+        justify-content: center;
+        align-items: center;
+      }
+
+      .flex-end {
+        justify-content: flex-end;
+        align-items: flex-end;
+      }
+
+      .flex-size1 {
+        flex-grow: 0;
+        /* may NOT grow with window-size over flex-basis size */
+        flex-shrink: 0;
+        /* may NOT shrink with window-size under flex-basis size */
+        flex-basis: 30%;
+      }
+
+      .flex-size2 {
+        flex-grow: 1;
+        /* may grow with window-size over flex-basis size */
+        flex-shrink: 1;
+        /* may shrink with window-size under flex-basis size */
+        flex-basis: 30%;
+      }
+
+      .flex-space-around {
+        justify-content: space-around;
+      }
+
+      .flex-space-between {
+        justify-content: space-between;
+      }
+
+      .flex-space-evenly {
+        justify-content: space-evenly;
+      }
+
+      .highlighted {
+        background-color: yellow;
+        font-size: boldest;
+      }
+    </style>
+    <div class="flex-container flex-start">
+      <p>Flex container with justify-content/align-items:
+        <span class="highlighted">flex-start</span>
+      </p>
+      <div class="flex-item">Item 1: Hello World!</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3: Hello Flex-World!</div>
+      <div class="flex-item">Item 4</div>
     </div>
-
-    <div id="emptyBox2" style="height:500px"></div>
-    
-    
-    <!-- **************************************************************** -->
-    <!-- Filter -->
-    <!-- **************************************************************** -->
-    <div id="filterPoint" style="width: 80%; border:1px solid grey;margin: 2px 100px 2px 100px;">
-       <style>
-           .clicked{
-               background-color:coral;
-           }
-           #elements, table{
-               margin: 20px 100px 0px 100px;
-           }
-           #elements div{
-              display:inline-block;
-              float:left;
-              margin:2px;
-              font-size:small;
-              font-weight:bolder;   
-           }           
-           .filterGreen{
-               width:100px;
-               height:100px;
-               background-color:chartreuse;
-               color:chartreuse;  /* This sets the border color as well as the font color */
-           }
-           .filterRed{
-               width:100px;
-               height:100px;
-               background-color:crimson;
-               color:crimson; /* This sets the border color as well as the font color */
-           }
-           .filterWhite{
-               width:100px;
-               height:100px;
-               background-color:aquamarine;
-               color:aquamarine; /* This sets the border color as well as the font color */
-           }
-           .filterSizeSmall{
-               width:40px;
-               height:40px;
-           }
-           .filterSizeMedium{
-               width:80px;
-               height:80px;
-           }
-           .filterSizeLarge{
-               width:120px;
-               height:120px;
-           }
-           .filterSquare{
-               border:1px double lite-gray;
-           }
-           .filterRound{
-               border-radius: 50%;
-               border:1px double lite-gray;
-           }
-           .filterTriangle.filterSizeMedium{
-               width: 0;
-               height: 0;
-               border-left: 40px solid transparent;
-               border-right: 40px solid transparent;
-               border-bottom: 80px solid;
-               background-color:white;
-           }
-           .filterTriangle.filterSizeSmall{
-               width: 0;
-               height: 0;
-               border-left: 20px solid transparent;
-               border-right: 20px solid transparent;
-               border-bottom: 40px solid;
-               background-color:white;
-           }
-           .filterTriangle.filterSizeLarge{
-               width: 0;
-               height: 0;
-               border-left: 60px solid transparent;
-               border-right: 60px solid transparent;
-               border-bottom: 120px solid;
-               background-color:white;
-           }
-       </style>
-       <h2>Filter the elements below according to your choices!</h2>
-       <h3>(You can choose several categories in one column if sensible)</h3>    
-       <table>
-            <tr>
-                <th>Color</th>
-                <th>Shape</th>
-                <th>Size</th>
-                <th>Character</th>
-            </tr>
-            <tr>
-                <td>
-                    <button id="filterGreen" class="blue button" onclick="filterElems('filterGreen')">Green</button>
-                </td>
-                <td>
-                    <button id="filterRound" class="blue button" onclick="filterElems('filterRound')">Round</button>
-                </td>
-                <td>
-                    <button id="filterSizeSmall" class="blue button" onclick="filterElems('filterSizeSmall')">Small</button>
-                </td>
-                <td>
-                    <button id="filterCharacterFunny" class="blue button" onclick="filterElems('filterCharacterFunny')">Funny</button>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <button id="filterRed" class="blue button" onclick="filterElems('filterRed')">Red</button>
-                </td>
-                <td>
-                    <button id="filterSquare" class="blue button" onclick="filterElems('filterSquare')">Square</button>
-                </td>
-                <td>
-                    <button id="filterSizeMedium" class="blue button" onclick="filterElems('filterSizeMedium')">Medium</button>
-                </td>
-                <td>
-                    <button id="filterCharacterWitty" class="blue button" onclick="filterElems('filterCharacterWitty')">Witty</button>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <button id="filterWhite" class="blue button" onclick="filterElems('filterWhite')">Aquamarine</button>
-                </td>
-                <td>
-                    <button id="filterTriangle" class="blue button" onclick="filterElems('filterTriangle')">Triangle</button>
-                </td>
-                <td>
-                    <button id="filterSizeLarge" class="blue button" onclick="filterElems('filterSizeLarge')">Large</button>
-                </td>
-                <td>
-                    <button id="filterCharacterCurious" class="blue button" onclick="filterElems('filterCharacterCurious')">Curious</button>
-                </td>
-            </tr>
-        </table>
-        <hr/>
-        
-           
-        <div id="elements">
-            <div class="filterGreen filterRound filterSizeLarge filterCharacterCurious"><span style="color:black">Curious</span></div>
-            <div class="filterGreen filterRound filterSizeSmall filterCharacterFunny filterCharacterWitty"><span style="color:black">Funny, Witty</span></div>
-            <div class="filterGreen filterRound filterSizeMedium filterCharacterWitty"><span style="color:black">Witty</span></div>
-            <div class="filterGreen filterSquare filterSizeLarge"><span style="color:black">???</span></div>
-            <div class="filterGreen filterSquare filterSizeSmall filterCharacterFunny"><span style="color:black">Funny</span></div>
-            <div class="filterGreen filterSquare filterSizeMedium"><span style="color:black">???</span></div>
-            <div class="filterGreen filterTriangle filterSizeLarge"><span style="color:black">???</span></div>
-            <div class="filterGreen filterTriangle filterSizeSmall"><span style="color:black">???</span></div>
-            <div class="filterGreen filterTriangle filterSizeMedium filterCharacterFunny"><span style="color:black">Funny</span></div>
-            
-            <div class="filterRed filterRound filterSizeLarge filterCharacterFunny"><span style="color:black">Funny</span></div>
-            <div class="filterRed filterRound filterSizeSmall"><span style="color:black">???</span></div>
-            <div class="filterRed filterRound filterSizeMedium"><span style="color:black">???</span></div>
-            <div class="filterRed filterSquare filterSizeLarge filterCharacterFunny filterCharacterWitty filterCharacterCurious"><span style="color:black">Funny, Witty, Curious</span></div>
-            <div class="filterRed filterSquare filterSizeSmall"><span style="color:black">???</span></div>
-            <div class="filterRed filterSquare filterSizeMedium"><span style="color:black">???</span></div>
-            <div class="filterRed filterTriangle filterSizeLarge filterCharacterWitty"><span style="color:black">Witty</span></div>
-            <div class="filterRed filterTriangle filterSizeSmall"><span style="color:black">???</span></div>
-            <div class="filterRed filterTriangle filterSizeMedium filterCharacterCurious"><span style="color:black">Curious</span></div>
-            
-            <div class="filterWhite filterRound filterSizeLarge filterCharacterCurious filterCharacterWitty"><span style="color:black">Curious,<br/> Witty</span></div>
-            <div class="filterWhite filterRound filterSizeSmall"><span style="color:black">???</span></div>
-            <div class="filterWhite filterRound filterSizeMedium"><span style="color:black">???</span></div>
-            <div class="filterWhite filterSquare filterSizeLarge"><span style="color:black">???</span></div>
-            <div class="filterWhite filterSquare filterSizeSmall filterCharacterWitty filterCharacterFunny"><span style="color:black">Witty, <br/> Funny</span></div>
-            <div class="filterWhite filterSquare filterSizeMedium filterCharacterFunny"><span style="color:black">Funny</span></div>
-            <div class="filterWhite filterTriangle filterSizeLarge"><span style="color:black">???</span></div>
-            <div class="filterWhite filterTriangle filterSizeSmall filterCharacterWitty"><span style="color:black">Witty</span></div>
-            <div class="filterWhite filterTriangle filterSizeMedium"><span style="color:black">???</span></div>
-            
-        </div>
-        <script type="text/javascript">           
-            var currentRestraints = new Array();
-
-            function filterElems(filter) {
-                $("#elements div").hide();
-                var button = $("#" + filter);
-                if (button.hasClass("clicked")) {
-                    button.removeClass("clicked");
-                    var index = currentRestraints.findIndex(function(restraint) {
-                        console.log("Restraint: " + restraint)
-                        if (restraint == filter) {
-                            return restraint;
-                        }
-                    });
-                    currentRestraints.splice(index, 1);
-                } else {
-                    button.addClass("clicked");
-                    currentRestraints.push(filter);
-                }
-
-                var restraints = "";
-                for (var j = 0; j < currentRestraints.length; j++) {
-                    restraints = restraints + "." + currentRestraints[j];
-                    console.log("Current Restraints: " + restraints)
-                }
-                $("#elements div" + restraints).show();
-            }
-        </script>
+    <div class="flex-container flex-center">
+      <p>Flex container with justify-content/align-items:
+        <span class="highlighted">flex-center</span>
+      </p>
+      <div class="flex-item">Item 1: Hello World!</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3: Hello Flex-World!</div>
+      <div class="flex-item">Item 4</div>
     </div>
-    
-    
+    <div class="flex-container flex-end">
+      <p>Flex container with justify-content/align-items:
+        <span class="highlighted">flex-end</span>
+      </p>
+      <div class="flex-item">Item 1: Hello World!</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3: Hello Flex-World!</div>
+      <div class="flex-item">Item 4</div>
+    </div>
+    <div class="flex-container">
+      <div class="flex-item"> Just a flex-item </div>
+      <div class="flex-item flex-size1"> A flex-item that may NOT grow nor shrink under 30%, i.e., it always is of
+        width=30%</div>
+      <div class="flex-item flex-size2">A flex-item that may grow or shrink as it likes</div>
+    </div>
+    <div class="flex-container flex-space-around">
+      <p>Flex container with justify-content:
+        <span class="highlighted">flex-space-around</span>
+      </p>
+      <div class="flex-item">Item 1: Hello World!</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3: Hello Flex-World!</div>
+      <div class="flex-item">Item 4</div>
+    </div>
+    <div class="flex-container flex-space-between">
+      <p>Flex container with justify-content:
+        <span class="highlighted">flex-space-between</span>
+      </p>
+      <div class="flex-item">Item 1: Hello World!</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3: Hello Flex-World!</div>
+      <div class="flex-item">Item 4</div>
+    </div>
+    <div class="flex-container flex-space-evenly">
+      <p>Flex container with justify-content:
+        <span class="highlighted">flex-space-evenly</span>
+      </p>
+      <div class="flex-item">Item 1: Hello World!</div>
+      <div class="flex-item">Item 2</div>
+      <div class="flex-item">Item 3: Hello Flex-World!</div>
+      <div class="flex-item">Item 4</div>
+    </div>
+  </div>
+
+  <div id="emptyBox2" style="height:500px"></div>
+
+
+  <!-- **************************************************************** -->
+  <!-- Filter -->
+  <!-- **************************************************************** -->
+  <div id="filterPoint" style="width: 80%; border:1px solid grey;margin: 2px 100px 2px 100px;">
+    <style>
+      .clicked {
+        background-color: coral;
+      }
+
+      #elements,
+      table {
+        margin: 20px 100px 0px 100px;
+      }
+
+      #elements div {
+        display: inline-block;
+        float: left;
+        margin: 2px;
+        font-size: small;
+        font-weight: bolder;
+      }
+
+      .filterGreen {
+        width: 100px;
+        height: 100px;
+        background-color: chartreuse;
+        color: chartreuse;
+        /* This sets the border color as well as the font color */
+      }
+
+      .filterRed {
+        width: 100px;
+        height: 100px;
+        background-color: crimson;
+        color: crimson;
+        /* This sets the border color as well as the font color */
+      }
+
+      .filterWhite {
+        width: 100px;
+        height: 100px;
+        background-color: aquamarine;
+        color: aquamarine;
+        /* This sets the border color as well as the font color */
+      }
+
+      .filterSizeSmall {
+        width: 40px;
+        height: 40px;
+      }
+
+      .filterSizeMedium {
+        width: 80px;
+        height: 80px;
+      }
+
+      .filterSizeLarge {
+        width: 120px;
+        height: 120px;
+      }
+
+      .filterSquare {
+        border: 1px double lite-gray;
+      }
+
+      .filterRound {
+        border-radius: 50%;
+        border: 1px double lite-gray;
+      }
+
+      .filterTriangle.filterSizeMedium {
+        width: 0;
+        height: 0;
+        border-left: 40px solid transparent;
+        border-right: 40px solid transparent;
+        border-bottom: 80px solid;
+        background-color: white;
+      }
+
+      .filterTriangle.filterSizeSmall {
+        width: 0;
+        height: 0;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-bottom: 40px solid;
+        background-color: white;
+      }
+
+      .filterTriangle.filterSizeLarge {
+        width: 0;
+        height: 0;
+        border-left: 60px solid transparent;
+        border-right: 60px solid transparent;
+        border-bottom: 120px solid;
+        background-color: white;
+      }
+    </style>
+    <h2>Filter the elements below according to your choices!</h2>
+    <h3>(You can choose several categories in one column if sensible)</h3>
+    <table>
+      <tr>
+        <th>Color</th>
+        <th>Shape</th>
+        <th>Size</th>
+        <th>Character</th>
+      </tr>
+      <tr>
+        <td>
+          <button id="filterGreen" class="blue button" onclick="filterElems('filterGreen')">Green</button>
+        </td>
+        <td>
+          <button id="filterRound" class="blue button" onclick="filterElems('filterRound')">Round</button>
+        </td>
+        <td>
+          <button id="filterSizeSmall" class="blue button" onclick="filterElems('filterSizeSmall')">Small</button>
+        </td>
+        <td>
+          <button id="filterCharacterFunny" class="blue button"
+            onclick="filterElems('filterCharacterFunny')">Funny</button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button id="filterRed" class="blue button" onclick="filterElems('filterRed')">Red</button>
+        </td>
+        <td>
+          <button id="filterSquare" class="blue button" onclick="filterElems('filterSquare')">Square</button>
+        </td>
+        <td>
+          <button id="filterSizeMedium" class="blue button" onclick="filterElems('filterSizeMedium')">Medium</button>
+        </td>
+        <td>
+          <button id="filterCharacterWitty" class="blue button"
+            onclick="filterElems('filterCharacterWitty')">Witty</button>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <button id="filterWhite" class="blue button" onclick="filterElems('filterWhite')">Aquamarine</button>
+        </td>
+        <td>
+          <button id="filterTriangle" class="blue button" onclick="filterElems('filterTriangle')">Triangle</button>
+        </td>
+        <td>
+          <button id="filterSizeLarge" class="blue button" onclick="filterElems('filterSizeLarge')">Large</button>
+        </td>
+        <td>
+          <button id="filterCharacterCurious" class="blue button"
+            onclick="filterElems('filterCharacterCurious')">Curious</button>
+        </td>
+      </tr>
+    </table>
+    <hr />
+
+
+    <div id="elements">
+      <div class="filterGreen filterRound filterSizeLarge filterCharacterCurious"><span
+          style="color:black">Curious</span></div>
+      <div class="filterGreen filterRound filterSizeSmall filterCharacterFunny filterCharacterWitty"><span
+          style="color:black">Funny, Witty</span></div>
+      <div class="filterGreen filterRound filterSizeMedium filterCharacterWitty"><span style="color:black">Witty</span>
+      </div>
+      <div class="filterGreen filterSquare filterSizeLarge"><span style="color:black">???</span></div>
+      <div class="filterGreen filterSquare filterSizeSmall filterCharacterFunny"><span style="color:black">Funny</span>
+      </div>
+      <div class="filterGreen filterSquare filterSizeMedium"><span style="color:black">???</span></div>
+      <div class="filterGreen filterTriangle filterSizeLarge"><span style="color:black">???</span></div>
+      <div class="filterGreen filterTriangle filterSizeSmall"><span style="color:black">???</span></div>
+      <div class="filterGreen filterTriangle filterSizeMedium filterCharacterFunny"><span
+          style="color:black">Funny</span></div>
+
+      <div class="filterRed filterRound filterSizeLarge filterCharacterFunny"><span style="color:black">Funny</span>
+      </div>
+      <div class="filterRed filterRound filterSizeSmall"><span style="color:black">???</span></div>
+      <div class="filterRed filterRound filterSizeMedium"><span style="color:black">???</span></div>
+      <div
+        class="filterRed filterSquare filterSizeLarge filterCharacterFunny filterCharacterWitty filterCharacterCurious">
+        <span style="color:black">Funny, Witty, Curious</span>
+      </div>
+      <div class="filterRed filterSquare filterSizeSmall"><span style="color:black">???</span></div>
+      <div class="filterRed filterSquare filterSizeMedium"><span style="color:black">???</span></div>
+      <div class="filterRed filterTriangle filterSizeLarge filterCharacterWitty"><span style="color:black">Witty</span>
+      </div>
+      <div class="filterRed filterTriangle filterSizeSmall"><span style="color:black">???</span></div>
+      <div class="filterRed filterTriangle filterSizeMedium filterCharacterCurious"><span
+          style="color:black">Curious</span></div>
+
+      <div class="filterWhite filterRound filterSizeLarge filterCharacterCurious filterCharacterWitty"><span
+          style="color:black">Curious,<br /> Witty</span></div>
+      <div class="filterWhite filterRound filterSizeSmall"><span style="color:black">???</span></div>
+      <div class="filterWhite filterRound filterSizeMedium"><span style="color:black">???</span></div>
+      <div class="filterWhite filterSquare filterSizeLarge"><span style="color:black">???</span></div>
+      <div class="filterWhite filterSquare filterSizeSmall filterCharacterWitty filterCharacterFunny"><span
+          style="color:black">Witty, <br /> Funny</span></div>
+      <div class="filterWhite filterSquare filterSizeMedium filterCharacterFunny"><span style="color:black">Funny</span>
+      </div>
+      <div class="filterWhite filterTriangle filterSizeLarge"><span style="color:black">???</span></div>
+      <div class="filterWhite filterTriangle filterSizeSmall filterCharacterWitty"><span
+          style="color:black">Witty</span></div>
+      <div class="filterWhite filterTriangle filterSizeMedium"><span style="color:black">???</span></div>
+
+    </div>
+    <script type="text/javascript">
+      var currentRestraints = new Array();
+
+      function filterElems(filter) {
+        $("#elements div").hide();
+        var button = $("#" + filter);
+        if (button.hasClass("clicked")) {
+          button.removeClass("clicked");
+          var index = currentRestraints.findIndex(function (restraint) {
+            console.log("Restraint: " + restraint)
+            if (restraint == filter) {
+              return restraint;
+            }
+          });
+          currentRestraints.splice(index, 1);
+        } else {
+          button.addClass("clicked");
+          currentRestraints.push(filter);
+        }
+
+        var restraints = "";
+        for (var j = 0; j < currentRestraints.length; j++) {
+          restraints = restraints + "." + currentRestraints[j];
+          console.log("Current Restraints: " + restraints)
+        }
+        $("#elements div" + restraints).show();
+      }
+    </script>
+  </div>
+
+
 </body>
 
 </html>

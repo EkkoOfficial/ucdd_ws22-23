@@ -7,36 +7,49 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <title>Home ConnectSolutions</title>
-    <link rel="stylesheet" href="stylesheets/index.css">
-    <script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>  
+  <meta charset="utf-8">
+  <title>Home ConnectSolutions</title>
+  <link rel="stylesheet" href="stylesheets/index.css">
+  <script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>
 </head>
 
 <body>
+  <nav>
+    <a href="index.html"><img id="logo" src="pics/logo.png" alt="" /></a>
+    <ul>
+      <li><a href="aboutUs.html">About Us</a></li>
+      <li><a href="subgroup29.html">Group29</a></li>
+      <li><a href="subgroup31.html">FindYourVibe</a></li>
+      <li><a href="Subgroup_43_Value_Added_Service.html">EventPlanner</a></li>
+      <li><a href="contactUs.html">Contact Us</a></li>
+      <li><a href="fancyStuff.html">Vorlage</a></li>
+    </ul>
+  </nav>
 
-<div id="main">
+  <!-- Teaser Element (
+    created using https://www.w3schools.com/howto/howto_css_image_text.asp and
+    https://getbootstrap.com/docs/5.3/components/buttons/ ) -->
+  <div class="heroSection">
+    <div class="teaser vw-100">
+      <div class="teaserImageContainer">
+        <!-- Source: https://unsplash.com/de/fotos/pREq0ns_p_E -->
+        <img src="pics/Index_pics/placeholder.jpg" class="teaserImage mw-100" alt="...">
+      </div>
+      <div class="overlay">
+        <h1 class=" effect-underline display-2">WE ARE CONNECT SOLUTIONS</h1>
+        <a class="btn btn-outline-light btn-lg mt-5" href="contactUs.html" role="button">Contact Us</a>
+      </div>
+    </div>
+  </div>
+  <!-- Service cards -->
 
-  <div class="header">
-    <a href="index.html">
-        <img id="logo" src="pics/logo.png"/>
-    </a>
-    
-    <nav class="navigation">
-      <ul>
-        <li><a href="aboutUs.html">About Us</a></li>
-        <li><a href="subgroup29.html">Group29</a></li>
-        <li><a href="subgroup31.html">FindYourVibe service</a></li>
-        <li><a href="Subgroup_43_Value_Added_Service.html">Event Planner</a></li>
-        <li><a href="contactUs.html">Contact Us</a></li>
-        <li><a href="fancyStuff.html">Vorlage</a></li>
-      </ul>
-      
-</div>
-
-  <h1 class=headline1>Get to know our team</h1>
+  <div class="section services">
+    <div class="service-element"></div>
+  </div>
 
 
+  <!-- Bootstrap script -->
+  <script src="./dist/main.js"></script>
 
 </body>
 

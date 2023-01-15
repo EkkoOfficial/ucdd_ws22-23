@@ -4,217 +4,256 @@
       <title>Added Value Service Subgroup 29</title>
       <meta charset="utf-8">
       <link rel="stylesheet" href="stylesheets/subgroup29.css">
-      <script type="text/javascript" src="js/jquery-3.1.1.min.js">          </script>  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/css/multi-select-tag.css">
+      <script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>  
   </head>
 
   <body>
 
-  <!-- Introduction-->
-  <div id="introduction-maske">
+<!--LANGE QUELLE VON LANGUAGE NOCH RICHTIG ANGEBEN-->
+    
+<header> 
+       <div class="header_text"></div>
+          <nav class="navigation">
+             <a href="index.html"><img id="logo" src="pics/logo.png" alt=""/></a>
+             <ul>
+              <li><a href="aboutUs.html">About Us</a></li>  
+              <li><a class="active" href="subgroup29.html">Group29</a></li>
+              <li><a href="subgroup31.html">FindYourVibe</a></li>
+              <li><a href="Subgroup_43_Value_Added_Service.html">EventPlanner</a>
+              </li>
+              <li><a href="contactUs.html">Contact Us</a></li>
+              <li><a href="fancyStuff.html">Vorlage</a></li>
+            </ul>
+          </nav>
+</header>
 
-    <div id="introduction">
-      Our Added Value Service intends to make meeting new people easier. 
-      Inspired by infamous Dating App Trends, we invented: "Insert Name Here"!
-      </br>
-      </br>
-      <h4>Why choose (NAME)?</h4>
-      </br>
 
-      <ul style=“list-style-type:circle”>
-        <li>Made for people that are new in town - or people who want to extend their friend group in a simple and comfortable way!</li>
-        <li>Easy to use and keep an overview of people you have met</li>
-        <li>Chatting without exchanging numbers - to avoid awkward situations!</li>
-      </ul>
+    
+<section id="screen_section"> 
+     <h1>Wanna make some<br><span style=color:#FFE600;">New friends?</span></br></h1>
+     <p class="subheading">Our Added Value Service intends to make meeting new people easier. 
+     <br> Inspired by infamous Dating App Trends, we invented: "Insert Name Here"!</br></p>
+     <button typ="button" id="arrow_button">Let's go<img src="pics/arrow.png"/> 
+     </button>
+</section>
 
-      </br>
 
-      <h4>How does it work?</h4>
-      
-    </div>
-
-    <button onclick="anzeigenAnlegen();">Anlegen</button>
+    
+<section id="about_section">
+  <div class="about_section_container">
+    <img src="pics/friends.jpeg" alt=""/>
   </div>
+  
+   <div class="about_section_container">
+     <h2>For who is the <span style=color:#FFE600;">service?</span></h2>
+     <p>Made for people that are new in town - or people who want to extend their friend 
+        group in a simple and comfortable way!</p>
+     <p>Easy to use and keep an overview of people you have met</p>
+     <p>Chatting without exchanging numbers - to avoid awkward situations!</p>
+   </div>  
+</section>
+    
 
-  </br>
- 
-  <!-- Step 1: Profil anlegen-->
+<section id="signup_profil">
+
+
+  <div class="container2 contain_in">
+      <div class="container1"> 
+          <h4>1.Step</h4>
+          <h5>In order to use the Gettoknow function you must create an account</h5>
+      </div>
+  </div>
+    
+  <div class="container contain_in">
+    <h3 class="form_title">Create your user profil</h3>
+    <form>
+      <div class="main_user_info">
+  
+           <div class="eingabe" name="name">
+               <label id="age" class="beschreibung">Name</label>
+               <input class="eingabefeld" 
+                type="text" placeholder="Enter Full Name" />
+            </div>
+
+           <div class="eingabe" name="age">
+               <label id="age" class="beschreibung">Age</label>
+               <input class="eingabefeld" 
+                type="number" placeholder="Enter your Age" />
+            </div>
+
+        <div class="eingabe" name="email">
+               <label id="age" class="beschreibung">E-mail</label>
+               <input class="eingabefeld" 
+                type="email" placeholder="Enter your e-mail"/>
+            </div>
+
+           <div class="eingabe" name="password">
+               <label id="age" class="beschreibung">Password</label>
+               <input class="eingabefeld" 
+                type="password" placeholder="Enter a password"/>
+            </div>
+
+        <div class="eingabe" name="interests">
+               <label id="age" class="beschreibung">Interests</label>
+               <input class="eingabefeld" 
+                type="text" placeholder="Enter your interests"/>
+            </div>
+
+        <div class="eingabe" name="job title">
+               <label id="age" class="beschreibung">Job title</label>
+               <input class="eingabefeld" 
+                type="text" placeholder="Enter your job title"/>
+            </div>
+        
+     </div>
+
+    <!--eigene eingeständige container außberhalb der flexboxen von oben-->
+          <div class="container_gender">
+              <p>Choose your gender</p>
+               <fieldset>
+                    <input type="radio" id="fem" name="gender" value="female">
+                    <label for="fem">female</label>
+
+                    <input type="radio" id="mal" name="gender" value="male">
+                    <label for="mal">male</label>
+
+                    <input type="radio" id="diverse" name="gender" value="diverse">
+                    <label for="diverse">diverse</label>
+              </fieldset>
+          </div>
+
+      
+          <div class="container_description" name="description">
+               <label id="age" class="beschreibung">Description</label>
+               <textarea class="eingabefeld" 
+                type="text"></textarea>
+          </div>
+
+      
+          <div class="container_language">
+           <!-- <label for="language">Select one or more languages</label>-->
+            <select name="language" id="language" multiple>
+               <option selected disabled>Select one or more languages</option>
+               <option value="Spanish">Spanish</option>
+               <option value="German">German</option>
+               <option value="English">English</option>
+               <option value="French">French</option>
+               <option value="Italian">Italian</option>
+               <option value="Polish">Polish</option>
+               <option value="Russian">Russian</option>
+            </select>
+          </div>
+
+      <!--Copyright (c) 2022 Habibullah Mohammadi Quelle:https://www.youtube.com/watch? 
+      v=9v9ci2EObvg VIKTORIA SARAH BITTE NICHT DIE ZWEI NACHFOLGENDE SCRIPT TAGS EINRÜCKEN FUNKTIONIERT SONST NICHT MEHR HAHA-->
+      <script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag/dist/js/multi-select-tag.js"></script>
+      <script>
+    new MultiSelectTag('language')  // id
+</script>
+
+
+      
+         <!--Quelle für Upload image:https://www.youtube.com/watch?v=KbeKkmk5nhY&list=PLnj4DfwkIwHg1Wvd2TtAthIifMFEElhGq&index=19&t=46s-->
+<div class="form">
+ <!-- <p>Preview Image Before Upload</p>-->
+  <div class="grid">
+       
+      <div class="form-element">
+           <input type="file" id="file-1" accept="image/*">
+           <label for="file-1" id="file-1-preview">
+           <img src="pics/woman.png" alt="">
+              <div>
+                <span>+</span>
+              </div>
+            </label>
+       </div>
+  </div>
+</div>
+
+ <!-- <div class="container_try">
+		  <input type="file" id="file-1" accept="image/*">
+		      <div class="img-area" data-img="">
+			        <h3>Upload Image</h3>
+			        <p>Image size must be less than <span>2MB</span></p>
+		      </div>
+		  <button class="select-image" onclick="previewBeforeUpload();">Select Image</button>
+	</div>-->
+      	<!--<script src="script.js"></script>-->
+         <!--EndeQuelle für Upload image:https://www.youtube.com/watch?v=KbeKkmk5nhY&list=PLnj4DfwkIwHg1Wvd2TtAthIifMFEElhGq&index=19&t=46s-->
+
+      
+      
+          <div class="container_button"> 
+              <button id="logKnopf"onclick="anzeigenMatch1();">Save</button>
+          </div>
+   
+  </div>
+ </form>
+</section>
+
+
+<section id="group_members">
+  <h2>Get to know us</h2>
+  <div class="flex_container">
+    
+      <div class="card">
+        <div class="wrapper">
+         <div class="profile">
+            <img src="pics/picEmily.jpg" alt="">
+         </div>
+           <h3>Emily</h3>
+           <p>Emily is the Creative one, she already worked for two marketing agencys where she 
+          got a lot of knowledge</p>
+           <a href="https://www.linkedin.com/in/emily-rettenmeier-69b2ba256/">more</a>
+          </div>
+      </div>
+
+    <div class="card">
+        <div class="wrapper">
+         <div class="profile">
+            <img src="pics/picSarah.jpg" alt="">
+         </div>
+           <h3>Sarah</h3>
+           <p>Emily is the Creative one, she already worked for two marketing agencys where she 
+          got a lot of knowledge</p>
+           <a href="https://www.linkedin.com/in/emily-rettenmeier-69b2ba256/">more</a>
+          </div>
+      </div>
+
+    <div class="card">
+        <div class="wrapper">
+         <div class="profile">
+            <img src="pics/picEmily.jpg" alt="">
+         </div>
+           <h3>Viktoria</h3>
+           <p>Emily is the Creative one, she already worked for two marketing agencys where she 
+          got a lot of knowledge</p>
+           <a href="https://www.linkedin.com/in/emily-rettenmeier-69b2ba256/">more</a>
+          </div>
+      </div>
+    
+  </div>
+  
+</section>
+
+
+    
+<section id="contact_section"> 
+     <h1>Interested?<br><span style=color:#FFE600;">Contact us!</span></br></h1>
+     <button typ="button" id="arrow_button">Let's go<img src="pics/arrow.png"/> 
+     </button>
+</section>
+
+
+  <!-- Step 1: Profil anlegen--
   <div id="anlegen-mask" style="display:none">
-
-  <!-- Quelle  https://youtu.be/eeHqZeJ9Vqc -->
-    <div class="center">
-      <h1>create your user profil!</h1>
-      
-      <form method="post">
-        
-        <div class="txt_field">
-          <input type="text" required>
-          <span></span>
-          <label id="name" class="beschreibung">name</label>
-        </div>
-
-        <div class="txt_field">
-          <input type="text"required>
-          <span></span>
-          <label id="age" class="beschreibung">age</label>
-        </div>
-
-        <div class="txt_field">
-          <input type="text"required>
-          <span></span>
-          <label id="gender" class="beschreibung">gender</label>
-        </div>
-
-        <div class="txt_field">
-          <input type="email" required>
-          <span></span>
-          <label id="emaill" class="beschreibung">e-mail</label>
-        </div>
-       
-        <div class="txt_field">
-          <input type="password" required>
-          <span></span>
-          <label>password</label>
-        </div>
-
-        <div class="txt_field">
-          <input type="text"required>
-          <span></span>
-          <label id="discription" class="beschreibung">discription</label>
-        </div>
-
-         <div class="txt_field">
-          <input type="email" required>
-          <span></span>
-          <label id="emaill" class="beschreibung">e-mail</label>
-        </div>
-       
-        <div class="txt_field">
-          <input type="password" required>
-          <span></span>
-          <label>password</label>
-        </div>
-
-        <div class="txt_field">
-          <input type="text"required>
-          <span></span>
-          <label id="discription" class="beschreibung">discription</label>
-        </div>
-
-        
-        <input type="submit" value="Sign up">
-       
-        <div class="signup_link">
-          Already a member? <a href="#">Sign in</a>
-        </div>
-      </form>
-    </div>
-     
-  <!--   <div id="seisfilmlange" class="eingabe" name="name">
-      <label id="name" class="beschreibung">Name</label>
-              <input id="eingabename" class="eingabefeld autocomplete" type="text" />
-      </div>
-
-    <div id="seisfilmlange" class="eingabe" name="age">
-        <label id="age" class="beschreibung">Age</label>
-        <input id="eingabeage" class="eingabefeld autocomplete" type="number" />
-      </div>
-
-   <div id="cuatrofsk" class="gender">
-               <label id="gender" class="beschreibung">Gender</label>
-               <select class="eingabefeld selectmenu" id="eingabegender" name = "gender" list ="gendertypen" />
-               <option selected disabled> Gender </option>
-               <option> male </option>
-               <option> female </option>
-               <option> divers </option>
-               </select>
-           </div>
-
-    <div id="seisfilmlange" class="eingabe">
-              <label id="email" class="beschreibung">E-mail</label>
-              <input id="eingabeemail" class="eingabefeld autocomplete" type="email" name='emailrules' />
-      </div>
-
-    <div id="seisfilmlange" class="eingabe">
-              <label id="password" class="beschreibung">Password</label>
-              <input id="eingabepassword" class="eingabefeld autocomplete" type="password" />
-      </div>
-
-    <div id="unofilmtitelbild" class="objZeile">
-               <label id="picture" class="beschreibung">Picture</label>
-               <input id="eingabepicture" class="eingabefeld" type="text"/>
-           </div>
-
-    <div id="tresfilmbeschreibung" class="objZeile">
-               <label id="discription" class="beschreibung">Discription</label>
-               <textarea id="eingabediscription" class="eingabefeld" rows="5" > </textarea>
-           </div>
-
     
-<div id="tresfilmbeschreibung" class="objZeile">
-   <label id="interests" class="beschreibung">Interests</label>
-  <div>
-    <input type="checkbox" id="sports" name="interest" value="sports" />
-    <label for="sports">Sports</label>
-  </div>
-  <div>
-    <input type="checkbox" id="music" name="interest" value="music" />
-    <label for="music">Music</label>
-  </div>
- <div>
-    <input type="checkbox" id="reading" name="interest" value="reading" />
-    <label for="reading">Reading</label>
-  </div>  
- <div>
-    <input type="checkbox" id="clubbing" name="interest" value="clubbing" />
-    <label for="clubbing">Clubbing</label>
-  </div>
-  <div>
-    <input type="checkbox" id="travel" name="interest" value="travel" />
-    <label for="travel">Travel</label>
-  </div>
-</div>
-
-
-<div id="tresfilmbeschreibung" class="objZeile">
-  <label id="language" class="beschreibung">language</label>
-  <div>
-    <input type="checkbox" id="sports" name="language" value="spanish" />
-    <label for="sports">Spanish</label>
-  </div>
-  <div>
-    <input type="checkbox" id="german" name="language" value="german" />
-    <label for="music">German</label>
-  </div>
- <div>
-    <input type="checkbox" id="english" name="language" value="english" />
-    <label for="english">English</label>
-  </div>  
-</div>
-
-    
- <div id="seisfilmlange" class="eingabe">
-    <label id="name" class="beschreibung">Job title</label>
-    <input id="eingabejobtitle" class="eingabefeld autocomplete" type="text" />
- </div>
-
-<div id="buttonocho">
-      <button id="logKnopf" onclick="anzeigenMatch1();alertanlegen();">Safe</button>
- </div>
-
-      <!-- Show hidden content in a fancybox 
-            <a data-fancybox data-src="#hidden-content">
-                <button class="green button">Trigger a fancybox</button>
-            </a>
-            <div id="hidden-content" style="display:none;">
-                <h2>Hello</h2>
-                <p>You are awesome.</p>
-            </div>-->
-
-</div> <!--Schliesung des anlegen-Mask divs-->
+  </div> <!--Schliesung des anlegen-Mask divs--
 
 
     
-  <!--Step 2: Matchen-->
+  <!--Step 2: Matchen--
 
   <div id="match1" style="display:none">
 
@@ -268,7 +307,7 @@
 </button>
   
 
-</div> <!--schliesung des match 1 divs-->
+</div> <!--schliesung des match 1 divs--
 
 
     
@@ -323,7 +362,7 @@
 </button>
   
 
-</div> <!--schliesung des match 2 divs-->
+</div> <!--schliesung des match 2 divs--
 
   <div id="match3" style="display:none">
 
@@ -376,9 +415,9 @@
 </button>
   
 
-</div> <!--schliesung des match 3 divs-->
+</div> <!--schliesung des match 3 divs--
 
-  </br>
+  </br>-->
     
   <!--Step 3: E-Mail-->
   <div id="email-maske" style="display:none">
@@ -457,14 +496,64 @@
       <h5 class="username">Martha Jones</h5>
       <p>3 weeks for me! I moved here because of uni.</p>
     </div>
+
+    <div class="text-bar">
+      <textarea id="chat-input" placeholder="Write your message here" maxlength="500"></textarea>
+      <button type="button" id="send-chat">Send</button>
+      </div>
     
     </div>
 
     
   <!--ab hier Java Script-->
   <script type="text/javascript">
+    
+  /*Quelle für Upload image:https://www.youtube.com/watch?v=KbeKkmk5nhY&list=PLnj4DfwkIwHg1Wvd2TtAthIifMFEElhGq&index=19&t=46s*/
+  function previewBeforeUpload(id){
+  document.querySelector("#"+id).addEventListener("change",function(e){
+    if(e.target.files.length == 0){
+      return;
+    }
+    let file = e.target.files[0];
+    let url = URL.createObjectURL(file);
+    document.querySelector("#"+id+"-preview div").innerText = file.name;
+    document.querySelector("#"+id+"-preview img").src = url;
+  });
+}
 
+previewBeforeUpload("file-1");
+    
+//Ende Quelle
+/*const selectImage = document.querySelector('.select-image');
+const inputFile = document.querySelector('#file');
+const imgArea = document.querySelector('.img-area');
 
+selectImage.addEventListener('click', function () {
+	inputFile.click();
+})
+
+inputFile.addEventListener('change', function () {
+	const image = this.files[0]
+	if(image.size < 2000000) {
+		const reader = new FileReader();
+		reader.onload = ()=> {
+			const allImg = imgArea.querySelectorAll('img');
+			allImg.forEach(item=> item.remove());
+			const imgUrl = reader.result;
+			const img = document.createElement('img');
+			img.src = imgUrl;
+			imgArea.appendChild(img);
+			imgArea.classList.add('active');
+			imgArea.dataset.img = image.name;
+		}
+		reader.readAsDataURL(image);
+	} else {
+		alert("Image size more than 2MB");
+	}
+})*/
+
+    
+/*
     function anzeigenIntroduction(){
   console.log('anzeigenIntroduction');
    $("#anlegen-mask").hide();
@@ -540,47 +629,15 @@ function anzeigenMatch3(){
    $("#introduction-maske").hide();
    $("#email-maske").show();
    $("#chat-maske").hide();
-}
+}*/
 
-function alertanlegen(){
-         alert("Your registration was successful!")
-      }
+//function alertanlegen(){
+  //       alert("Your registration was successful!")
+  //    }
 
-
-
-//legt die Regeln fest, welche Kriterien erfüllt sein müssen
-//function myRules(){
- // console.log("Aufruf von Funktion myRules()");
-
-  //Das Inputfeld mit dem Namen "filmtitelreq" wird selektiert
-  //$("input[name='age']").rules("add",{
-    
-   // required: true, //Feld muss ausgefüllt werden
-   // minlength: 2,
-
-    //Fehlermeldung wird angezeigt bei Nichteinhalten der Regeln
-   // messages:{
-     // required: 'bitte geben Sie den vollständigen Filmtitel ein',
-     // minlength: 'Bitte geben Sie den vollständigen Filmtitel (mindestens 2 Zeichen) ein'
-   // }
- // }); 
-//Validate Funktion
-//$(".validateForm").validate({
- //   errorElement: 'span'
-      
-//Aufrufen der Function myRules()
-//myRules();
-  
-</script>
+  </script>
        
 </body>
   
 </html>
 
-
-<!--was wir noch brauchen:
--alert bei Match: du hast ein match
--alert: erfolgreich angelegt
--möglicherweise Profil bearbeiten (für mehr java)
--Rules Java
--->

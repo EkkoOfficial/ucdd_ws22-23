@@ -1,0 +1,149 @@
+/* Header */
+nav ul{
+  float: right;
+}
+
+nav li{
+  display: inline-block;
+  margin-top: 30px;
+  margin-right: 40px;
+}
+
+nav li a{
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
+}
+
+nav ul li .active{
+  font-weight: bold;
+}
+
+nav ul li:hover{
+  border-bottom: 2px solid white;
+}
+
+nav:hover::after{
+  width: 0;
+}
+
+.header{
+    background-color: #0f1f38;
+    height: 100px;
+    width:100%;
+    position: absolute;
+    top:0px;
+    left:0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#logo {
+      height: 45px;
+			position: absolute;
+      top: 50%;
+      transform: translate(0%, -50%);
+      margin-left: 20px;
+}
+
+.header{
+    background-color: #0f1f38;
+    height: 100px;
+    width:100%;
+    position: absolute;
+    top:0px;
+    left:0px;
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#logo {
+      height: 45px;
+			position: absolute;
+      top: 50%;
+      transform: translate(0%, -50%);
+      margin-left: 20px;
+}
+
+/* Teaser */
+#teaserAboutUs {
+  position: absolute;
+  width: 100%;
+  top:100px;
+  left:0px;
+}
+
+#teaserBenefits{
+  position: absolute;
+  width: 100%;
+  top:910px;
+  left:0px;
+}
+
+/* Content */
+
+.headline1, .headlineTeam{
+font-family: Arial, Helvetica, sans-serif;
+  font-size: 60px; 
+  font-weight: bold;
+ /* color: #425b94;*/
+}
+
+.textAboutUs{
+  position: absolute;
+  top:695px;
+  left:5%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: black;
+}
+
+ 
+
+.col, .row {
+  margin: 20px;
+  text-align: left;
+  row-gap: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  color: black;
+}
+
+.text {
+font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+.gridTeam{
+  position: absolute;
+  top:1400px;
+  width: 90%;
+  left:5%;
+}
+
+.name{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  color: #425b94;
+}
+
+.contact{
+  background-color: #0f1f38;
+  position: absolute;
+  width:100%;
+  height: 250px;
+  top:2800px;
+  left:0px;
+/*  bottom: 0px;*/
+  text-align: center; 
+}
+
+.headlineContact{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 45px; 
+  font-weight: bold;
+  color: white;
+}
+
+
+

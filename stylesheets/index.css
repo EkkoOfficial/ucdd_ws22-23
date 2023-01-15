@@ -1,72 +1,125 @@
-/* hier beginnt der header*/
-body{
-  margin:0;
+/*neuer header anfang*/
+*{
+  margin: 0;
+  padding:0;
   font-family: Arial, Helvetica, sans-serif;
+  
 }
 
-.navigation a {
-    color: #2A2E30;
-    font-size: 120%;
-    text-decoration: none;
-    margin:0px;
+nav{
+  height: 90px;
+  width: 100%;
+  background-color: #0f1f38;
+  position: relative;
 }
 
-.navigation ul {
-   list-style-type: none;
-   margin-left: 50%;
-   position: absolute;
-   top: 0.5%;       
+nav ul{
+  float: right;
 }
 
-.navigation ul li {
-   display: inline-block;
+nav li{
+  display: inline-block;
+  margin-top: 30px;
+  margin-right: 40px;
 }
 
-.navigation ul li a {
-   display: block;
-   padding: 10px 15px;
+nav li a{
+  font-size: 18px;
+  color: white;
+  text-decoration: none;
 }
 
-.navigation ul li a.active, img.active {
-   background: grey;
-   border-radius: 20px;
+nav ul li .active{
+  font-weight: bold;
 }
 
-.navigation ul li a:hover {
-   background: #F2F2F2;
-   border-radius: 20px;
+nav ul li:hover{
+  border-bottom: 2px solid white;
 }
 
-.header{
-    background-color: #A0BDCE;
-    height: 130px;
-    width:100%;
-    position: absolute;
-    top:0px;
-    left:0px;
-    margin: 0px;
+nav:hover::after{
+  width: 0;
 }
 
 #logo {
-			position: relative;
-  		left: 40px;
-			width: 130px;
-  height: 100px;
-			top: 10px;
-}
-/* hier endet der header*/
-
-
-/* hier beginnt das Grid*/
-#main {
- display: grid;
- grid-template-columns: 10% 80% 10%;
- grid-template-rows: 10% auto auto 20%;                     
- grid-template-areas: 
- "left-1 main right-1"
- "left-1 main right-1"
- "left-1 main right-1"
- "footer footer footer"           
+      height: 45px;
+			position: absolute;
+      top: 50%;
+      transform: translate(0%, -50%);
+      margin-left: 20px;
 }
 
-/* hier endet das Grid*/
+/*neuer header ende*/
+
+/*sections*/
+.section{
+    color: #fff;
+    background-color: #0f1f38;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.heroSection{
+    color: #fff;
+    background-color: #0f1f38;
+}
+
+/*service section*/
+
+.services{
+  display:flex;
+}
+
+.service-element{
+  display: block;
+}
+
+/*teaser element*/
+
+.teaser {
+  position: relative;
+  text-align: center;
+  color: white;
+  background-color: transparent;
+}
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.teaserImageContainer{
+  height: 600px;
+}
+
+.teaserImage{
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(35%);
+}
+
+/*teaser element hover
+Source: https://www.graphicpie.com/css-text-hover-effects/
+*/
+.effect-underline:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 1em;
+  width: 100%;
+  border-bottom: 1px solid;
+  margin-top: 10px;
+  opacity: 0;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale(0,1);
+  transform: scale(0,1);
+}
+
+.effect-underline:hover:after {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}

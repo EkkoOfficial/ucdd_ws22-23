@@ -8,8 +8,8 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Home ConnectSolutions</title>
-    <link rel="stylesheet" href="stylesheets/index.css">
+    <title>Contact Us ConnectSolutions</title>
+    <link rel="stylesheet" href="stylesheets/contactUs.css">
     <script type="text/javascript" src="js/jquery-3.1.1.min.js"> </script>  
 </head>
 
@@ -26,9 +26,9 @@
       <ul>
         <li><a href="aboutUs.html">About Us</a></li>
         <li><a href="subgroup29.html">Group29</a></li>
-        <li><a href="subgroup31.html">FindYourVibe service</a></li>
+        <li><a href="subgroup31.html">FindYourVibe</a></li>
         <li><a href="">GroupSamThomas</a></li>
-        <li><a href="contactUs.html">Contact Us</a></li>
+        <li><a class="active" href="contactUs.html">Contact Us</a></li>
         <li><a href="fancyStuff.html">Vorlage</a></li>
       </ul>
       
@@ -36,9 +36,42 @@
 
   <h1 class=headline1>Contact Us</h1>
 
-  <p>Kontaktadresse und evtl. Formular?</p>
+  <div class="our-information">
+    <h3>Connect Solutions</h3>
+    </br>
+    <p>Wileystraße 1</p>
+    <p>89231 Neu-Ulm</p>
+    <p>Germany</p>
+     
+  <div class="contact-form">
 
+    <div class="personal-info">
+      <label for="name" class="form-label">Name</label>
+      <input type="name1" class="form-control" id="name-input">
+      <label for="surname" class="form-label">Surname</label>
+      <input type="surname1" class="form-control" id="surname-input">
+    </div>
 
-</body>
+    <div class="e-mail-field">
+      <label for="e-mail-input" class="form-label">Email Address</label>
+      <input type="email" class="form-control" id="e-mail-input" placeholder="name@example.com">
+      </div>
+
+    <div class="number">
+      <label for="telephone" class="form-label">Telephone Number</label>
+      <input type="number1" class="form-control" id="number-input">
+    </div>
+     
+      <div class="text-field">
+      <label for="message-input" class="form-label">Write your inquiry here.</label>
+      <textarea class="form-control" id="message-input" rows="3"></textarea>
+      </div>
+
+    <button type="button">Send</button>
+
+   </div>
+  
+
+  </body>
 
 </html>
